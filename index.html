@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>バイセル | 出張買取・宅配買取・店頭買取</title>
+  <title>バイセル | 雛人形・五月人形の高価買取</title>
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
     :root{
-      --primary:#e63e2f;
-      --primary-dark:#c4321f;
-      --accent:#f5a623;
+      --primary:#8b2252;
+      --primary-dark:#6e1a40;
+      --accent:#c9a84c;
+      --accent-light:#f5ecd7;
       --dark:#1a1a2e;
       --gray:#6b7280;
-      --light:#f8f9fa;
+      --light:#faf8f5;
       --white:#ffffff;
       --radius:12px;
       --shadow:0 4px 24px rgba(0,0,0,.08);
@@ -20,18 +21,17 @@
     html{scroll-behavior:smooth;font-size:16px}
     body{font-family:-apple-system,'Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;color:var(--dark);line-height:1.8;overflow-x:hidden}
 
-    /* ===== UTILITY ===== */
     .container{max-width:1100px;margin:0 auto;padding:0 24px}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:18px 48px;border:none;border-radius:60px;font-size:1.125rem;font-weight:700;cursor:pointer;text-decoration:none;transition:all .25s}
-    .btn-primary{background:var(--primary);color:var(--white);box-shadow:0 6px 20px rgba(230,62,47,.35)}
-    .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(230,62,47,.45)}
-    .btn-accent{background:var(--accent);color:var(--dark);box-shadow:0 6px 20px rgba(245,166,35,.35)}
-    .btn-accent:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(245,166,35,.45)}
+    .btn-primary{background:var(--primary);color:var(--white);box-shadow:0 6px 20px rgba(139,34,82,.35)}
+    .btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(139,34,82,.45)}
+    .btn-accent{background:var(--accent);color:var(--white);box-shadow:0 6px 20px rgba(201,168,76,.35)}
+    .btn-accent:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.45)}
     .section-title{font-size:2rem;font-weight:800;text-align:center;margin-bottom:16px;line-height:1.4}
     .section-sub{text-align:center;color:var(--gray);margin-bottom:56px;font-size:1.05rem}
     section{padding:80px 0}
 
-    /* ===== HEADER ===== */
+    /* HEADER */
     header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);padding:0 24px}
     header .inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
     .logo{font-size:1.5rem;font-weight:900;color:var(--primary);text-decoration:none;letter-spacing:-.02em}
@@ -41,50 +41,75 @@
     header nav a:hover{color:var(--primary)}
     .header-cta{padding:10px 24px;font-size:.85rem}
 
-    /* ===== HERO ===== */
-    .hero{padding:140px 0 100px;background:linear-gradient(160deg,#fff5f4 0%,#fff 40%,#fffbea 100%);position:relative;overflow:hidden}
-    .hero::after{content:'';position:absolute;top:-60%;right:-20%;width:700px;height:700px;background:radial-gradient(circle,rgba(230,62,47,.06) 0%,transparent 70%);border-radius:50%}
+    /* HERO */
+    .hero{padding:140px 0 100px;background:linear-gradient(160deg,#fdf6f9 0%,#fff 30%,var(--accent-light) 100%);position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:10%;right:5%;width:300px;height:300px;background:radial-gradient(circle,rgba(139,34,82,.05) 0%,transparent 70%);border-radius:50%}
+    .hero::after{content:'';position:absolute;bottom:10%;left:5%;width:250px;height:250px;background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 70%);border-radius:50%}
     .hero .container{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
     .hero-text .badge{display:inline-block;background:var(--primary);color:var(--white);font-size:.8rem;font-weight:700;padding:6px 16px;border-radius:60px;margin-bottom:20px}
-    .hero-text h1{font-size:2.75rem;font-weight:900;line-height:1.35;margin-bottom:20px}
+    .hero-text .badge-season{display:inline-block;background:var(--accent);color:var(--white);font-size:.8rem;font-weight:700;padding:6px 16px;border-radius:60px;margin-bottom:20px;margin-left:8px}
+    .hero-text h1{font-size:2.6rem;font-weight:900;line-height:1.4;margin-bottom:20px}
     .hero-text h1 em{font-style:normal;color:var(--primary)}
-    .hero-text p{color:var(--gray);font-size:1.1rem;margin-bottom:32px;max-width:480px}
+    .hero-text h1 .gold{color:var(--accent)}
+    .hero-text p{color:var(--gray);font-size:1.1rem;margin-bottom:32px;max-width:500px}
     .hero-stats{display:flex;gap:32px;margin-top:36px}
     .hero-stats .stat{text-align:center}
-    .hero-stats .stat-num{display:block;font-size:2rem;font-weight:900;color:var(--primary)}
+    .hero-stats .stat-num{display:block;font-size:1.8rem;font-weight:900;color:var(--primary)}
     .hero-stats .stat-label{font-size:.8rem;color:var(--gray)}
     .hero-visual{display:flex;align-items:center;justify-content:center}
-    .hero-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:40px;text-align:center;width:100%;max-width:400px}
-    .hero-card .icon-row{display:flex;justify-content:center;gap:16px;margin-bottom:24px;flex-wrap:wrap}
-    .hero-card .icon-item{width:72px;height:72px;background:var(--light);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:2rem}
-    .hero-card p{font-weight:700;margin-bottom:16px;font-size:1.1rem}
+    .hero-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:36px;text-align:center;width:100%;max-width:420px;border:2px solid var(--accent-light)}
+    .hero-card .icon-row{display:flex;justify-content:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+    .hero-card .icon-item{width:80px;height:80px;background:var(--light);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:2.2rem;gap:2px}
+    .hero-card .icon-item small{font-size:.65rem;color:var(--gray);font-weight:600}
+    .hero-card p{font-weight:700;margin-bottom:16px;font-size:1.05rem}
+    .hero-card .price-example{background:linear-gradient(135deg,#fdf6f9,var(--accent-light));border-radius:8px;padding:14px;margin-bottom:16px;font-size:.9rem}
+    .hero-card .price-example strong{color:var(--primary);font-size:1.3rem}
 
-    /* ===== TRUST BAR ===== */
+    /* URGENCY BAR */
+    .urgency-bar{background:linear-gradient(90deg,var(--primary),var(--primary-dark));color:var(--white);padding:16px 0;text-align:center;font-weight:700;font-size:1.05rem;letter-spacing:.02em}
+    .urgency-bar .blink{animation:blink 1.5s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.5}}
+
+    /* TRUST BAR */
     .trust-bar{background:var(--dark);color:var(--white);padding:20px 0}
-    .trust-bar .container{display:flex;justify-content:center;flex-wrap:wrap;gap:36px}
-    .trust-item{display:flex;align-items:center;gap:8px;font-size:.95rem;font-weight:600}
+    .trust-bar .container{display:flex;justify-content:center;flex-wrap:wrap;gap:32px}
+    .trust-item{display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600}
     .trust-item .check{color:var(--accent);font-size:1.2rem}
 
-    /* ===== ITEMS ===== */
+    /* ITEMS */
     .items{background:var(--white)}
-    .items-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-    .item-card{background:var(--light);border-radius:var(--radius);padding:28px 20px;text-align:center;transition:all .25s;border:2px solid transparent}
-    .item-card:hover{border-color:var(--primary);transform:translateY(-4px);box-shadow:var(--shadow)}
-    .item-card .emoji{font-size:2.5rem;margin-bottom:12px;display:block}
-    .item-card h3{font-size:1rem;font-weight:700;margin-bottom:6px}
-    .item-card p{font-size:.82rem;color:var(--gray)}
+    .items-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .item-block{background:var(--light);border-radius:var(--radius);padding:36px 32px;border:2px solid transparent;transition:all .25s}
+    .item-block:hover{border-color:var(--primary);box-shadow:var(--shadow)}
+    .item-block .item-header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+    .item-block .item-icon{font-size:3rem}
+    .item-block h3{font-size:1.3rem;font-weight:800}
+    .item-block h3 small{display:block;font-size:.8rem;color:var(--gray);font-weight:500;margin-top:2px}
+    .item-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .item-list li{list-style:none;font-size:.88rem;padding:6px 0;padding-left:20px;position:relative;color:#444}
+    .item-list li::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:8px;height:8px;background:var(--accent);border-radius:50%}
 
-    /* ===== REASON ===== */
+    /* PRICE EXAMPLES */
+    .price-examples{background:var(--accent-light)}
+    .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .price-card{background:var(--white);border-radius:var(--radius);padding:28px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .price-card::before{content:'買取実績';position:absolute;top:0;left:0;right:0;background:var(--primary);color:var(--white);font-size:.75rem;font-weight:700;padding:6px}
+    .price-card .item-name{margin-top:28px;font-size:.9rem;color:var(--gray);margin-bottom:8px}
+    .price-card .price{font-size:2rem;font-weight:900;color:var(--primary)}
+    .price-card .price small{font-size:1rem}
+    .price-card .note{font-size:.75rem;color:var(--gray);margin-top:8px}
+
+    /* REASON */
     .reason{background:var(--light)}
     .reason-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
     .reason-card{background:var(--white);border-radius:var(--radius);padding:36px 28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-    .reason-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--primary)}
-    .reason-num{font-size:3rem;font-weight:900;color:rgba(230,62,47,.1);position:absolute;top:12px;right:20px;line-height:1}
+    .reason-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--primary),var(--accent))}
+    .reason-num{font-size:3rem;font-weight:900;color:rgba(139,34,82,.08);position:absolute;top:12px;right:20px;line-height:1}
     .reason-card .emoji{font-size:2rem;margin-bottom:16px;display:block}
     .reason-card h3{font-size:1.1rem;font-weight:800;margin-bottom:10px}
     .reason-card p{font-size:.9rem;color:var(--gray);line-height:1.7}
 
-    /* ===== FLOW ===== */
+    /* FLOW */
     .flow{background:var(--white)}
     .flow-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
     .flow-steps::before{content:'';position:absolute;top:48px;left:12%;right:12%;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent))}
@@ -94,7 +119,7 @@
     .flow-step h3{font-size:1rem;font-weight:700;margin-bottom:6px}
     .flow-step p{font-size:.82rem;color:var(--gray)}
 
-    /* ===== TESTIMONIALS ===== */
+    /* TESTIMONIALS */
     .testimonials{background:var(--light)}
     .testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
     .testimonial-card{background:var(--white);border-radius:var(--radius);padding:32px 28px;box-shadow:var(--shadow)}
@@ -105,7 +130,7 @@
     .testimonial-card .author-info .name{font-weight:700;font-size:.9rem}
     .testimonial-card .author-info .meta{font-size:.78rem;color:var(--gray)}
 
-    /* ===== FAQ ===== */
+    /* FAQ */
     .faq{background:var(--white)}
     .faq-list{max-width:760px;margin:0 auto}
     .faq-item{border-bottom:1px solid #e5e7eb;padding:24px 0}
@@ -114,26 +139,26 @@
     .faq-item[open] summary::after{transform:rotate(45deg)}
     .faq-item .answer{padding-top:14px;color:var(--gray);font-size:.95rem;line-height:1.8}
 
-    /* ===== CTA ===== */
-    .cta-section{background:linear-gradient(135deg,var(--primary) 0%,#ff6b5a 100%);color:var(--white);text-align:center;padding:80px 0}
+    /* CTA */
+    .cta-section{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 50%,#4a1530 100%);color:var(--white);text-align:center;padding:80px 0}
     .cta-section h2{font-size:2.2rem;font-weight:900;margin-bottom:16px}
     .cta-section p{font-size:1.1rem;opacity:.9;margin-bottom:36px;max-width:560px;margin-left:auto;margin-right:auto}
-    .cta-section .btn{background:var(--white);color:var(--primary);font-size:1.2rem;padding:20px 56px}
-    .cta-section .btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.2)}
+    .cta-section .btn{background:var(--accent);color:var(--white);font-size:1.2rem;padding:20px 56px}
+    .cta-section .btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.3)}
     .cta-section .phone{margin-top:24px;font-size:2rem;font-weight:900;letter-spacing:.02em}
     .cta-section .phone-sub{font-size:.85rem;opacity:.8}
 
-    /* ===== FOOTER ===== */
     footer{background:var(--dark);color:rgba(255,255,255,.6);text-align:center;padding:32px 0;font-size:.85rem}
 
-    /* ===== RESPONSIVE ===== */
+    /* RESPONSIVE */
     @media(max-width:768px){
       header nav a:not(.btn){display:none}
       .hero .container{grid-template-columns:1fr}
       .hero-text h1{font-size:2rem}
-      .hero-stats{gap:20px}
+      .hero-stats{gap:16px}
       .hero-visual{margin-top:20px}
-      .items-grid{grid-template-columns:repeat(2,1fr)}
+      .items-grid{grid-template-columns:1fr}
+      .price-grid{grid-template-columns:1fr}
       .reason-grid{grid-template-columns:1fr}
       .flow-steps{grid-template-columns:repeat(2,1fr);gap:32px}
       .flow-steps::before{display:none}
@@ -142,16 +167,16 @@
       section{padding:56px 0}
     }
     @media(max-width:480px){
-      .hero-text h1{font-size:1.6rem}
+      .hero-text h1{font-size:1.5rem}
       .hero-stats{flex-direction:column;gap:12px;align-items:flex-start}
-      .items-grid{grid-template-columns:1fr 1fr}
       .flow-steps{grid-template-columns:1fr 1fr}
+      .hero-card .icon-row{gap:8px}
+      .hero-card .icon-item{width:68px;height:68px;font-size:1.8rem}
     }
   </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="inner">
     <a href="#" class="logo">Buy<span>Sell</span></a>
@@ -169,9 +194,10 @@
 <section class="hero">
   <div class="container">
     <div class="hero-text">
-      <span class="badge">累計買取実績 3,200万点以上</span>
-      <h1>あなたの「売りたい」に<br><em>最高の価値</em>をお届けします</h1>
-      <p>着物・ブランド品・切手・古銭など、経験豊富な査定士がご自宅まで伺い、一点一点丁寧に査定いたします。</p>
+      <span class="badge">雛人形・五月人形 専門買取</span>
+      <span class="badge-season">買取強化中</span>
+      <h1>飾らなくなった<br><em>雛人形</em>・<span class="gold">五月人形</span>を<br><em>高価買取</em>いたします</h1>
+      <p>押入れに眠ったままの雛人形や五月人形、捨てるにはもったいない。バイセルなら経験豊富な専門査定士がご自宅に伺い、大切なお人形を丁寧に査定いたします。</p>
       <a href="#cta" class="btn btn-primary">今すぐ無料査定を申し込む →</a>
       <div class="hero-stats">
         <div class="stat">
@@ -191,10 +217,13 @@
     <div class="hero-visual">
       <div class="hero-card">
         <div class="icon-row">
-          <div class="icon-item">👘</div>
-          <div class="icon-item">👜</div>
-          <div class="icon-item">💍</div>
-          <div class="icon-item">🕰️</div>
+          <div class="icon-item">🎎<small>雛人形</small></div>
+          <div class="icon-item">🎏<small>五月人形</small></div>
+          <div class="icon-item">⚔️<small>兜・甲冑</small></div>
+          <div class="icon-item">🏯<small>ケース飾り</small></div>
+        </div>
+        <div class="price-example">
+          買取価格の一例：七段飾り雛人形<br><strong>120,000円</strong>で買取!
         </div>
         <p>まずは無料で査定額をチェック</p>
         <a href="#cta" class="btn btn-accent" style="width:100%">簡単30秒で申し込み</a>
@@ -203,61 +232,100 @@
   </div>
 </section>
 
+<!-- URGENCY -->
+<div class="urgency-bar">
+  <div class="container">
+    <span class="blink">&#9888;</span> シーズン前の今が売りどき！ 雛人形・五月人形の買取価格が通常より<strong>最大30%UP</strong>キャンペーン実施中
+  </div>
+</div>
+
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="container">
-    <div class="trust-item"><span class="check">✓</span>出張費・査定料すべて無料</div>
-    <div class="trust-item"><span class="check">✓</span>最短即日対応</div>
-    <div class="trust-item"><span class="check">✓</span>クーリングオフ対応</div>
-    <div class="trust-item"><span class="check">✓</span>上場企業グループ運営</div>
+    <div class="trust-item"><span class="check">&#10003;</span>出張費・査定料すべて無料</div>
+    <div class="trust-item"><span class="check">&#10003;</span>最短即日で訪問</div>
+    <div class="trust-item"><span class="check">&#10003;</span>クーリングオフ対応</div>
+    <div class="trust-item"><span class="check">&#10003;</span>上場企業グループ運営</div>
   </div>
 </div>
 
 <!-- ITEMS -->
 <section class="items" id="items">
   <div class="container">
-    <h2 class="section-title">幅広い品目を買取いたします</h2>
-    <p class="section-sub">専門の査定士が一つひとつ丁寧に査定。思わぬ高額買取も多数。</p>
+    <h2 class="section-title">こんなお人形、ありませんか？</h2>
+    <p class="section-sub">有名作家物から量産品まで、幅広く買取いたします。状態問わずまずはご相談ください。</p>
     <div class="items-grid">
-      <div class="item-card">
-        <span class="emoji">👘</span>
-        <h3>着物</h3>
-        <p>振袖・訪問着・帯・和装小物など</p>
+      <div class="item-block">
+        <div class="item-header">
+          <span class="item-icon">🎎</span>
+          <h3>雛人形<small>ひな祭り・桃の節句</small></h3>
+        </div>
+        <ul class="item-list">
+          <li>七段飾り・五段飾り</li>
+          <li>三段飾り・親王飾り</li>
+          <li>木目込み人形</li>
+          <li>ケース入り雛人形</li>
+          <li>有名作家の作品</li>
+          <li>京雛・江戸雛</li>
+          <li>雛道具・屏風・ぼんぼり</li>
+          <li>つるし雛・市松人形</li>
+        </ul>
       </div>
-      <div class="item-card">
-        <span class="emoji">👜</span>
-        <h3>ブランド品</h3>
-        <p>バッグ・財布・時計・アクセサリー</p>
+      <div class="item-block">
+        <div class="item-header">
+          <span class="item-icon">🎏</span>
+          <h3>五月人形<small>端午の節句・子どもの日</small></h3>
+        </div>
+        <ul class="item-list">
+          <li>兜飾り・着用兜</li>
+          <li>鎧飾り・大将飾り</li>
+          <li>ケース入り五月人形</li>
+          <li>収納飾り</li>
+          <li>有名作家の作品</li>
+          <li>金太郎・桃太郎人形</li>
+          <li>鯉のぼり・武者幟</li>
+          <li>弓太刀・陣羽織</li>
+        </ul>
       </div>
-      <div class="item-card">
-        <span class="emoji">💍</span>
-        <h3>貴金属・宝石</h3>
-        <p>金・プラチナ・ダイヤモンド・宝飾品</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE EXAMPLES -->
+<section class="price-examples" id="price">
+  <div class="container">
+    <h2 class="section-title">買取価格の実例</h2>
+    <p class="section-sub">実際にバイセルで買取させていただいた実績をご紹介します。</p>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="item-name">久月 七段飾り雛人形</div>
+        <div class="price">120,000<small>円</small></div>
+        <div class="note">購入から15年・良好な状態</div>
       </div>
-      <div class="item-card">
-        <span class="emoji">📮</span>
-        <h3>切手</h3>
-        <p>記念切手・中国切手・シート切手</p>
+      <div class="price-card">
+        <div class="item-name">真多呂 木目込み親王飾り</div>
+        <div class="price">85,000<small>円</small></div>
+        <div class="note">有名作家作品・共箱付き</div>
       </div>
-      <div class="item-card">
-        <span class="emoji">🪙</span>
-        <h3>古銭・記念硬貨</h3>
-        <p>古銭・古紙幣・記念硬貨・外国コイン</p>
+      <div class="price-card">
+        <div class="item-name">吉徳大光 着用兜飾り</div>
+        <div class="price">95,000<small>円</small></div>
+        <div class="note">純金箔押・美品</div>
       </div>
-      <div class="item-card">
-        <span class="emoji">📷</span>
-        <h3>カメラ</h3>
-        <p>一眼レフ・レンズ・フィルムカメラ</p>
+      <div class="price-card">
+        <div class="item-name">鎧平飾り 大鎧セット</div>
+        <div class="price">150,000<small>円</small></div>
+        <div class="note">正絹縅・屏風付きフルセット</div>
       </div>
-      <div class="item-card">
-        <span class="emoji">🎸</span>
-        <h3>楽器</h3>
-        <p>ギター・管楽器・電子楽器</p>
+      <div class="price-card">
+        <div class="item-name">京雛 三段飾り</div>
+        <div class="price">70,000<small>円</small></div>
+        <div class="note">西陣織衣装・道具一式</div>
       </div>
-      <div class="item-card">
-        <span class="emoji">🍶</span>
-        <h3>お酒</h3>
-        <p>ウイスキー・ワイン・日本酒・ブランデー</p>
+      <div class="price-card">
+        <div class="item-name">幸一光 木目込み五月人形</div>
+        <div class="price">60,000<small>円</small></div>
+        <div class="note">有名作家作品・ケース付き</div>
       </div>
     </div>
   </div>
@@ -266,26 +334,26 @@
 <!-- REASON -->
 <section class="reason" id="reason">
   <div class="container">
-    <h2 class="section-title">バイセルが選ばれる3つの理由</h2>
-    <p class="section-sub">お客様に安心してご利用いただける仕組みを整えています。</p>
+    <h2 class="section-title">人形買取でバイセルが選ばれる理由</h2>
+    <p class="section-sub">大切なお人形だからこそ、信頼できる専門業者にお任せください。</p>
     <div class="reason-grid">
       <div class="reason-card">
         <span class="reason-num">01</span>
         <span class="emoji">🏠</span>
-        <h3>ご自宅で完結する出張買取</h3>
-        <p>経験豊富な査定士がお客様のご自宅へ訪問。重い荷物を運ぶ必要はありません。出張費・査定料は一切無料です。</p>
+        <h3>大きなお人形も安心の出張買取</h3>
+        <p>七段飾りなど大型の雛人形も、査定士がご自宅へ訪問。梱包や運搬の手間は一切不要。出張費・査定料もすべて無料です。</p>
       </div>
       <div class="reason-card">
         <span class="reason-num">02</span>
-        <span class="emoji">💰</span>
-        <h3>業界トップクラスの買取価格</h3>
-        <p>独自の販売ルートと徹底したコスト管理で、他社より高い買取価格を実現。査定額にご納得いただけなければキャンセルも無料。</p>
+        <span class="emoji">🔍</span>
+        <h3>人形専門の査定士が適正価格で</h3>
+        <p>作家物・ブランド・素材・年代を正確に見極める専門知識を持った査定士が在籍。他社では見落とされがちな価値も見逃しません。</p>
       </div>
       <div class="reason-card">
         <span class="reason-num">03</span>
         <span class="emoji">🛡️</span>
-        <h3>安心のアフターフォロー</h3>
-        <p>8日間のクーリングオフ制度を完備。専任スタッフによるフォローコールで、お取引後も安心をお約束します。</p>
+        <h3>安心のクーリングオフ完備</h3>
+        <p>8日間のクーリングオフ制度を完備。「やっぱり手放したくない」と思われた場合もお品物をお返しいたします。</p>
       </div>
     </div>
   </div>
@@ -312,8 +380,8 @@
       <div class="flow-step">
         <div class="circle">🔍</div>
         <span class="step-num">Step 3</span>
-        <h3>査定</h3>
-        <p>専門査定士が<br>丁寧にお見積り</p>
+        <h3>出張査定</h3>
+        <p>ご自宅で<br>丁寧にお見積り</p>
       </div>
       <div class="flow-step">
         <div class="circle">💴</div>
@@ -329,38 +397,38 @@
 <section class="testimonials" id="voice">
   <div class="container">
     <h2 class="section-title">お客様の声</h2>
-    <p class="section-sub">実際にご利用いただいたお客様からの評価です。</p>
+    <p class="section-sub">実際にお人形をお売りいただいたお客様の声をご紹介します。</p>
     <div class="testimonial-grid">
       <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <blockquote>亡くなった母の着物をどうすればよいか困っていましたが、査定士の方がとても丁寧に対応してくださり安心できました。想像以上の金額で驚きました。</blockquote>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>娘が嫁いでから20年、押入れに眠っていた七段飾りの雛人形。処分するのは忍びなかったのですが、バイセルさんに丁寧に査定していただき、想像以上の金額に驚きました。</blockquote>
         <div class="author">
           <div class="avatar">👩</div>
           <div class="author-info">
             <div class="name">T.S 様</div>
-            <div class="meta">60代女性 / 着物買取</div>
+            <div class="meta">70代女性 / 雛人形買取</div>
           </div>
         </div>
       </div>
       <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <blockquote>ブランドバッグを5点まとめて査定してもらいました。他社より2万円以上高く買い取っていただけて大満足です。出張費も無料で助かりました。</blockquote>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>息子が成人し、五月人形の兜飾りをどうするか悩んでいました。大きくて運べないと思っていたら、自宅まで来てくれて助かりました。作家物だったため高値がつきました。</blockquote>
         <div class="author">
           <div class="avatar">👨</div>
           <div class="author-info">
             <div class="name">K.M 様</div>
-            <div class="meta">40代男性 / ブランド品買取</div>
+            <div class="meta">50代男性 / 五月人形買取</div>
           </div>
         </div>
       </div>
       <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <blockquote>コレクションしていた切手を整理するために利用しました。一枚一枚丁寧に見てくださり、プレミア価値のある切手もきちんと評価していただけました。</blockquote>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>実家の整理で祖母の雛人形と市松人形が出てきました。古いものなので値段がつかないと思っていましたが、伝統工芸品として価値があるとのことで買い取っていただけました。</blockquote>
         <div class="author">
-          <div class="avatar">👴</div>
+          <div class="avatar">👩</div>
           <div class="author-info">
-            <div class="name">H.Y 様</div>
-            <div class="meta">70代男性 / 切手買取</div>
+            <div class="name">A.N 様</div>
+            <div class="meta">40代女性 / 雛人形・市松人形買取</div>
           </div>
         </div>
       </div>
@@ -372,27 +440,27 @@
 <section class="faq" id="faq">
   <div class="container">
     <h2 class="section-title">よくあるご質問</h2>
-    <p class="section-sub">初めてのお客様でも安心してご利用いただけます。</p>
+    <p class="section-sub">雛人形・五月人形の買取に関するよくあるご質問にお答えします。</p>
     <div class="faq-list">
+      <details class="faq-item">
+        <summary>古い雛人形でも買取できますか？</summary>
+        <div class="answer">はい、年代を問わず査定いたします。特に昭和初期以前の雛人形は伝統工芸品として高い価値がつくことがあります。まずはお気軽にご相談ください。</div>
+      </details>
+      <details class="faq-item">
+        <summary>箱や付属品がなくても大丈夫ですか？</summary>
+        <div class="answer">箱や共箱がなくても買取は可能です。ただし、付属品や共箱が揃っていると査定額がアップすることがありますので、あればご一緒にお出しください。</div>
+      </details>
+      <details class="faq-item">
+        <summary>七段飾りなど大型のものも出張買取できますか？</summary>
+        <div class="answer">もちろんです。大型の段飾りこそ出張買取が便利です。査定士がご自宅へ伺い、その場で査定・お支払いいたします。梱包や運搬の心配はございません。</div>
+      </details>
+      <details class="faq-item">
+        <summary>人形供養はしてもらえますか？</summary>
+        <div class="answer">申し訳ございませんが、人形供養のサービスは行っておりません。ただし、買取させていただいたお人形は次に大切にしてくださる方のもとへお届けいたします。</div>
+      </details>
       <details class="faq-item">
         <summary>出張買取に費用はかかりますか？</summary>
         <div class="answer">いいえ、出張費・査定料・キャンセル料すべて無料です。査定額にご納得いただけない場合もお気軽にお断りいただけます。</div>
-      </details>
-      <details class="faq-item">
-        <summary>査定にはどれくらい時間がかかりますか？</summary>
-        <div class="answer">品物の量や種類にもよりますが、一般的なご依頼であれば30分〜1時間程度でお見積りをお出しいたします。</div>
-      </details>
-      <details class="faq-item">
-        <summary>汚れや傷がある品物でも買取できますか？</summary>
-        <div class="answer">はい、状態に関わらずまずは査定させていただきます。シミや汚れ、傷があっても買取できるケースは多数ございます。</div>
-      </details>
-      <details class="faq-item">
-        <summary>クーリングオフは適用されますか？</summary>
-        <div class="answer">はい。出張買取の場合、法令に基づき契約から8日間のクーリングオフが適用されます。お品物をご返却いたしますのでご安心ください。</div>
-      </details>
-      <details class="faq-item">
-        <summary>1点だけでも出張買取してもらえますか？</summary>
-        <div class="answer">もちろんです。1点からでもお気軽にお申し込みください。まとめてのご依頼も大歓迎です。</div>
       </details>
     </div>
   </div>
@@ -401,15 +469,14 @@
 <!-- CTA -->
 <section class="cta-section" id="cta">
   <div class="container">
-    <h2>まずは無料査定から<br>はじめてみませんか？</h2>
-    <p>経験豊富な査定士が、お客様の大切なお品物を丁寧に査定いたします。出張費・査定料は完全無料です。</p>
+    <h2>飾らなくなったお人形、<br>眠らせていませんか？</h2>
+    <p>雛人形・五月人形の専門査定士が、大切なお人形の価値を丁寧にお調べいたします。出張費・査定料は完全無料です。</p>
     <a href="#" class="btn">無料査定を申し込む →</a>
     <div class="phone">📞 0120-XXX-XXX</div>
     <div class="phone-sub">24時間受付（土日祝も対応）</div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <p>&copy; 2026 BuySell Technologies. All rights reserved.</p>
