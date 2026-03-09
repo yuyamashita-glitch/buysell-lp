@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>レゴ買取 折り込みチラシ - バイセル</title>
+<title>おもちゃ・ゲーム買取 折り込みチラシ - バイセル</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
 
@@ -29,7 +29,6 @@
     font-weight: 700;
   }
 
-  /* A5サイズ比率 */
   .chirashi {
     width: 520px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
@@ -60,9 +59,7 @@
     gap: 10px;
   }
 
-  .front-header .logo-area img {
-    height: 22px;
-  }
+  .front-header .logo-area img { height: 22px; }
 
   .front-header .cm-text {
     font-size: 10px;
@@ -80,30 +77,35 @@
     line-height: 1.3;
   }
 
-  /* 表面メイン：写真背景 */
   .front-main {
     position: relative;
-    padding: 20px;
+    padding: 16px 20px;
     text-align: center;
-    min-height: 420px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
   }
 
-  /* レゴ写真を背景的に配置 */
+  .catch-copy {
+    font-size: 17px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    line-height: 1.5;
+    margin-bottom: 6px;
+  }
+
   .front-photos {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 16px;
+    gap: 8px;
+    margin-bottom: 12px;
   }
 
   .front-photos img {
-    width: 150px;
-    height: 110px;
+    width: 115px;
+    height: 85px;
     object-fit: cover;
     border-radius: 8px;
     border: 3px solid #ffd700;
@@ -113,38 +115,33 @@
   .shuzai-badge {
     background: #ffd700;
     color: #1a1a1a;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 900;
-    padding: 5px 24px;
+    padding: 4px 20px;
     border-radius: 30px;
     display: inline-block;
-    margin-bottom: 12px;
-  }
-
-  .catch-copy {
-    font-size: 18px;
-    font-weight: 900;
-    color: #fff;
-    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
-    line-height: 1.5;
     margin-bottom: 8px;
   }
 
-  .main-product {
-    font-size: 88px;
-    font-weight: 900;
-    line-height: 1.05;
-    text-shadow: 3px 3px 0 rgba(0,0,0,0.4), 0 0 20px rgba(0,0,0,0.2);
-    color: #ffd700;
-    letter-spacing: 0.05em;
-  }
-
-  .sub-text {
-    font-size: 40px;
+  .main-title {
+    font-size: 24px;
     font-weight: 900;
     color: #fff;
-    margin-top: 6px;
+    line-height: 1.3;
     text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+  }
+
+  .main-title .big {
+    font-size: 52px;
+    color: #ffd700;
+    display: block;
+    line-height: 1.1;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.4);
+  }
+
+  .main-title .mid {
+    font-size: 30px;
+    color: #fff;
   }
 
   /* バラブロック訴求 */
@@ -154,74 +151,56 @@
     gap: 12px;
     background: #fff;
     border-radius: 10px;
-    padding: 10px 16px;
-    margin: 14px 0 10px;
+    padding: 10px 14px;
+    margin: 12px 0 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-    max-width: 420px;
+    max-width: 440px;
+    width: 100%;
   }
 
   .bara-appeal img {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 8px;
     border: 3px solid #ffd700;
     flex-shrink: 0;
   }
 
-  .bara-text {
-    text-align: left;
-  }
+  .bara-text { text-align: left; }
 
   .bara-main {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 900;
     color: #c41e24;
     line-height: 1.4;
   }
 
   .bara-main strong {
-    font-size: 20px;
-    color: #c41e24;
+    font-size: 18px;
   }
 
   .bara-sub {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     color: #1a6b2a;
-    margin-top: 3px;
-  }
-
-  /* 下部レゴ写真帯 */
-  .front-photos-bottom {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 16px;
-  }
-
-  .front-photos-bottom img {
-    width: 90px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 2px solid rgba(255,255,255,0.6);
+    margin-top: 2px;
   }
 
   .front-badges {
     display: flex;
-    gap: 8px;
+    gap: 6px;
     justify-content: center;
-    margin-top: 16px;
+    margin-top: 10px;
     flex-wrap: wrap;
   }
 
   .badge {
     background: #fff;
     color: #1a6b2a;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 900;
-    padding: 6px 14px;
+    padding: 5px 10px;
     border-radius: 6px;
     border: 2px solid #ffd700;
   }
@@ -234,18 +213,18 @@
 
   .front-footer {
     background: rgba(0,0,0,0.35);
-    padding: 10px 16px;
+    padding: 8px 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 14px;
   }
 
   .front-footer .point {
     display: flex;
     align-items: center;
-    gap: 6px;
-    font-size: 13px;
+    gap: 5px;
+    font-size: 12px;
     font-weight: 700;
     color: #fff;
   }
@@ -253,37 +232,46 @@
   .front-footer .point .icon {
     background: #ffd700;
     color: #1a1a1a;
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 900;
     flex-shrink: 0;
   }
 
+  /* 電話CTA - 大きく目立たせる */
   .front-cta {
     background: #c41e24;
-    padding: 10px 16px;
+    padding: 12px 16px;
     text-align: center;
   }
 
   .front-cta .phone-note {
-    font-size: 11px;
+    font-size: 12px;
     color: #ffd700;
+    font-weight: 700;
   }
 
   .front-cta .phone {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 900;
     color: #fff;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+  }
+
+  .front-cta .phone-sub {
+    font-size: 10px;
+    color: #fff;
+    margin-top: 2px;
   }
 
   /* ============================
-     裏面 (BACK) - height auto で見切れ防止
+     裏面 (BACK)
      ============================ */
   .back {
     background: #fff;
@@ -300,13 +288,13 @@
 
   .back-header h2 {
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 900;
   }
 
   .back-header h2 span {
     color: #ffd700;
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .back-subtitle {
@@ -319,12 +307,12 @@
     border-bottom: 2px solid #c41e24;
   }
 
-  /* 買取実績グリッド - 写真版 */
+  /* 買取実績グリッド */
   .results-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    padding: 10px 10px 8px;
+    gap: 6px;
+    padding: 8px 10px 6px;
   }
 
   .result-item {
@@ -337,7 +325,7 @@
 
   .result-item .item-img {
     width: 100%;
-    height: 90px;
+    height: 75px;
     overflow: hidden;
     background: #f5f5f5;
   }
@@ -351,7 +339,7 @@
   .result-item .item-name {
     font-size: 9px;
     font-weight: 700;
-    padding: 3px 4px 1px;
+    padding: 2px 4px 1px;
     background: #1a6b2a;
     color: #fff;
     white-space: nowrap;
@@ -360,10 +348,10 @@
   }
 
   .result-item .item-price {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 900;
     color: #c41e24;
-    padding: 2px 4px 4px;
+    padding: 2px 4px 3px;
     line-height: 1.2;
   }
 
@@ -377,8 +365,8 @@
     background: #1a6b2a;
     color: #fff;
     text-align: center;
-    padding: 8px 12px;
-    font-size: 14px;
+    padding: 7px 12px;
+    font-size: 13px;
     font-weight: 900;
     margin: 6px 10px;
     border-radius: 6px;
@@ -388,19 +376,20 @@
     color: #ffd700;
   }
 
-  /* その他買取品目 - 写真版 */
+  /* その他買取品目 - 大きめに */
   .other-items {
-    padding: 6px 10px 8px;
+    padding: 6px 10px 6px;
   }
 
   .other-items h3 {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 900;
-    color: #1a6b2a;
+    color: #c41e24;
     text-align: center;
     margin-bottom: 6px;
-    border-bottom: 2px dashed #1a6b2a;
-    padding-bottom: 3px;
+    background: #fff3cd;
+    padding: 5px;
+    border-radius: 4px;
   }
 
   .other-grid {
@@ -411,14 +400,14 @@
 
   .other-item {
     text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
     overflow: hidden;
   }
 
   .other-item .other-img {
     width: 100%;
-    height: 55px;
+    height: 65px;
     overflow: hidden;
     background: #f9f9f9;
   }
@@ -430,21 +419,21 @@
   }
 
   .other-item .other-name {
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 700;
     color: #333;
-    padding: 2px 2px;
+    padding: 3px 2px;
     background: #f0f0f0;
   }
 
-  /* フッター */
+  /* フッター - 電話番号大きく */
   .back-footer {
     background: #c41e24;
-    padding: 10px 16px;
+    padding: 14px 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 14px;
     margin-top: 6px;
   }
 
@@ -468,62 +457,39 @@
     margin-top: 2px;
   }
 
-  .back-footer .phone-area {
-    text-align: center;
-  }
+  .back-footer .phone-area { text-align: center; }
 
   .back-footer .phone-label {
-    font-size: 10px;
+    font-size: 11px;
     color: #ffd700;
     font-weight: 700;
   }
 
   .back-footer .phone-number {
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 900;
     color: #fff;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    line-height: 1.2;
   }
 
   .back-footer .phone-hours {
-    font-size: 9px;
+    font-size: 10px;
     color: #fff;
   }
 
   /* レスポンシブ */
   @media (max-width: 560px) {
-    .chirashi {
-      width: 100%;
-    }
-    .catch-copy {
-      font-size: 3.5vw;
-    }
-    .main-product {
-      font-size: 17vw;
-    }
-    .sub-text {
-      font-size: 7vw;
-    }
-    .front-cta .phone {
-      font-size: 6vw;
-    }
-    .front-photos img {
-      width: 28vw;
-      height: 20vw;
-    }
-    .front-photos-bottom img {
-      width: 17vw;
-      height: 13vw;
-    }
-    .result-item .item-img {
-      height: 17vw;
-    }
-    .other-item .other-img {
-      height: 11vw;
-    }
-    .back-footer .phone-number {
-      font-size: 5.5vw;
-    }
+    .chirashi { width: 100%; }
+    .catch-copy { font-size: 3.5vw; }
+    .main-title .big { font-size: 10vw; }
+    .main-title .mid { font-size: 6vw; }
+    .front-cta .phone { font-size: 7.5vw; }
+    .front-photos img { width: 22vw; height: 16vw; }
+    .result-item .item-img { height: 14vw; }
+    .other-item .other-img { height: 13vw; }
+    .back-footer .phone-number { font-size: 7vw; }
+    .bara-appeal img { width: 16vw; height: 16vw; }
   }
 </style>
 </head>
@@ -544,25 +510,27 @@
   <div class="front-main">
     <div class="shuzai-badge">出張買取</div>
 
-    <!-- キャッチコピー -->
-    <div class="catch-copy">お子さま・お孫さまが<br>遊ばなくなった</div>
+    <div class="catch-copy">お子さま・お孫さまが遊ばなくなった</div>
 
     <!-- メイン写真 -->
     <div class="front-photos">
-      <img src="https://images.brickset.com/sets/images/10698-1.jpg" alt="レゴ クラシック 黄色のアイデアボックス">
-      <img src="https://images.brickset.com/sets/images/10696-1.jpg" alt="レゴ クラシック 黄色のアイデアボックス">
-      <img src="https://images.brickset.com/sets/images/10692-1.jpg" alt="レゴ クラシック">
+      <img src="https://images.brickset.com/sets/images/10698-1.jpg" alt="レゴ 黄色のアイデアボックス">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Nintendo-Famicom-Console-Set-FL.jpg" alt="ファミコン">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Nintendo-64-wController-L.jpg" alt="Nintendo 64">
+      <img src="https://images.pexels.com/photos/220137/pexels-photo-220137.jpeg?auto=compress&cs=tinysrgb&w=640" alt="おもちゃ">
     </div>
 
-    <div class="main-product">レゴ</div>
-    <div class="sub-text">まとめて買取します！</div>
+    <div class="main-title">
+      <span class="big">おもちゃ・ゲーム</span>
+      <span class="mid">まとめて買取します！</span>
+    </div>
 
     <!-- バラブロック訴求 -->
     <div class="bara-appeal">
-      <img src="https://images.brickset.com/sets/images/10698-1.jpg" alt="バラのレゴブロック">
+      <img src="https://images.brickset.com/sets/images/10696-1.jpg" alt="バラのレゴブロック">
       <div class="bara-text">
-        <p class="bara-main">黄色い箱に入った<br><strong>バラのブロック</strong>でもOK！</p>
-        <p class="bara-sub">押入れに眠っているレゴ、まとめてお売りください</p>
+        <p class="bara-main">レゴの<strong>バラブロック</strong>もOK！</p>
+        <p class="bara-sub">押入れに眠っているおもちゃ・ゲーム、まとめてお売りください</p>
       </div>
     </div>
 
@@ -576,13 +544,14 @@
 
   <div class="front-footer">
     <div class="point"><span class="icon">✓</span>バラでもOK</div>
-    <div class="point"><span class="icon">✓</span>パーツ欠品OK</div>
     <div class="point"><span class="icon">✓</span>箱・説明書なしOK</div>
+    <div class="point"><span class="icon">✓</span>動作不良でもOK</div>
   </div>
 
   <div class="front-cta">
-    <div class="phone-note">まずはお気軽にお電話ください（24時間受付）</div>
+    <div class="phone-note">まずはお気軽にお電話ください</div>
     <div class="phone">0120-XXX-XXX</div>
+    <div class="phone-sub">【24時間・365日受付】通話料無料</div>
   </div>
 
 </div>
@@ -592,67 +561,67 @@
 <div class="chirashi back">
 
   <div class="back-header">
-    <h2>こんなレゴも <span>買取できます</span></h2>
+    <h2>こんなものも <span>買取できます</span></h2>
   </div>
 
   <div class="back-subtitle">押入れ・クローゼットに眠っていませんか？</div>
 
-  <!-- 買取実績（写真付き） -->
+  <!-- 買取実績 -->
   <div class="results-grid">
     <div class="result-item">
-      <div class="item-img"><img src="https://images.brickset.com/sets/images/10698-1.jpg" alt="レゴ クラシック 黄色い箱"></div>
-      <div class="item-name">バラブロック まとめ</div>
+      <div class="item-img"><img src="https://images.brickset.com/sets/images/10698-1.jpg" alt="レゴ バラブロック"></div>
+      <div class="item-name">レゴ まとめ</div>
       <div class="item-price">15,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img"><img src="https://images.brickset.com/sets/images/60316-1.jpg" alt="レゴ シティ"></div>
-      <div class="item-name">レゴ シティ まとめ</div>
+      <div class="item-img"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Nintendo-Famicom-Console-Set-FL.jpg" alt="ファミコン"></div>
+      <div class="item-name">ファミコン本体+ソフト</div>
       <div class="item-price">12,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img"><img src="https://images.brickset.com/sets/images/71741-1.jpg" alt="レゴ ニンジャゴー"></div>
-      <div class="item-name">ニンジャゴー まとめ</div>
+      <div class="item-img"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Nintendo-64-wController-L.jpg" alt="Nintendo 64"></div>
+      <div class="item-name">Nintendo 64 まとめ</div>
       <div class="item-price">18,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img"><img src="https://images.brickset.com/sets/images/10874-1.jpg" alt="レゴ デュプロ"></div>
-      <div class="item-name">デュプロ まとめ</div>
-      <div class="item-price">5,000<span class="en">円</span></div>
+      <div class="item-img"><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/SNES-Mod1-Console-Set.jpg" alt="スーパーファミコン"></div>
+      <div class="item-name">スーパーファミコン</div>
+      <div class="item-price">10,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img"><img src="https://images.brickset.com/sets/images/71032-13.jpg" alt="レゴ ミニフィグ"></div>
-      <div class="item-name">ミニフィグ まとめ</div>
+      <div class="item-img"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Game-Boy-FL.jpg" alt="ゲームボーイ"></div>
+      <div class="item-name">ゲームボーイ+ソフト</div>
       <div class="item-price">8,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img"><img src="https://images.brickset.com/sets/images/10696-1.jpg" alt="レゴ クラシック"></div>
-      <div class="item-name">レゴ クラシック</div>
-      <div class="item-price">3,000<span class="en">円</span></div>
+      <div class="item-img"><img src="https://images.pexels.com/photos/1373100/pexels-photo-1373100.jpeg?auto=compress&cs=tinysrgb&w=640" alt="ゲームソフト"></div>
+      <div class="item-name">ゲームソフト まとめ</div>
+      <div class="item-price">5,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img"><img src="https://images.brickset.com/sets/images/75192-1.jpg" alt="レゴ スター・ウォーズ"></div>
-      <div class="item-name">スター・ウォーズ</div>
-      <div class="item-price">35,000<span class="en">円</span></div>
-    </div>
-    <div class="result-item">
-      <div class="item-img"><img src="https://images.brickset.com/sets/images/42115-1.jpg" alt="レゴ テクニック"></div>
-      <div class="item-name">テクニック</div>
+      <div class="item-img"><img src="https://images.pexels.com/photos/139009/pexels-photo-139009.jpeg?auto=compress&cs=tinysrgb&w=640" alt="フィギュア"></div>
+      <div class="item-name">フィギュア まとめ</div>
       <div class="item-price">20,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img"><img src="https://images.brickset.com/sets/images/10270-1.jpg" alt="レゴ フレンズ"></div>
-      <div class="item-name">フレンズ まとめ</div>
+      <div class="item-img"><img src="https://images.pexels.com/photos/2767817/pexels-photo-2767817.jpeg?auto=compress&cs=tinysrgb&w=640" alt="ミニカー"></div>
+      <div class="item-name">トミカ・プラレール</div>
       <div class="item-price">6,000<span class="en">円</span></div>
+    </div>
+    <div class="result-item">
+      <div class="item-img"><img src="https://images.pexels.com/photos/220137/pexels-photo-220137.jpeg?auto=compress&cs=tinysrgb&w=640" alt="ぬいぐるみ"></div>
+      <div class="item-name">ぬいぐるみ まとめ</div>
+      <div class="item-price">3,000<span class="en">円</span></div>
     </div>
   </div>
 
   <div class="back-message">
-    お子さま・お孫さまの<span>思い出のレゴ</span>、他のおもちゃもまとめて査定OK!!
+    お子さま・お孫さまの<span>思い出の品</span>、まとめて査定いたします!
   </div>
 
-  <!-- その他買取品目（写真付き） -->
+  <!-- その他買取品目（大きめ） -->
   <div class="other-items">
-    <h3>その他の買取品目</h3>
+    <h3>おもちゃ以外もまとめて査定OK！</h3>
     <div class="other-grid">
       <div class="other-item">
         <div class="other-img"><img src="https://images.pexels.com/photos/2918482/pexels-photo-2918482.jpeg?auto=compress&cs=tinysrgb&w=640" alt="着物"></div>
@@ -689,6 +658,7 @@
     </div>
   </div>
 
+  <!-- フッター - 電話番号大きく -->
   <div class="back-footer">
     <div class="staff-area">
       <img src="https://images.pexels.com/photos/17049766/pexels-photo-17049766.jpeg?auto=compress&cs=tinysrgb&w=200" alt="査定士">
