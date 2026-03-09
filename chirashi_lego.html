@@ -26,11 +26,9 @@
     font-weight: 700;
   }
 
-  /* A5 148mm x 210mm → 比率維持で画面表示 */
+  /* A5サイズ比率 */
   .chirashi {
     width: 520px;
-    height: 736px;
-    overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     position: relative;
   }
@@ -39,13 +37,12 @@
      表面 (FRONT)
      ============================ */
   .front {
-    background: linear-gradient(135deg, #1a6b2a 0%, #0d4f1c 50%, #1a6b2a 100%);
+    background: #1a6b2a;
     color: #fff;
     display: flex;
     flex-direction: column;
   }
 
-  /* ヘッダー：バイセルロゴバー */
   .front-header {
     background: #c41e24;
     padding: 8px 16px;
@@ -80,76 +77,83 @@
     line-height: 1.3;
   }
 
-  /* メインビジュアル */
+  /* 表面メイン：写真背景 */
   .front-main {
-    flex: 1;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    min-height: 420px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 16px 20px;
-    position: relative;
-    text-align: center;
+    overflow: hidden;
   }
 
-  .front-main .shuzai-badge {
+  /* レゴ写真を背景的に配置 */
+  .front-photos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .front-photos img {
+    width: 150px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #ffd700;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  }
+
+  .shuzai-badge {
     background: #ffd700;
     color: #1a1a1a;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 900;
-    padding: 4px 20px;
+    padding: 5px 24px;
     border-radius: 30px;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
-  .front-main .main-product {
-    font-size: 90px;
+  .main-product {
+    font-size: 88px;
     font-weight: 900;
     line-height: 1.05;
-    text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
-    color: #fff;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.4), 0 0 20px rgba(0,0,0,0.2);
+    color: #ffd700;
     letter-spacing: 0.05em;
   }
 
-  .front-main .main-product .highlight {
-    color: #ffd700;
-  }
-
-  .front-main .sub-text {
-    font-size: 42px;
+  .sub-text {
+    font-size: 40px;
     font-weight: 900;
-    color: #ffd700;
-    margin-top: 4px;
+    color: #fff;
+    margin-top: 6px;
     text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
   }
 
-  /* レゴブロックの装飾 */
-  .lego-dots {
+  /* 下部レゴ写真帯 */
+  .front-photos-bottom {
     display: flex;
     justify-content: center;
     gap: 8px;
-    margin: 12px 0;
+    margin-top: 16px;
   }
 
-  .lego-dot {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #ffd700;
-    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2);
+  .front-photos-bottom img {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid rgba(255,255,255,0.6);
   }
 
-  .lego-dot:nth-child(2) { background: #e74c3c; }
-  .lego-dot:nth-child(3) { background: #3498db; }
-  .lego-dot:nth-child(4) { background: #ffd700; }
-  .lego-dot:nth-child(5) { background: #2ecc71; }
-  .lego-dot:nth-child(6) { background: #e74c3c; }
-
-  /* 特典バッジ */
   .front-badges {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     margin-top: 16px;
     flex-wrap: wrap;
@@ -171,9 +175,8 @@
     border-color: #c41e24;
   }
 
-  /* フッター */
   .front-footer {
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.35);
     padding: 10px 16px;
     display: flex;
     align-items: center;
@@ -193,21 +196,26 @@
   .front-footer .point .icon {
     background: #ffd700;
     color: #1a1a1a;
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 900;
+    flex-shrink: 0;
   }
 
-  /* 下部CTA */
   .front-cta {
     background: #c41e24;
     padding: 10px 16px;
     text-align: center;
+  }
+
+  .front-cta .phone-note {
+    font-size: 11px;
+    color: #ffd700;
   }
 
   .front-cta .phone {
@@ -217,18 +225,8 @@
     letter-spacing: 2px;
   }
 
-  .front-cta .phone-icon {
-    font-size: 24px;
-    margin-right: 6px;
-  }
-
-  .front-cta .phone-note {
-    font-size: 11px;
-    color: #ffd700;
-  }
-
   /* ============================
-     裏面 (BACK)
+     裏面 (BACK) - height auto で見切れ防止
      ============================ */
   .back {
     background: #fff;
@@ -257,19 +255,19 @@
   .back-subtitle {
     background: #fff3cd;
     text-align: center;
-    padding: 8px;
-    font-size: 14px;
+    padding: 6px;
+    font-size: 13px;
     font-weight: 700;
     color: #c41e24;
     border-bottom: 2px solid #c41e24;
   }
 
-  /* 買取実績グリッド */
+  /* 買取実績グリッド - 写真版 */
   .results-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-    padding: 12px 12px 8px;
+    padding: 10px 10px 8px;
   }
 
   .result-item {
@@ -277,25 +275,31 @@
     border-radius: 6px;
     overflow: hidden;
     text-align: center;
+    background: #fff;
   }
 
   .result-item .item-img {
     width: 100%;
     height: 90px;
+    overflow: hidden;
     background: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    position: relative;
+  }
+
+  .result-item .item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .result-item .item-name {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
     padding: 3px 4px 1px;
     background: #1a6b2a;
     color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .result-item .item-price {
@@ -303,10 +307,7 @@
     font-weight: 900;
     color: #c41e24;
     padding: 2px 4px 4px;
-  }
-
-  .result-item .item-price .yen {
-    font-size: 11px;
+    line-height: 1.2;
   }
 
   .result-item .item-price .en {
@@ -314,7 +315,7 @@
     font-weight: 700;
   }
 
-  /* 中段メッセージ */
+  /* メッセージ帯 */
   .back-message {
     background: #1a6b2a;
     color: #fff;
@@ -322,7 +323,7 @@
     padding: 8px 12px;
     font-size: 14px;
     font-weight: 900;
-    margin: 0 12px;
+    margin: 6px 10px;
     border-radius: 6px;
   }
 
@@ -330,19 +331,19 @@
     color: #ffd700;
   }
 
-  /* その他買取品目 */
+  /* その他買取品目 - 写真版 */
   .other-items {
-    padding: 8px 12px;
+    padding: 6px 10px 8px;
   }
 
   .other-items h3 {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 900;
     color: #1a6b2a;
     text-align: center;
     margin-bottom: 6px;
     border-bottom: 2px dashed #1a6b2a;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
   }
 
   .other-grid {
@@ -355,44 +356,59 @@
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 4px;
-    padding: 4px;
+    overflow: hidden;
   }
 
-  .other-item .other-icon {
-    font-size: 28px;
-    display: block;
-    margin-bottom: 2px;
+  .other-item .other-img {
+    width: 100%;
+    height: 55px;
+    overflow: hidden;
+    background: #f9f9f9;
+  }
+
+  .other-item .other-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .other-item .other-name {
     font-size: 9px;
     font-weight: 700;
     color: #333;
+    padding: 2px 2px;
+    background: #f0f0f0;
   }
 
   /* フッター */
   .back-footer {
-    margin-top: auto;
     background: #c41e24;
-    padding: 12px 16px;
+    padding: 10px 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
+    margin-top: 6px;
   }
 
   .back-footer .staff-area {
     text-align: center;
+    flex-shrink: 0;
   }
 
-  .back-footer .staff-icon {
-    font-size: 36px;
+  .back-footer .staff-area img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
   }
 
   .back-footer .staff-text {
-    font-size: 9px;
+    font-size: 8px;
     color: #fff;
     font-weight: 700;
+    margin-top: 2px;
   }
 
   .back-footer .phone-area {
@@ -400,13 +416,13 @@
   }
 
   .back-footer .phone-label {
-    font-size: 11px;
+    font-size: 10px;
     color: #ffd700;
     font-weight: 700;
   }
 
   .back-footer .phone-number {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 900;
     color: #fff;
     letter-spacing: 1px;
@@ -417,28 +433,33 @@
     color: #fff;
   }
 
-  .back-footer .logo-footer img {
-    height: 18px;
-  }
-
   /* レスポンシブ */
   @media (max-width: 560px) {
     .chirashi {
       width: 100%;
-      height: auto;
-      aspect-ratio: 148 / 210;
     }
-    .front-main .main-product {
-      font-size: 16vw;
+    .main-product {
+      font-size: 17vw;
     }
-    .front-main .sub-text {
+    .sub-text {
       font-size: 8vw;
     }
     .front-cta .phone {
       font-size: 6vw;
     }
+    .front-photos img {
+      width: 28vw;
+      height: 20vw;
+    }
+    .front-photos-bottom img {
+      width: 17vw;
+      height: 13vw;
+    }
     .result-item .item-img {
-      height: 16vw;
+      height: 17vw;
+    }
+    .other-item .other-img {
+      height: 11vw;
     }
     .back-footer .phone-number {
       font-size: 5.5vw;
@@ -452,7 +473,6 @@
 <p class="page-label">【表面】</p>
 <div class="chirashi front">
 
-  <!-- ヘッダー -->
   <div class="front-header">
     <div class="logo-area">
       <img src="logo_wh.svg" alt="バイセル">
@@ -461,31 +481,25 @@
     <div class="listed">東証上場<br>企業</div>
   </div>
 
-  <!-- メインビジュアル -->
   <div class="front-main">
     <div class="shuzai-badge">出張買取</div>
 
-    <div class="lego-dots">
-      <div class="lego-dot"></div>
-      <div class="lego-dot"></div>
-      <div class="lego-dot"></div>
-      <div class="lego-dot"></div>
-      <div class="lego-dot"></div>
-      <div class="lego-dot"></div>
+    <!-- メイン写真 -->
+    <div class="front-photos">
+      <img src="https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=300&h=220&fit=crop" alt="レゴセット">
+      <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=300&h=220&fit=crop" alt="レゴブロック">
+      <img src="https://images.unsplash.com/photo-1560961911-ba7ef651a56c?w=300&h=220&fit=crop" alt="レゴミニフィグ">
     </div>
 
-    <div class="main-product">
-      <span class="highlight">レゴ</span>
-    </div>
+    <div class="main-product">レゴ</div>
     <div class="sub-text">高価買取します！</div>
 
-    <div class="lego-dots">
-      <div class="lego-dot"></div>
-      <div class="lego-dot"></div>
-      <div class="lego-dot"></div>
-      <div class="lego-dot"></div>
-      <div class="lego-dot"></div>
-      <div class="lego-dot"></div>
+    <!-- 下部写真帯 -->
+    <div class="front-photos-bottom">
+      <img src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?w=180&h=140&fit=crop" alt="レゴシティ">
+      <img src="https://images.unsplash.com/photo-1599508704512-2f19efd1e35f?w=180&h=140&fit=crop" alt="レゴテクニック">
+      <img src="https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=180&h=140&fit=crop" alt="レゴスターウォーズ">
+      <img src="https://images.unsplash.com/photo-1578652520385-c404cd08a252?w=180&h=140&fit=crop" alt="レゴクリエイター">
     </div>
 
     <div class="front-badges">
@@ -496,26 +510,15 @@
     </div>
   </div>
 
-  <!-- ポイント -->
   <div class="front-footer">
-    <div class="point">
-      <span class="icon">✓</span>
-      開封済みでもOK
-    </div>
-    <div class="point">
-      <span class="icon">✓</span>
-      パーツ欠品でもOK
-    </div>
-    <div class="point">
-      <span class="icon">✓</span>
-      箱なしでもOK
-    </div>
+    <div class="point"><span class="icon">✓</span>開封済みでもOK</div>
+    <div class="point"><span class="icon">✓</span>パーツ欠品でもOK</div>
+    <div class="point"><span class="icon">✓</span>箱なしでもOK</div>
   </div>
 
-  <!-- CTA -->
   <div class="front-cta">
     <div class="phone-note">まずはお気軽にお電話ください（24時間受付）</div>
-    <div class="phone"><span class="phone-icon">📞</span>0120-XXX-XXX</div>
+    <div class="phone">0120-XXX-XXX</div>
   </div>
 
 </div>
@@ -524,115 +527,112 @@
 <p class="page-label">【裏面】</p>
 <div class="chirashi back">
 
-  <!-- ヘッダー -->
   <div class="back-header">
     <h2>バイセルの豊富な <span>買取実績</span></h2>
   </div>
 
   <div class="back-subtitle">納得の買取実績をご覧ください！</div>
 
-  <!-- 買取実績 -->
+  <!-- 買取実績（写真付き） -->
   <div class="results-grid">
     <div class="result-item">
-      <div class="item-img">🏰</div>
-      <div class="item-name">レゴ クリエイター</div>
+      <div class="item-img"><img src="https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=300&h=200&fit=crop" alt="レゴ クリエイター エキスパート"></div>
+      <div class="item-name">クリエイター エキスパート</div>
       <div class="item-price">85,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img">⭐</div>
-      <div class="item-name">レゴ スター・ウォーズ</div>
+      <div class="item-img"><img src="https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=300&h=200&fit=crop" alt="レゴ スター・ウォーズ"></div>
+      <div class="item-name">スター・ウォーズ</div>
       <div class="item-price">120,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img">🏙️</div>
-      <div class="item-name">レゴ モジュラー</div>
+      <div class="item-img"><img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=300&h=200&fit=crop" alt="レゴ モジュラービルディング"></div>
+      <div class="item-name">モジュラービルディング</div>
       <div class="item-price">65,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img">🔧</div>
-      <div class="item-name">レゴ テクニック</div>
+      <div class="item-img"><img src="https://images.unsplash.com/photo-1599508704512-2f19efd1e35f?w=300&h=200&fit=crop" alt="レゴ テクニック"></div>
+      <div class="item-name">テクニック</div>
       <div class="item-price">55,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img">🏗️</div>
-      <div class="item-name">レゴ アーキテクチャー</div>
+      <div class="item-img"><img src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?w=300&h=200&fit=crop" alt="レゴ シティ"></div>
+      <div class="item-name">レゴ シティ</div>
       <div class="item-price">45,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img">🦸</div>
-      <div class="item-name">レゴ マーベル</div>
+      <div class="item-img"><img src="https://images.unsplash.com/photo-1560961911-ba7ef651a56c?w=300&h=200&fit=crop" alt="レゴ ミニフィグ"></div>
+      <div class="item-name">ミニフィグ まとめ</div>
       <div class="item-price">38,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img">🏎️</div>
-      <div class="item-name">レゴ スピードチャンピオン</div>
+      <div class="item-img"><img src="https://images.unsplash.com/photo-1578652520385-c404cd08a252?w=300&h=200&fit=crop" alt="レゴ アーキテクチャー"></div>
+      <div class="item-name">アーキテクチャー</div>
       <div class="item-price">25,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img">🌸</div>
-      <div class="item-name">レゴ フラワーブーケ</div>
-      <div class="item-price">8,000<span class="en">円</span></div>
+      <div class="item-img"><img src="https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?w=300&h=200&fit=crop" alt="レゴ ニンジャゴー"></div>
+      <div class="item-name">ニンジャゴー</div>
+      <div class="item-price">15,000<span class="en">円</span></div>
     </div>
     <div class="result-item">
-      <div class="item-img">🧱</div>
-      <div class="item-name">レゴ ミニフィグまとめ</div>
-      <div class="item-price">15,000<span class="en">円</span></div>
+      <div class="item-img"><img src="https://images.unsplash.com/photo-1518946222227-364f22132616?w=300&h=200&fit=crop" alt="レゴ デュプロ"></div>
+      <div class="item-name">デュプロ まとめ</div>
+      <div class="item-price">8,000<span class="en">円</span></div>
     </div>
   </div>
 
-  <!-- メッセージ -->
   <div class="back-message">
     <span>レゴ以外</span>のおもちゃ・ホビーの査定も大歓迎です!!
   </div>
 
-  <!-- その他買取品目 -->
+  <!-- その他買取品目（写真付き） -->
   <div class="other-items">
     <h3>その他の買取品目</h3>
     <div class="other-grid">
       <div class="other-item">
-        <span class="other-icon">👘</span>
-        <span class="other-name">着物</span>
+        <div class="other-img"><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=200&h=140&fit=crop" alt="着物"></div>
+        <div class="other-name">着物</div>
       </div>
       <div class="other-item">
-        <span class="other-icon">💍</span>
-        <span class="other-name">貴金属</span>
+        <div class="other-img"><img src="https://images.unsplash.com/photo-1515562141589-67f0d569b6c4?w=200&h=140&fit=crop" alt="貴金属"></div>
+        <div class="other-name">貴金属</div>
       </div>
       <div class="other-item">
-        <span class="other-icon">⌚</span>
-        <span class="other-name">ブランド品</span>
+        <div class="other-img"><img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=200&h=140&fit=crop" alt="ブランド品"></div>
+        <div class="other-name">ブランド品</div>
       </div>
       <div class="other-item">
-        <span class="other-icon">🪙</span>
-        <span class="other-name">古銭</span>
+        <div class="other-img"><img src="https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=200&h=140&fit=crop" alt="古銭"></div>
+        <div class="other-name">古銭</div>
       </div>
       <div class="other-item">
-        <span class="other-icon">📮</span>
-        <span class="other-name">切手</span>
+        <div class="other-img"><img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=200&h=140&fit=crop" alt="切手"></div>
+        <div class="other-name">切手</div>
       </div>
       <div class="other-item">
-        <span class="other-icon">🍶</span>
-        <span class="other-name">お酒</span>
+        <div class="other-img"><img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=200&h=140&fit=crop" alt="お酒"></div>
+        <div class="other-name">お酒</div>
       </div>
       <div class="other-item">
-        <span class="other-icon">🖼️</span>
-        <span class="other-name">骨董品</span>
+        <div class="other-img"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=200&h=140&fit=crop" alt="骨董品"></div>
+        <div class="other-name">骨董品</div>
       </div>
       <div class="other-item">
-        <span class="other-icon">🎸</span>
-        <span class="other-name">楽器</span>
+        <div class="other-img"><img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=200&h=140&fit=crop" alt="楽器"></div>
+        <div class="other-name">楽器</div>
       </div>
     </div>
   </div>
 
-  <!-- フッター -->
   <div class="back-footer">
     <div class="staff-area">
-      <div class="staff-icon">👨‍💼</div>
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop" alt="査定士">
       <div class="staff-text">経験豊富な<br>査定士が対応</div>
     </div>
     <div class="phone-area">
       <div class="phone-label">お問い合わせ・お申し込みはこちら</div>
-      <div class="phone-number">📞 0120-XXX-XXX</div>
+      <div class="phone-number">0120-XXX-XXX</div>
       <div class="phone-hours">【24時間・365日受付】通話料無料</div>
     </div>
   </div>
