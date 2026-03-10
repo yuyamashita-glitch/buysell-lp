@@ -327,17 +327,26 @@
   .event-phone .phone-number { font-size: 32px; font-weight: 900; color: #fff; letter-spacing: 2px; line-height: 1.2; }
   .event-phone .phone-hours { font-size: 9px; color: rgba(255,255,255,0.8); }
 
-  .event-notes {
+  .disclaimers {
     font-size: 8px; color: rgba(255,255,255,0.7); margin-top: 4px; line-height: 1.4;
   }
 
-  .legal-footer {
+  .company-info {
     background: #0d1242; padding: 6px 12px; margin-top: 6px;
     border-top: 1px solid rgba(255,255,255,0.2);
-  }
-  .legal-footer .legal-text {
     font-size: 7px; color: rgba(255,255,255,0.6); line-height: 1.5;
   }
+
+  /* 裏面フッター */
+  .back-footer {
+    background: linear-gradient(135deg, #c41e24, #a01018);
+    padding: 8px 12px; text-align: center;
+    border-top: 3px solid #ffd700;
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+  }
+  .back-footer .footer-phone .phone-note { font-size: 10px; color: #ffd700; font-weight: 700; }
+  .back-footer .footer-phone .phone-number { font-size: 28px; font-weight: 900; color: #fff; letter-spacing: 2px; line-height: 1.1; }
+  .back-footer .footer-phone .phone-sub { font-size: 9px; color: rgba(255,255,255,0.8); }
 
   /* レスポンシブ */
   @media (max-width: 560px) {
@@ -538,19 +547,27 @@
       <div class="phone-hours">【24時間・365日受付】通話料無料</div>
     </div>
 
-    <div class="event-notes">
+    <div class="disclaimers">
       ※買取の際は本人確認書類（運転免許証・マイナンバーカード等）をご持参ください。<br>
       ※未成年者からの買取はできません。（成年の方でも20歳未満の方からの酒類の買取はできません）<br>
       ※お支払いは内容によって振込対応となる場合もございます。<br>
-      ※季節事情または地域により出張査定や即日での対応が難しい場合もございます。
+      ※季節事情または地域により出張査定や即日での対応が難しい場合もございます。<br>
+      ※内容により宅配査定・店舗査定をご案内する場合がございます。
     </div>
 
-    <div class="legal-footer">
-      <div class="legal-text">
-        ※運営会社：株式会社BuySell Technologies<br>
-        〒160-0004 東京都新宿区四谷4-28-8 PALTビル<br>
-        東京都公安委員会古物商許可番号：第301041408603号
-      </div>
+    <div class="company-info">
+      運営会社：株式会社BuySell Technologies<br>
+      〒160-0004 東京都新宿区四谷4-28-8 PALTビル<br>
+      【東京都公安委員会】古物商許可番号：第301041408603号
+    </div>
+  </div>
+
+  <!-- 裏面フッター -->
+  <div class="back-footer">
+    <div class="footer-phone">
+      <div class="phone-note">お問い合わせ・ご予約</div>
+      <div class="phone-number">0120-000-000</div>
+      <div class="phone-sub">【24時間・365日受付】通話料無料</div>
     </div>
   </div>
 </div>
