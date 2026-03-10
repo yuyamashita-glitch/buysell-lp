@@ -23,122 +23,224 @@
 
   .page-label { font-size: 14px; color: #666; margin-bottom: -10px; font-weight: 700; }
 
-  .chirashi { width: 520px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+  .chirashi { width: 520px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); overflow: hidden; }
 
   /* === 表面 === */
   .front { background: #8B0000; color: #fff; display: flex; flex-direction: column; }
 
   .front-header {
-    background: #c41e24; padding: 8px 16px;
+    background: #c41e24; padding: 6px 12px;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .front-header .logo-area { display: flex; align-items: center; gap: 10px; }
-  .front-header .logo-area img { height: 22px; }
+  .front-header .logo-area { display: flex; align-items: center; gap: 8px; }
+  .front-header .logo-area img { height: 20px; }
   .front-header .cm-text {
-    font-size: 10px; background: #fff; color: #c41e24;
-    padding: 2px 8px; border-radius: 3px; font-weight: 700;
+    font-size: 9px; background: #fff; color: #c41e24;
+    padding: 2px 6px; border-radius: 3px; font-weight: 700;
   }
-  .front-header .listed { font-size: 9px; color: #fff; text-align: right; line-height: 1.3; }
+  .front-header .listed { font-size: 8px; color: #fff; text-align: right; line-height: 1.3; }
+
+  /* 開催情報バナー（表面上部） */
+  .event-banner {
+    background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1a237e 100%);
+    padding: 10px 12px;
+    text-align: center;
+    position: relative;
+    border-top: 3px solid #ffd700;
+    border-bottom: 3px solid #ffd700;
+  }
+  .event-banner::before,
+  .event-banner::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 30px;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 4px,
+      rgba(255,215,0,0.15) 4px,
+      rgba(255,215,0,0.15) 8px
+    );
+  }
+  .event-banner::before { left: 0; }
+  .event-banner::after { right: 0; }
+  .event-banner .eb-label {
+    display: inline-block;
+    background: #ffd700; color: #1a237e;
+    font-size: 11px; font-weight: 900;
+    padding: 2px 14px; border-radius: 3px;
+    margin-bottom: 4px;
+    letter-spacing: 2px;
+  }
+  .event-banner .eb-date {
+    font-size: 28px; font-weight: 900; color: #fff;
+    line-height: 1.2;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+  }
+  .event-banner .eb-date .eb-small { font-size: 14px; }
+  .event-banner .eb-time {
+    font-size: 14px; font-weight: 700; color: #ffd700;
+    margin-top: 2px;
+  }
+  .event-banner .eb-venue {
+    font-size: 16px; font-weight: 900; color: #fff;
+    margin-top: 4px;
+    background: rgba(255,255,255,0.12);
+    padding: 3px 10px; border-radius: 4px;
+    display: inline-block;
+  }
+  .event-banner .eb-address {
+    font-size: 9px; color: rgba(255,255,255,0.8);
+    margin-top: 2px;
+  }
 
   .front-main {
-    padding: 14px 20px; text-align: center;
+    padding: 10px 14px; text-align: center;
     display: flex; flex-direction: column; align-items: center;
     background: linear-gradient(180deg, #8B0000 0%, #5a0000 100%);
+    position: relative;
+  }
+  /* 斜めストライプ装飾 */
+  .front-main::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 18px,
+      rgba(255,215,0,0.03) 18px,
+      rgba(255,215,0,0.03) 20px
+    );
+    pointer-events: none;
   }
 
   .gold-badge {
     background: linear-gradient(135deg, #f5d442, #c9952a);
-    color: #3C2509; font-size: 14px; font-weight: 900;
-    padding: 4px 24px; border-radius: 30px; margin-bottom: 8px;
+    color: #3C2509; font-size: 13px; font-weight: 900;
+    padding: 3px 20px; border-radius: 30px; margin-bottom: 4px;
     border: 2px solid #f5d442;
     text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+    position: relative;
   }
 
   .catch-copy {
-    font-size: 15px; font-weight: 700; color: #ffd700;
-    line-height: 1.5; margin-bottom: 6px;
+    font-size: 14px; font-weight: 700; color: #ffd700;
+    line-height: 1.4; margin-bottom: 4px;
+    position: relative;
   }
 
   .price-highlight {
     background: linear-gradient(135deg, #f5d442, #c9952a);
-    color: #3C2509; padding: 8px 20px; border-radius: 10px;
-    margin-bottom: 10px; text-align: center;
+    color: #3C2509; padding: 6px 16px; border-radius: 8px;
+    margin-bottom: 6px; text-align: center;
     border: 3px solid #ffd700;
     box-shadow: 0 3px 15px rgba(255,215,0,0.4);
+    position: relative;
   }
-  .price-highlight .label { font-size: 13px; font-weight: 700; }
-  .price-highlight .price { font-size: 18px; font-weight: 900; }
-  .price-highlight .note { font-size: 9px; font-weight: 500; margin-top: 2px; }
+  .price-highlight .label { font-size: 11px; font-weight: 700; }
+  .price-highlight .price { font-size: 16px; font-weight: 900; }
+  .price-highlight .note { font-size: 8px; font-weight: 500; margin-top: 2px; }
 
-  .front-photos { display: flex; justify-content: center; gap: 8px; margin-bottom: 10px; }
+  .front-photos { display: flex; justify-content: center; gap: 6px; margin-bottom: 6px; position: relative; }
   .front-photos img {
-    width: 190px; height: 130px; object-fit: contain; border-radius: 8px;
+    width: 150px; height: 100px; object-fit: contain; border-radius: 6px;
     border: 3px solid #ffd700; box-shadow: 0 3px 10px rgba(0,0,0,0.4);
     background: #fff;
   }
 
-  .main-title { font-size: 22px; font-weight: 900; color: #fff; line-height: 1.3; text-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
-  .main-title .big { font-size: 46px; color: #ffd700; display: block; line-height: 1.1; text-shadow: 3px 3px 0 rgba(0,0,0,0.4); }
-  .main-title .mid { font-size: 26px; color: #fff; }
+  .main-title { font-size: 18px; font-weight: 900; color: #fff; line-height: 1.2; text-shadow: 2px 2px 0 rgba(0,0,0,0.3); position: relative; }
+  .main-title .big { font-size: 38px; color: #ffd700; display: block; line-height: 1.1; text-shadow: 3px 3px 0 rgba(0,0,0,0.4); }
+  .main-title .mid { font-size: 22px; color: #fff; }
 
   /* 貴金属カテゴリ4アイテム */
   .gold-categories {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;
-    margin: 12px 0 8px; width: 100%;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;
+    margin: 6px 0 4px; width: 100%;
+    position: relative;
   }
   .gold-cat-item {
-    background: #fff; border-radius: 6px; text-align: center; padding: 6px 4px;
+    background: #fff; border-radius: 5px; text-align: center; padding: 4px 3px;
     border: 2px solid #ffd700;
   }
   .gold-cat-item img {
-    width: 100%; height: 55px; object-fit: contain;
+    width: 100%; height: 45px; object-fit: contain;
   }
   .gold-cat-item .cat-name {
-    font-size: 9px; font-weight: 900; color: #3C2509; margin-top: 3px;
+    font-size: 8px; font-weight: 900; color: #3C2509; margin-top: 2px;
   }
 
   .urgency-message {
     background: linear-gradient(90deg, #c41e24, #e63e3e);
-    color: #fff; font-size: 14px; font-weight: 900; padding: 8px 16px;
-    border-radius: 8px; margin: 8px 0;
+    color: #fff; font-size: 12px; font-weight: 900; padding: 5px 12px;
+    border-radius: 6px; margin: 4px 0;
     text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
     border: 2px solid #ffd700;
+    position: relative;
   }
 
-  .front-badges { display: flex; gap: 6px; justify-content: center; margin-top: 8px; flex-wrap: wrap; }
+  .front-badges { display: flex; gap: 4px; justify-content: center; margin-top: 4px; flex-wrap: wrap; position: relative; }
   .badge {
-    background: #fff; color: #8B0000; font-size: 11px; font-weight: 900;
-    padding: 5px 10px; border-radius: 6px; border: 2px solid #ffd700;
+    background: #fff; color: #8B0000; font-size: 10px; font-weight: 900;
+    padding: 3px 8px; border-radius: 5px; border: 2px solid #ffd700;
   }
   .badge.gold { background: #ffd700; color: #3C2509; border-color: #c9952a; }
 
-  .front-footer {
-    background: rgba(0,0,0,0.35); padding: 8px 16px;
-    display: flex; align-items: center; justify-content: center; gap: 14px;
+  /* 特徴タグライン */
+  .tagline-strip {
+    background: #ffd700;
+    display: flex; justify-content: center; gap: 0;
+    padding: 0;
   }
-  .front-footer .point { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; color: #fff; }
+  .tagline-strip .tag-item {
+    flex: 1;
+    text-align: center;
+    font-size: 11px; font-weight: 900; color: #3C2509;
+    padding: 5px 4px;
+    border-right: 1px solid rgba(0,0,0,0.15);
+    position: relative;
+  }
+  .tagline-strip .tag-item:last-child { border-right: none; }
+  .tagline-strip .tag-item .tag-icon {
+    font-size: 14px; display: block; line-height: 1;
+  }
+  .tagline-strip .tag-item .tag-text {
+    font-size: 9px; font-weight: 700;
+  }
+
+  .front-footer {
+    background: rgba(0,0,0,0.35); padding: 5px 12px;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+  .front-footer .point { display: flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 700; color: #fff; }
   .front-footer .point .icon {
-    background: #ffd700; color: #3C2509; width: 22px; height: 22px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 900; flex-shrink: 0;
+    background: #ffd700; color: #3C2509; width: 18px; height: 18px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900; flex-shrink: 0;
   }
 
   .cta-phone {
-    background: #c41e24; padding: 12px 16px; text-align: center;
+    background: linear-gradient(135deg, #c41e24, #a01018);
+    padding: 8px 12px; text-align: center;
+    border-top: 2px solid #ffd700;
   }
-  .cta-phone .phone-note { font-size: 12px; color: #ffd700; font-weight: 700; }
-  .cta-phone .phone { font-size: 42px; font-weight: 900; color: #fff; letter-spacing: 3px; line-height: 1.2; }
-  .cta-phone .phone-sub { font-size: 10px; color: #fff; margin-top: 2px; }
+  .cta-phone .phone-note { font-size: 10px; color: #ffd700; font-weight: 700; }
+  .cta-phone .phone-number-main { font-size: 36px; font-weight: 900; color: #fff; letter-spacing: 2px; line-height: 1.1; }
+  .cta-phone .phone-sub { font-size: 9px; color: rgba(255,255,255,0.8); margin-top: 1px; }
 
   /* === 裏面 === */
   .back { background: #fff; color: #333; display: flex; flex-direction: column; }
 
-  .back-header { background: #c41e24; padding: 8px 16px; text-align: center; }
-  .back-header h2 { color: #fff; font-size: 17px; font-weight: 900; }
-  .back-header h2 span { color: #ffd700; font-size: 20px; }
+  .back-header {
+    background: linear-gradient(90deg, #c41e24, #8B0000);
+    padding: 8px 16px; text-align: center;
+    border-bottom: 3px solid #ffd700;
+  }
+  .back-header h2 { color: #fff; font-size: 16px; font-weight: 900; }
+  .back-header h2 span { color: #ffd700; font-size: 18px; }
 
   .back-subtitle {
     background: #fff3cd; text-align: center; padding: 5px;
-    font-size: 12px; font-weight: 700; color: #c41e24; border-bottom: 2px solid #c41e24;
+    font-size: 11px; font-weight: 700; color: #c41e24; border-bottom: 2px solid #c41e24;
   }
 
   /* 買取カテゴリセクション */
@@ -147,110 +249,108 @@
     display: flex; align-items: center; gap: 8px; margin-bottom: 5px;
   }
   .category-title .cat-label {
-    background: #c41e24; color: #fff; font-size: 13px; font-weight: 900;
+    background: #c41e24; color: #fff; font-size: 12px; font-weight: 900;
     padding: 3px 12px; border-radius: 4px;
   }
-  .category-title .cat-note {
-    font-size: 10px; color: #666; font-weight: 500;
-  }
 
-  .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; padding: 0 8px 4px; }
+  .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 0 8px 4px; }
   .result-item { border: 2px solid #ddd; border-radius: 5px; overflow: hidden; text-align: center; background: #fff; }
-  .result-item .item-img { width: 100%; height: 68px; overflow: hidden; background: #f5f5f5; }
+  .result-item .item-img { width: 100%; height: 65px; overflow: hidden; background: #f5f5f5; }
   .result-item .item-img img { width: 100%; height: 100%; object-fit: contain; }
   .result-item .item-name {
-    font-size: 8px; font-weight: 700; padding: 2px 3px 3px;
+    font-size: 8px; font-weight: 700; padding: 2px 3px;
     background: #8B0000; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
 
   .back-message {
     background: linear-gradient(135deg, #f5d442, #c9952a); color: #3C2509; text-align: center;
-    padding: 6px 10px; font-size: 12px; font-weight: 900; margin: 5px 8px; border-radius: 5px;
+    padding: 6px 10px; font-size: 11px; font-weight: 900; margin: 5px 8px; border-radius: 5px;
   }
   .back-message span { color: #8B0000; }
 
   /* その他買取品目 */
   .other-items { padding: 5px 8px 6px; }
   .other-items h3 {
-    font-size: 14px; font-weight: 900; color: #c41e24; text-align: center;
-    background: #fff3cd; padding: 5px; border-radius: 4px; margin-bottom: 6px;
+    font-size: 13px; font-weight: 900; color: #c41e24; text-align: center;
+    background: #fff3cd; padding: 4px; border-radius: 4px; margin-bottom: 5px;
   }
-  .other-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+  .other-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
   .other-item { text-align: center; border: 2px solid #ddd; border-radius: 5px; overflow: hidden; }
-  .other-item .other-img { width: 100%; height: 70px; overflow: hidden; background: #f9f9f9; }
+  .other-item .other-img { width: 100%; height: 65px; overflow: hidden; background: #f9f9f9; }
   .other-item .other-img img { width: 100%; height: 100%; object-fit: contain; }
-  .other-item .other-name { font-size: 9px; font-weight: 700; color: #333; padding: 3px 2px; background: #f0f0f0; }
+  .other-item .other-name { font-size: 8px; font-weight: 700; color: #333; padding: 2px; background: #f0f0f0; }
 
   /* 買取の流れ */
   .flow-section {
-    background: #f9f5eb; padding: 8px; margin: 0 8px 5px; border-radius: 6px;
+    background: #f9f5eb; padding: 6px 8px; margin: 0 8px 4px; border-radius: 5px;
   }
   .flow-title {
-    font-size: 13px; font-weight: 900; color: #c41e24; text-align: center; margin-bottom: 6px;
+    font-size: 12px; font-weight: 900; color: #c41e24; text-align: center; margin-bottom: 4px;
   }
-  .flow-steps { display: flex; justify-content: center; gap: 4px; }
+  .flow-steps { display: flex; justify-content: center; gap: 3px; }
   .flow-step {
-    text-align: center; flex: 1; background: #fff; border-radius: 6px;
-    padding: 6px 4px; border: 1px solid #ddd;
+    text-align: center; flex: 1; background: #fff; border-radius: 5px;
+    padding: 4px 3px; border: 1px solid #ddd;
   }
   .flow-step .step-num {
-    background: #c41e24; color: #fff; font-size: 10px; font-weight: 900;
-    width: 20px; height: 20px; border-radius: 50%; display: inline-flex;
-    align-items: center; justify-content: center; margin-bottom: 3px;
+    background: #c41e24; color: #fff; font-size: 9px; font-weight: 900;
+    width: 18px; height: 18px; border-radius: 50%; display: inline-flex;
+    align-items: center; justify-content: center; margin-bottom: 2px;
   }
-  .flow-step .step-text { font-size: 9px; font-weight: 700; color: #333; line-height: 1.3; }
+  .flow-step .step-text { font-size: 8px; font-weight: 700; color: #333; line-height: 1.3; }
 
-  /* 催事スケジュール */
+  /* 催事スケジュール（裏面） */
   .event-section {
-    background: #8B0000; padding: 12px 16px; text-align: center;
+    background: linear-gradient(135deg, #1a237e, #283593);
+    padding: 10px 14px; text-align: center;
+    border-top: 3px solid #ffd700;
   }
   .event-section .event-title {
-    color: #ffd700; font-size: 16px; font-weight: 900; margin-bottom: 8px;
+    color: #ffd700; font-size: 14px; font-weight: 900; margin-bottom: 6px;
     text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
   }
   .event-info {
-    background: #fff; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px;
+    background: #fff; border-radius: 8px; padding: 8px 12px; margin-bottom: 6px;
     border: 3px solid #ffd700;
   }
   .event-info .event-date {
-    font-size: 22px; font-weight: 900; color: #c41e24; line-height: 1.3;
+    font-size: 20px; font-weight: 900; color: #c41e24; line-height: 1.3;
   }
   .event-info .event-time {
-    font-size: 13px; font-weight: 700; color: #333; margin-top: 2px;
+    font-size: 12px; font-weight: 700; color: #333; margin-top: 2px;
   }
   .event-info .event-place {
-    font-size: 15px; font-weight: 900; color: #3C2509; margin-top: 6px;
-    padding-top: 6px; border-top: 1px dashed #ddd;
+    font-size: 14px; font-weight: 900; color: #3C2509; margin-top: 4px;
+    padding-top: 4px; border-top: 1px dashed #ddd;
   }
   .event-info .event-address {
-    font-size: 10px; font-weight: 500; color: #666; margin-top: 2px;
+    font-size: 9px; font-weight: 500; color: #666; margin-top: 2px;
   }
 
-  .event-phone {
-    margin-top: 8px;
-  }
-  .event-phone .phone-label { font-size: 10px; color: #ffd700; font-weight: 700; }
-  .event-phone .phone-number { font-size: 36px; font-weight: 900; color: #fff; letter-spacing: 2px; line-height: 1.2; }
-  .event-phone .phone-hours { font-size: 10px; color: #fff; }
+  .event-phone { margin-top: 6px; }
+  .event-phone .phone-label { font-size: 9px; color: #ffd700; font-weight: 700; }
+  .event-phone .phone-number { font-size: 32px; font-weight: 900; color: #fff; letter-spacing: 2px; line-height: 1.2; }
+  .event-phone .phone-hours { font-size: 9px; color: rgba(255,255,255,0.8); }
 
   .event-notes {
-    font-size: 9px; color: rgba(255,255,255,0.7); margin-top: 6px; line-height: 1.4;
+    font-size: 8px; color: rgba(255,255,255,0.7); margin-top: 4px; line-height: 1.4;
   }
 
   /* レスポンシブ */
   @media (max-width: 560px) {
     .chirashi { width: 100%; }
-    .catch-copy { font-size: 3.2vw; }
-    .main-title .big { font-size: 9.5vw; }
-    .main-title .mid { font-size: 5.5vw; }
-    .cta-phone .phone { font-size: 8vw; }
-    .front-photos img { width: 22vw; height: 16vw; }
+    .event-banner .eb-date { font-size: 6vw; }
+    .event-banner .eb-venue { font-size: 3.5vw; }
+    .main-title .big { font-size: 8vw; }
+    .main-title .mid { font-size: 5vw; }
+    .cta-phone .phone-number-main { font-size: 7vw; }
+    .front-photos img { width: 28vw; height: 20vw; }
     .gold-categories { grid-template-columns: repeat(4, 1fr); }
-    .gold-cat-item img { height: 10vw; }
-    .result-item .item-img { height: 13vw; }
-    .other-item .other-img { height: 14vw; }
-    .event-info .event-date { font-size: 5vw; }
-    .event-phone .phone-number { font-size: 7vw; }
+    .gold-cat-item img { height: 9vw; }
+    .result-item .item-img { height: 12vw; }
+    .other-item .other-img { height: 13vw; }
+    .event-info .event-date { font-size: 4.5vw; }
+    .event-phone .phone-number { font-size: 6.5vw; }
   }
 </style>
 </head>
@@ -267,9 +367,18 @@
     <div class="listed">東証上場<br>企業</div>
   </div>
 
+  <!-- 開催情報バナー（目立つ位置） -->
+  <div class="event-banner">
+    <div class="eb-label">買取催事 開催決定</div>
+    <div class="eb-date">3<span class="eb-small">月</span>18<span class="eb-small">日(水)</span>〜20<span class="eb-small">日(金)</span></div>
+    <div class="eb-time">10:00〜17:00</div>
+    <div class="eb-venue">マックスバリュ瓢箪山店</div>
+    <div class="eb-address">大阪府東大阪市昭和町1-2</div>
+  </div>
+
   <div class="front-main">
     <div class="gold-badge">出張買取催事</div>
-    <div class="catch-copy">金・プラチナ 歴史的高騰中！</div>
+    <div class="catch-copy">金・プラチナ 歴史的高騰中！<br>今がチャンス！</div>
 
     <div class="front-photos">
       <img src="img/kikinzoku.jpg" alt="貴金属・金製品">
@@ -277,7 +386,7 @@
     </div>
 
     <div class="main-title">
-      <span class="big">貴金属</span>
+      <span class="big">金・貴金属</span>
       <span class="mid">高価買取いたします！</span>
     </div>
 
@@ -301,26 +410,28 @@
     </div>
 
     <div class="urgency-message">
-      価値が下がる前に一度ご相談ください！
+      ⚡ 価値が下がる前に一度ご相談ください！
     </div>
 
     <div class="front-badges">
       <div class="badge">査定完全無料</div>
       <div class="badge">買取相談のみOK</div>
-      <div class="badge">1点からでもOK</div>
-      <div class="badge gold">即現金手渡し</div>
+      <div class="badge">1点からOK</div>
+      <div class="badge gold">即現金お渡し</div>
     </div>
   </div>
 
-  <div class="front-footer">
-    <div class="point"><span class="icon">✓</span>傷・汚れOK</div>
-    <div class="point"><span class="icon">✓</span>箱・保証書なしOK</div>
-    <div class="point"><span class="icon">✓</span>壊れていてもOK</div>
+  <!-- 特徴タグライン -->
+  <div class="tagline-strip">
+    <div class="tag-item"><span class="tag-icon">✓</span><span class="tag-text">傷・汚れOK</span></div>
+    <div class="tag-item"><span class="tag-icon">✓</span><span class="tag-text">箱・保証書なしOK</span></div>
+    <div class="tag-item"><span class="tag-icon">✓</span><span class="tag-text">壊れていてもOK</span></div>
+    <div class="tag-item"><span class="tag-icon">✓</span><span class="tag-text">予約不要</span></div>
   </div>
 
   <div class="cta-phone">
     <div class="phone-note">まずはお気軽にお電話ください</div>
-    <div class="phone">0120-000-000</div>
+    <div class="phone-number-main">0120-000-000</div>
     <div class="phone-sub">【24時間・365日受付】通話料無料</div>
   </div>
 </div>
@@ -394,19 +505,19 @@
     <div class="flow-steps">
       <div class="flow-step">
         <div class="step-num">1</div>
-        <div class="step-text">ご来場<br><span style="font-size:8px;color:#888;">予約なしでもOK</span></div>
+        <div class="step-text">ご来場<br><span style="font-size:7px;color:#888;">予約なしでもOK</span></div>
       </div>
       <div class="flow-step">
         <div class="step-num">2</div>
-        <div class="step-text">相談・査定<br><span style="font-size:8px;color:#888;">その場で査定</span></div>
+        <div class="step-text">相談・査定<br><span style="font-size:7px;color:#888;">その場で査定</span></div>
       </div>
       <div class="flow-step">
         <div class="step-num">3</div>
-        <div class="step-text">身分証の提示<br><span style="font-size:8px;color:#888;">運転免許証等</span></div>
+        <div class="step-text">身分証の提示<br><span style="font-size:7px;color:#888;">運転免許証等</span></div>
       </div>
       <div class="flow-step">
         <div class="step-num">4</div>
-        <div class="step-text">現金即払い<br><span style="font-size:8px;color:#888;">その場でお渡し</span></div>
+        <div class="step-text">現金即払い<br><span style="font-size:7px;color:#888;">その場でお渡し</span></div>
       </div>
     </div>
   </div>
@@ -417,8 +528,8 @@
 
     <div class="event-info">
       <div class="event-date">3月18日(水)〜20日(金)</div>
-      <div class="event-time">10:00〜18:00</div>
-      <div class="event-place">マックスバリュ 瓢箪山店</div>
+      <div class="event-time">10:00〜17:00</div>
+      <div class="event-place">マックスバリュ瓢箪山店</div>
       <div class="event-address">大阪府東大阪市昭和町1-2</div>
     </div>
 
