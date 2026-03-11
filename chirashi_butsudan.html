@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>仏壇・仏具買取 折り込みチラシ - バイセル</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .page-label { font-size: 14px; color: #666; margin-bottom: -10px; font-weight: 700; }
+
+  .chirashi { width: 520px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+
+  /* === 表面 === */
+  .front {
+    background: #2d1b3d;
+    color: #fff; display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+  }
+  /* 麻の葉パターン風（和柄） */
+  .front::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(circle at 50% 100%, transparent 68%, rgba(212,175,55,0.07) 68%, rgba(212,175,55,0.07) 72%, transparent 72%) 0 0 / 50px 25px,
+      radial-gradient(circle at 50% 100%, transparent 68%, rgba(212,175,55,0.07) 68%, rgba(212,175,55,0.07) 72%, transparent 72%) 25px 12.5px / 50px 25px;
+    pointer-events: none; z-index: 1;
+  }
+  .front::after {
+    content: ''; position: absolute; bottom: -60px; left: -60px;
+    width: 180px; height: 180px; border-radius: 50%;
+    background: radial-gradient(circle, transparent 55%, rgba(212,175,55,0.08) 55%, rgba(212,175,55,0.08) 60%, transparent 60%,
+      transparent 65%, rgba(212,175,55,0.05) 65%, rgba(212,175,55,0.05) 70%, transparent 70%);
+    pointer-events: none; z-index: 1;
+  }
+
+  .front-header { background: #f5d000; margin: 0; padding: 0; line-height: 0; overflow: hidden; position: relative; z-index: 2; }
+  .front-header img { width: 100%; display: block; margin-bottom: -4px; }
+
+  .front-accent {
+    background: linear-gradient(90deg, #8b6914, #d4af37, #f5e6a3, #d4af37, #8b6914);
+    height: 6px; position: relative; z-index: 2;
+    box-shadow: 0 2px 8px rgba(212,175,55,0.4);
+  }
+
+  .front-main {
+    padding: 16px 20px 10px; text-align: center;
+    display: flex; flex-direction: column; align-items: center;
+    position: relative; z-index: 2;
+  }
+
+  .catch-copy {
+    font-size: 16px; font-weight: 900; color: #fff;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.5); line-height: 1.6; margin-bottom: 4px;
+  }
+  .catch-copy .highlight {
+    color: #f5e6a3; font-size: 21px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.5), 0 0 20px rgba(212,175,55,0.3);
+  }
+
+  .front-photos { display: flex; justify-content: center; gap: 12px; margin-bottom: 12px; }
+  .front-photos img {
+    width: 205px; height: 145px; object-fit: cover; border-radius: 4px;
+    border: 4px solid #8b6914;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(212,175,55,0.3);
+    outline: 2px solid #d4af37; outline-offset: 2px;
+  }
+  .front-photos .photo-placeholder {
+    width: 205px; height: 145px; border-radius: 4px;
+    border: 4px solid #8b6914; outline: 2px solid #d4af37; outline-offset: 2px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    background: #3d2b4d; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    color: #d4af37; font-weight: 900; font-size: 14px;
+  }
+  .front-photos .photo-placeholder .ph-sub { font-size: 10px; color: #999; margin-top: 4px; }
+
+  .shuzai-badge {
+    background: linear-gradient(135deg, #8b6914, #d4af37, #8b6914);
+    color: #1a1a1a; font-size: 15px; font-weight: 900;
+    padding: 6px 28px; border-radius: 4px; margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(212,175,55,0.5);
+    letter-spacing: 4px;
+    border: 1px solid #6b5010;
+  }
+
+  .main-title { font-size: 22px; font-weight: 900; color: #fff; line-height: 1.3; margin-bottom: 2px; }
+  .main-title .big {
+    font-size: 40px; color: #fff; display: block; line-height: 1.1;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.5), 0 0 40px rgba(255,255,255,0.15);
+    letter-spacing: 4px;
+  }
+  .main-title .mid {
+    font-size: 36px; color: #f5e6a3;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.5), 0 0 30px rgba(212,175,55,0.4);
+    letter-spacing: 2px;
+  }
+
+  .disposal-appeal {
+    background: linear-gradient(180deg, #fffdf0 0%, #fff 100%);
+    border-radius: 4px; padding: 14px 16px; margin: 12px 0 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); max-width: 450px; width: 100%;
+    border: 3px solid #8b6914;
+    position: relative;
+  }
+  .disposal-appeal::before {
+    content: ''; position: absolute; inset: 3px;
+    border: 1px solid rgba(139,105,20,0.3); border-radius: 2px;
+    pointer-events: none;
+  }
+  .disposal-appeal .appeal-title {
+    font-size: 16px; font-weight: 900; color: #c41e24; text-align: center; margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #8b6914;
+  }
+  .disposal-list {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 6px;
+  }
+  .disposal-list .disposal-tag {
+    background: #fff;
+    color: #2d1b3d; font-size: 12px; font-weight: 900;
+    padding: 5px 14px; border-radius: 4px;
+    border-left: 4px solid #7b2d8b; border-right: none; border-top: none; border-bottom: none;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  }
+
+  .front-badges { display: flex; gap: 8px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+  .badge {
+    background: rgba(255,255,255,0.95); color: #2d1b3d; font-size: 12px; font-weight: 900;
+    padding: 6px 14px; border-radius: 2px; border: 2px solid #d4af37;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .badge.red {
+    background: linear-gradient(135deg, #c41e24, #e02a30);
+    color: #fff; border-color: #d4af37;
+    box-shadow: 0 2px 6px rgba(196,30,36,0.4);
+  }
+
+  .front-footer {
+    background: rgba(0,0,0,0.5); padding: 8px 16px;
+    display: flex; align-items: center; justify-content: center; gap: 14px;
+    border-top: 3px solid #d4af37;
+    position: relative; z-index: 2;
+  }
+  .front-footer .point { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; color: #fff; }
+  .front-footer .point .icon {
+    background: linear-gradient(135deg, #8b6914, #d4af37); color: #1a1a1a;
+    width: 22px; height: 22px; border-radius: 2px;
+    display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 900; flex-shrink: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  }
+
+  /* 電話CTA */
+  .cta-phone {
+    background: #c41e24; padding: 14px 16px; text-align: center;
+    position: relative; overflow: hidden; z-index: 2;
+    border-top: 3px solid #d4af37;
+  }
+  .cta-phone .phone-note { font-size: 13px; color: #ffd700; font-weight: 700; letter-spacing: 2px; }
+  .cta-phone .phone {
+    font-size: 42px; font-weight: 900; color: #fff; letter-spacing: 3px; line-height: 1.2;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+  }
+  .cta-phone .phone-sub { font-size: 10px; color: rgba(255,255,255,0.9); margin-top: 2px; }
+
+  /* === 裏面 === */
+  .back { background: #fff; color: #333; display: flex; flex-direction: column; }
+
+  .back-header { background: #2d1b3d; padding: 8px 16px; text-align: center; }
+  .back-header h2 { color: #fff; font-size: 17px; font-weight: 900; }
+  .back-header h2 span { color: #f5e6a3; }
+
+  .back-subtitle {
+    background: #f5f0e0; text-align: center; padding: 5px;
+    font-size: 12px; font-weight: 700; color: #2d1b3d; border-bottom: 2px solid #2d1b3d;
+  }
+
+  /* 買取対象品目 */
+  .results-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; padding: 8px 12px 4px; }
+  .result-item { border: 2px solid #ddd; border-radius: 5px; overflow: hidden; text-align: center; background: #fff; }
+  .result-item .item-img { width: 100%; height: 100px; overflow: hidden; background: #f5f5f5; display: flex; align-items: center; justify-content: center; }
+  .result-item .item-img img { width: 100%; height: 100%; object-fit: cover; }
+  .result-item .item-img .placeholder { font-size: 14px; color: #888; font-weight: 700; }
+  .result-item .item-name {
+    font-size: 9px; font-weight: 700; padding: 3px 3px 2px;
+    background: #2d1b3d; color: #fff;
+  }
+
+  /* メッセージ帯 */
+  .back-message {
+    background: #2d1b3d; color: #fff; text-align: center;
+    padding: 6px 10px; font-size: 12px; font-weight: 900; margin: 5px 8px; border-radius: 5px;
+  }
+  .back-message span { color: #f5e6a3; }
+
+  /* サービス特徴 */
+  .service-features { padding: 8px 10px; }
+  .service-features h3 {
+    font-size: 14px; font-weight: 900; color: #2d1b3d; text-align: center;
+    margin-bottom: 8px;
+  }
+  .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .feature-item { text-align: center; }
+  .feature-item .feature-icon {
+    width: 40px; height: 40px; border-radius: 50%; margin: 0 auto 4px;
+    background: #2d1b3d; color: #f5e6a3; font-size: 18px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .feature-item .feature-title { font-size: 11px; font-weight: 900; color: #c41e24; }
+  .feature-item .feature-desc { font-size: 9px; color: #666; line-height: 1.4; }
+
+  /* その他買取品目 */
+  .other-items { padding: 5px 8px 6px; }
+  .other-items h3 {
+    font-size: 14px; font-weight: 900; color: #2d1b3d; text-align: center;
+    background: #f5f0e0; padding: 5px; border-radius: 4px; margin-bottom: 6px;
+  }
+  .other-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+  .other-item { text-align: center; border: 2px solid #ddd; border-radius: 5px; overflow: hidden; }
+  .other-item .other-img { width: 100%; height: 70px; overflow: hidden; background: #f9f9f9; }
+  .other-item .other-img img { width: 100%; height: 100%; object-fit: cover; }
+  .other-item .other-name { font-size: 9px; font-weight: 700; color: #333; padding: 3px 2px; background: #f0f0f0; }
+
+  /* 注釈 */
+  .disclaimers {
+    padding: 6px 10px; font-size: 8px; color: #666; line-height: 1.6;
+    background: #f9f9f9; border-top: 1px solid #ddd;
+  }
+  .company-info {
+    padding: 6px 10px; font-size: 8px; color: #333; text-align: center;
+    background: #eee; font-weight: 700;
+  }
+
+  /* フッター */
+  .back-footer {
+    background: #2d1b3d; padding: 12px 16px;
+    display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 5px;
+  }
+  .back-footer .staff-area { text-align: center; flex-shrink: 0; }
+  .back-footer .staff-area img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; }
+  .back-footer .staff-text { font-size: 8px; color: #fff; font-weight: 700; margin-top: 2px; }
+  .back-footer .phone-area { text-align: center; }
+  .back-footer .phone-label { font-size: 10px; color: #f5e6a3; font-weight: 700; }
+  .back-footer .phone-number { font-size: 36px; font-weight: 900; color: #fff; letter-spacing: 2px; line-height: 1.2; }
+  .back-footer .phone-hours { font-size: 10px; color: #fff; }
+
+  /* レスポンシブ */
+  @media (max-width: 560px) {
+    .chirashi { width: 100%; }
+    .catch-copy { font-size: 3.5vw; }
+    .catch-copy .highlight { font-size: 4.2vw; }
+    .main-title .big { font-size: 7vw; }
+    .main-title .mid { font-size: 7vw; }
+    .cta-phone .phone { font-size: 8vw; }
+    .front-photos img { width: 42vw; height: 28vw; }
+    .front-photos .photo-placeholder { width: 42vw; height: 28vw; }
+    .result-item .item-img { height: 20vw; }
+    .other-item .other-img { height: 14vw; }
+    .back-footer .phone-number { font-size: 7vw; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== 表面 ========== -->
+<p class="page-label">【表面】</p>
+<div class="chirashi front">
+  <div class="front-header">
+    <img src="img/header_official.jpg?v=4" alt="バイセル - テレビCMでおなじみ！買取はバイセル 878787 東証上場企業">
+  </div>
+  <div class="front-accent"></div>
+
+  <div class="front-main">
+    <div class="shuzai-badge">出張買取</div>
+    <div class="catch-copy">
+      ご実家やご自宅の<span class="highlight">仏壇・仏具</span><br>
+      そのままにしていませんか？
+    </div>
+
+    <div class="front-photos">
+      <img src="img/butsudan.jpg?v=1" alt="仏壇">
+      <img src="img/butsugu_silver.jpg?v=1" alt="仏具">
+    </div>
+
+    <div class="main-title">
+      <span class="big">仏壇・仏具</span>
+      <span class="mid">査定いたします</span>
+    </div>
+
+    <div class="disposal-appeal">
+      <p class="appeal-title">こんなお悩みありませんか？</p>
+      <div class="disposal-list">
+        <span class="disposal-tag">実家じまいで仏壇がある</span>
+        <span class="disposal-tag">引越し先に置く場所がない</span>
+        <span class="disposal-tag">終活・生前整理をしたい</span>
+        <span class="disposal-tag">継ぐ人がいない</span>
+        <span class="disposal-tag">価値がわからない</span>
+        <span class="disposal-tag">手放し方がわからない</span>
+      </div>
+    </div>
+
+    <div class="front-badges">
+      <div class="badge">出張料・査定料 <strong>無料</strong></div>
+      <div class="badge">大型品もOK</div>
+      <div class="badge">お断りOK</div>
+      <div class="badge red">現金即払い※</div>
+    </div>
+  </div>
+
+  <div class="front-footer">
+    <div class="point"><span class="icon">✓</span>1点からOK</div>
+    <div class="point"><span class="icon">✓</span>運び出しもお任せ</div>
+    <div class="point"><span class="icon">✓</span>ご自宅まで伺います</div>
+  </div>
+
+  <div class="cta-phone">
+    <div class="phone-note">まずはお気軽にお電話ください</div>
+    <div class="phone">0120-XXX-XXX</div>
+    <div class="phone-sub">【24時間・365日受付】通話料無料</div>
+  </div>
+</div>
+
+<!-- ========== 裏面 ========== -->
+<p class="page-label">【裏面】</p>
+<div class="chirashi back">
+  <div class="back-header">
+    <h2><span>仏壇・仏具</span> 買取対象品目</h2>
+  </div>
+
+  <div class="back-subtitle">大切にされてきたお品物、丁寧に査定いたします</div>
+
+  <div class="results-grid">
+    <div class="result-item">
+      <div class="item-img"><img src="img/butsudan2.jpg?v=1" alt="仏壇"></div>
+      <div class="item-name">仏壇（唐木・金仏壇など）</div>
+    </div>
+    <div class="result-item">
+      <div class="item-img"><img src="img/butsugu_incense.jpg?v=1" alt="仏具"></div>
+      <div class="item-name">仏具（おりん・花立・香炉）</div>
+    </div>
+    <div class="result-item">
+      <div class="item-img"><img src="img/butsugu_juzu.jpg?v=1" alt="数珠"></div>
+      <div class="item-name">数珠・念珠（珊瑚・翡翠）</div>
+    </div>
+    <div class="result-item">
+      <div class="item-img"><img src="img/kakejiku.jpg?v=1" alt="掛け軸"></div>
+      <div class="item-name">掛け軸・仏画</div>
+    </div>
+  </div>
+
+  <div class="back-message">
+    手放しにくいお品物こそ、<span>丁寧に査定</span>いたします
+  </div>
+
+  <!-- サービス特徴 -->
+  <div class="service-features">
+    <h3>バイセルが選ばれる理由</h3>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">1</div>
+        <div class="feature-title">ご自宅で査定</div>
+        <div class="feature-desc">大きな仏壇も<br>運ぶ必要なし</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">2</div>
+        <div class="feature-title">その場で現金化</div>
+        <div class="feature-desc">査定後すぐに<br>お支払い※</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">3</div>
+        <div class="feature-title">経験豊富な査定士</div>
+        <div class="feature-desc">価値をしっかり<br>見極めます</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- その他買取品目 -->
+  <div class="other-items">
+    <h3>その他にもこんなものを買取しています</h3>
+    <div class="other-grid">
+      <div class="other-item">
+        <div class="other-img"><img src="img/kimono.jpg" alt="着物"></div>
+        <div class="other-name">着物</div>
+      </div>
+      <div class="other-item">
+        <div class="other-img"><img src="img/kikinzoku.jpg" alt="貴金属"></div>
+        <div class="other-name">貴金属</div>
+      </div>
+      <div class="other-item">
+        <div class="other-img"><img src="img/brand.jpg" alt="ブランド品"></div>
+        <div class="other-name">ブランド品</div>
+      </div>
+      <div class="other-item">
+        <div class="other-img"><img src="img/kosen.jpg" alt="古銭"></div>
+        <div class="other-name">古銭</div>
+      </div>
+      <div class="other-item">
+        <div class="other-img"><img src="img/kitte.jpg" alt="切手"></div>
+        <div class="other-name">切手</div>
+      </div>
+      <div class="other-item">
+        <div class="other-img"><img src="img/osake.jpg" alt="お酒"></div>
+        <div class="other-name">お酒</div>
+      </div>
+      <div class="other-item">
+        <div class="other-img"><img src="img/kottou.jpg" alt="骨董品"></div>
+        <div class="other-name">骨董品</div>
+      </div>
+      <div class="other-item">
+        <div class="other-img"><img src="img/gakki.jpg" alt="楽器"></div>
+        <div class="other-name">楽器</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimers">
+    ※お支払いは内容によって振込対応となる場合もございます。<br>
+    ※未成年者からの買取はできません。（成年の方でも20歳未満の方からの酒類の買取はできません）<br>
+    ※買取をご希望される場合、法に基づき「運転免許証」「マイナンバーカード」「健康保険証」などのご本人確認書類を査定士にご提示ください。<br>
+    ※季節事情または地域により出張査定や即日での対応が難しい場合もございます。<br>
+    ※内容により宅配査定・店舗査定をご案内する場合がございます。
+  </div>
+  <div class="company-info">
+    運営会社：株式会社BuySell Technologies<br>
+    〒160-0004 東京都新宿区四谷4-28-8 PALTビル<br>
+    【東京都公安委員会】古物商許可番号：第301041408603号
+  </div>
+
+  <div class="back-footer">
+    <div class="staff-area">
+      <img src="img/staff_appraise.jpg" alt="査定士">
+      <div class="staff-text">経験豊富な<br>査定士が対応</div>
+    </div>
+    <div class="phone-area">
+      <div class="phone-label">お問い合わせ・お申し込みはこちら</div>
+      <div class="phone-number">0120-XXX-XXX</div>
+      <div class="phone-hours">【24時間・365日受付】通話料無料</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
