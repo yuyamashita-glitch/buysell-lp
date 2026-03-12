@@ -181,20 +181,22 @@
   }
 
   /* 買取実績 */
-  .results-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; padding: 8px 12px 4px; }
-  .result-item { border: 2px solid #ddd; border-radius: 5px; overflow: hidden; text-align: center; background: #fff; }
-  .result-item .item-img { width: 100%; height: 100px; overflow: hidden; background: #f9f6f2; display: flex; align-items: center; justify-content: center; }
-  .result-item .item-img img { width: 100%; height: 100%; object-fit: contain; }
-  .result-item .item-name {
-    font-size: 9px; font-weight: 700; padding: 2px 3px 1px;
-    background: #1a1a2e; color: #fff;
+  .results-list { padding: 8px 12px 4px; }
+  .result-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 12px; border-bottom: 2px solid #eee;
+    background: #fff;
   }
-  .result-item .item-price {
-    font-size: 18px; font-weight: 900; color: #c41e24; padding: 3px 3px 2px;
-    background: #fff8f0; border-top: 1px solid #eee;
-    line-height: 1.2;
+  .result-row:nth-child(odd) { background: #faf8f5; }
+  .result-row .result-name { font-size: 12px; font-weight: 700; color: #333; }
+  .result-row .result-price {
+    font-size: 22px; font-weight: 900; color: #c41e24;
+    white-space: nowrap;
   }
-  .result-item .item-price .yen { font-size: 12px; }
+  .result-row .result-price .yen { font-size: 14px; }
+  .result-note {
+    font-size: 8px; color: #888; text-align: right; padding: 2px 12px;
+  }
 
   /* メッセージ帯 */
   .back-message {
@@ -263,7 +265,7 @@
     .main-title .mid { font-size: 7vw; }
     .cta-phone .phone { font-size: 8vw; }
     .front-photos img { width: 42vw; height: 28vw; }
-    .result-item .item-img { height: 20vw; }
+    .result-row .result-price { font-size: 5vw; }
     .other-item .other-img { height: 14vw; }
     .back-footer .phone-number { font-size: 7vw; }
   }
@@ -338,28 +340,33 @@
 
   <div class="back-subtitle">お持ちの真珠、価値を確かめてみませんか？</div>
 
-  <div class="results-grid">
-    <div class="result-item">
-      <div class="item-img"><img src="img/pearl_result1.png?v=1" alt="パールネックレス"></div>
-      <div class="item-name">パール／メレダイヤ／ネックレス</div>
-      <div class="item-price">200,000<span class="yen">円</span></div>
+  <div class="results-list">
+    <div class="result-row">
+      <div class="result-name">パール／メレダイヤ／ネックレス</div>
+      <div class="result-price">200,000<span class="yen">円</span></div>
     </div>
-    <div class="result-item">
-      <div class="item-img"><img src="img/pearl_result2.png?v=1" alt="あこやパールネックレス"></div>
-      <div class="item-name">パール／ネックレス</div>
-      <div class="item-price">150,000<span class="yen">円</span></div>
+    <div class="result-row">
+      <div class="result-name">パール／リング</div>
+      <div class="result-price">150,000<span class="yen">円</span></div>
     </div>
-    <div class="result-item">
-      <div class="item-img"><img src="img/pearl_result3.png?v=1" alt="南洋パールネックレス"></div>
-      <div class="item-name">パール／メレダイヤ／帯留め</div>
-      <div class="item-price">114,600<span class="yen">円</span></div>
+    <div class="result-row">
+      <div class="result-name">パール／メレダイヤ／リング</div>
+      <div class="result-price">120,000<span class="yen">円</span></div>
     </div>
-    <div class="result-item">
-      <div class="item-img"><img src="img/pearl_result4.png?v=1" alt="南洋パールネックレス"></div>
-      <div class="item-name">パール／メレダイヤ／ブローチ</div>
-      <div class="item-price">106,000<span class="yen">円</span></div>
+    <div class="result-row">
+      <div class="result-name">パール／メレダイヤ／帯留め</div>
+      <div class="result-price">114,600<span class="yen">円</span></div>
+    </div>
+    <div class="result-row">
+      <div class="result-name">パール／メレダイヤ／ブローチ</div>
+      <div class="result-price">106,000<span class="yen">円</span></div>
+    </div>
+    <div class="result-row">
+      <div class="result-name">パール／ダイアモンド／ネックレス</div>
+      <div class="result-price">90,000<span class="yen">円</span></div>
     </div>
   </div>
+  <div class="result-note">※買取実績はあくまで一例です。状態によってはご希望の金額に添えない場合もございます。</div>
 
   <div class="back-message">
     あこや真珠・南洋真珠・タヒチ黒蝶真珠・淡水パールなど<span>幅広く査定</span>いたします
