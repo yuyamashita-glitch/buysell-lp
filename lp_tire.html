@@ -14,7 +14,7 @@
   body {
     font-family: 'Noto Sans JP', sans-serif;
     background: #f5f5f5;
-    color: #333;
+    color: #1A1311;
     line-height: 1.6;
   }
 
@@ -24,258 +24,322 @@
   }
   .lp-header img { width: 100%; display: block; margin-bottom: -4px; }
 
-  /* === ファーストビュー === */
-  .fv {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    color: #fff; text-align: center; padding: 30px 20px 24px;
-    position: relative; overflow: hidden;
-  }
-  .fv::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    background:
-      radial-gradient(ellipse at 20% 80%, rgba(255,255,255,0.03) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 50%);
-    pointer-events: none;
-  }
-  .fv-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
-    color: #fff; font-size: 14px; font-weight: 900;
-    padding: 6px 24px; border-radius: 30px; margin-bottom: 12px;
-    letter-spacing: 3px;
-    box-shadow: 0 3px 10px rgba(231,76,60,0.4);
-    position: relative; z-index: 1;
-  }
-  .fv-catch {
-    font-size: 16px; font-weight: 700; margin-bottom: 6px;
-    position: relative; z-index: 1;
-  }
-  .fv-main {
-    font-size: 36px; font-weight: 900; line-height: 1.2; margin-bottom: 8px;
-    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
-    position: relative; z-index: 1;
-  }
-  .fv-main .accent { color: #f1c40f; }
-  .fv-sub {
-    font-size: 20px; font-weight: 900; color: #f1c40f;
-    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
-    margin-bottom: 16px;
-    position: relative; z-index: 1;
-  }
-  .fv-photos {
-    display: flex; justify-content: center; gap: 10px; margin-bottom: 16px;
-    position: relative; z-index: 1;
-  }
-  .fv-photos img {
-    width: 160px; height: 110px; object-fit: cover; border-radius: 6px;
-    border: 3px solid rgba(255,255,255,0.3);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-  }
-  .fv-badges {
-    display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;
-    margin-bottom: 8px;
-    position: relative; z-index: 1;
-  }
-  .fv-badges .badge {
-    background: rgba(255,255,255,0.95); color: #1a1a2e; font-size: 12px; font-weight: 900;
-    padding: 6px 14px; border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  }
-  .fv-badges .badge.red {
-    background: #e74c3c; color: #fff;
-  }
-
-  /* === CTA（共通） === */
-  .cta-section {
-    background: #e74c3c; padding: 20px 16px; text-align: center;
-  }
-  .cta-section .cta-label {
-    font-size: 14px; color: #fff; font-weight: 700; margin-bottom: 4px;
-    letter-spacing: 1px;
-  }
-  .cta-section .cta-phone {
-    font-size: 40px; font-weight: 900; color: #fff; letter-spacing: 3px;
-    text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
-    line-height: 1.2;
-  }
-  .cta-section .cta-phone a { color: #fff; text-decoration: none; }
-  .cta-section .cta-sub {
-    font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 4px;
-  }
-  .cta-section .cta-note {
-    font-size: 13px; color: #ffd700; font-weight: 700; margin-bottom: 6px;
-  }
-
   /* === セクション共通 === */
   .section { max-width: 600px; margin: 0 auto; }
   .section-title {
     font-size: 22px; font-weight: 900; text-align: center;
-    padding: 20px 16px 10px; color: #1a1a2e;
+    padding: 24px 16px 12px; color: #1A1311;
   }
-  .section-title .red { color: #e74c3c; }
-  .section-title .num {
-    display: inline-block; background: #e74c3c; color: #fff;
-    width: 32px; height: 32px; border-radius: 50%; font-size: 18px;
-    line-height: 32px; margin-right: 4px;
+  .section-title .green { color: #027B4B; }
+  .section-title .underline {
+    display: block; width: 60px; height: 3px;
+    background: #79af9b; margin: 8px auto 0; border-radius: 2px;
   }
 
-  /* === こんなお悩み === */
-  .worry-section {
-    background: #fff; padding: 20px 16px;
+  /* === ファーストビュー === */
+  .fv {
+    background: linear-gradient(180deg, #e8f5e9 0%, #fff 100%);
+    text-align: center; padding: 24px 20px 20px;
+    position: relative;
   }
-  .worry-title {
-    font-size: 20px; font-weight: 900; text-align: center; color: #1a1a2e;
+  .fv-label {
+    display: inline-block;
+    background: #027B4B; color: #fff;
+    font-size: 13px; font-weight: 900; padding: 4px 20px;
+    border-radius: 20px; margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  .fv-main {
+    font-size: 28px; font-weight: 900; line-height: 1.3; margin-bottom: 4px;
+    color: #1A1311;
+  }
+  .fv-main .accent { color: #027B4B; font-size: 34px; }
+  .fv-sub {
+    font-size: 15px; font-weight: 700; color: #555;
     margin-bottom: 14px;
   }
-  .worry-title .red { color: #e74c3c; }
-  .worry-list {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
-    max-width: 500px; margin: 0 auto;
+  .fv-photo {
+    width: 100%; max-width: 500px; margin: 0 auto 14px;
+    display: flex; gap: 8px; justify-content: center;
   }
-  .worry-item {
-    background: #f8f9fa; padding: 8px 16px; border-radius: 6px;
-    font-size: 14px; font-weight: 700; color: #333;
-    border-left: 4px solid #0f3460;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  .fv-photo img {
+    width: 48%; height: auto; aspect-ratio: 3/2; object-fit: cover;
+    border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .fv-points {
+    display: flex; gap: 6px; justify-content: center; flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  .fv-points .point {
+    background: #fff; border: 2px solid #79af9b; color: #027B4B;
+    font-size: 12px; font-weight: 900; padding: 5px 12px;
+    border-radius: 4px;
+  }
+  .fv-points .point.highlight {
+    background: #027B4B; color: #fff; border-color: #027B4B;
+  }
+  .fv-stats {
+    display: flex; justify-content: center; gap: 16px;
+    margin-bottom: 14px;
+  }
+  .fv-stats .stat {
+    text-align: center;
+  }
+  .fv-stats .stat-num {
+    font-size: 28px; font-weight: 900; color: #027B4B; line-height: 1;
+  }
+  .fv-stats .stat-num small { font-size: 14px; }
+  .fv-stats .stat-label {
+    font-size: 10px; color: #666;
   }
 
-  /* === 買取対象 === */
-  .target-section {
-    background: #f8f9fa; padding: 20px 16px;
+  /* === CTA === */
+  .cta-section {
+    background: #027B4B; padding: 16px; text-align: center;
   }
+  .cta-section .cta-note {
+    font-size: 13px; color: #ffd700; font-weight: 700; margin-bottom: 4px;
+  }
+  .cta-phone-btn {
+    display: block; background: #fff; color: #027B4B;
+    font-size: 32px; font-weight: 900; letter-spacing: 2px;
+    padding: 10px 16px; border-radius: 8px; text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    line-height: 1.2; margin: 0 auto; max-width: 400px;
+  }
+  .cta-phone-btn .phone-icon { font-size: 24px; vertical-align: middle; margin-right: 4px; }
+  .cta-sub {
+    font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 6px;
+  }
+  .cta-sub-bold { font-weight: 700; color: #fff; }
+
+  /* === 取扱商品 === */
+  .target-section { background: #fff; padding: 20px 16px; }
   .target-grid {
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
     max-width: 500px; margin: 10px auto 0;
   }
   .target-card {
-    background: #fff; border-radius: 8px; overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: center;
+    background: #f8faf8; border-radius: 8px; overflow: hidden;
+    border: 2px solid #e0ece4; text-align: center;
   }
-  .target-card img {
-    width: 100%; height: 120px; object-fit: cover;
-  }
+  .target-card img { width: 100%; height: 110px; object-fit: cover; }
   .target-card .card-name {
-    padding: 8px; font-size: 13px; font-weight: 900; color: #1a1a2e;
-    background: #f0f4f8;
+    padding: 8px; font-size: 13px; font-weight: 900; color: #1A1311;
+  }
+  .target-note {
+    text-align: center; font-size: 11px; color: #888; margin-top: 10px;
   }
 
-  /* === 選ばれる理由 === */
-  .reason-section {
-    background: #fff; padding: 20px 16px;
-  }
-  .reason-list {
-    max-width: 500px; margin: 0 auto;
-  }
-  .reason-item {
-    display: flex; align-items: flex-start; gap: 14px;
-    padding: 14px 0;
-    border-bottom: 1px solid #eee;
-  }
-  .reason-item:last-child { border-bottom: none; }
-  .reason-num {
-    width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
-    background: #0f3460; color: #f1c40f; font-size: 20px; font-weight: 900;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .reason-content {}
-  .reason-content .reason-title {
-    font-size: 16px; font-weight: 900; color: #1a1a2e; margin-bottom: 2px;
-  }
-  .reason-content .reason-desc {
-    font-size: 13px; color: #666; line-height: 1.5;
-  }
-
-  /* === 買取の流れ === */
-  .flow-section {
-    background: #f8f9fa; padding: 20px 16px;
-  }
-  .flow-steps {
+  /* === メーカー === */
+  .maker-section { background: #f8faf8; padding: 20px 16px; }
+  .maker-grid {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
     max-width: 500px; margin: 10px auto 0;
   }
-  .flow-step {
-    display: flex; align-items: center; gap: 14px;
-    background: #fff; border-radius: 8px; padding: 14px 16px;
-    margin-bottom: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  .maker-tag {
+    background: #fff; border: 1px solid #ddd; padding: 6px 14px;
+    border-radius: 20px; font-size: 12px; font-weight: 700; color: #333;
   }
-  .flow-step .step-num {
-    width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
-    background: #e74c3c; color: #fff; font-size: 16px; font-weight: 900;
-    display: flex; align-items: center; justify-content: center;
+  .maker-note {
+    text-align: center; font-size: 12px; color: #027B4B; font-weight: 700;
+    margin-top: 10px;
   }
-  .flow-step .step-text {}
-  .flow-step .step-title { font-size: 15px; font-weight: 900; color: #1a1a2e; }
-  .flow-step .step-desc { font-size: 12px; color: #666; }
+
+  /* === 買取不可 === */
+  .ng-section { background: #fff; padding: 20px 16px; }
+  .ng-section .section-title .red { color: #c0392b; }
+  .ng-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+    max-width: 500px; margin: 10px auto 0;
+  }
+  .ng-item {
+    display: flex; align-items: center; gap: 8px;
+    background: #fef2f2; padding: 8px 12px; border-radius: 6px;
+    font-size: 13px; font-weight: 700; color: #721c24;
+  }
+  .ng-icon { font-size: 16px; flex-shrink: 0; }
 
   /* === 買取相場 === */
   .price-section {
-    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    background: linear-gradient(180deg, #1A1311 0%, #2d2520 100%);
     padding: 20px 16px;
   }
   .price-section .section-title { color: #fff; }
-  .price-section .section-title .red { color: #f1c40f; }
-  .price-subtitle {
-    text-align: center; font-size: 13px; color: rgba(255,255,255,0.7);
-    margin-bottom: 12px;
-  }
+  .price-section .section-title .green { color: #79af9b; }
   .price-grid {
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
-    max-width: 500px; margin: 0 auto;
+    max-width: 500px; margin: 10px auto 0;
   }
   .price-card {
     background: #fff; border-radius: 8px; overflow: hidden;
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
   }
-  .price-card img {
-    width: 100%; height: 100px; object-fit: cover;
-  }
+  .price-card img { width: 100%; height: 95px; object-fit: cover; }
   .price-card .price-info { padding: 8px 10px; }
   .price-card .price-name {
-    font-size: 11px; font-weight: 700; color: #333; line-height: 1.3;
-    margin-bottom: 4px;
+    font-size: 11px; font-weight: 700; color: #555; line-height: 1.3;
+    margin-bottom: 4px; min-height: 28px;
   }
   .price-card .price-amount {
-    font-size: 22px; font-weight: 900; color: #e74c3c;
-    line-height: 1;
+    font-size: 24px; font-weight: 900; color: #c0392b; line-height: 1;
   }
-  .price-card .price-amount small { font-size: 12px; }
+  .price-card .price-amount small { font-size: 13px; }
   .price-note {
-    text-align: center; font-size: 10px; color: rgba(255,255,255,0.6);
+    text-align: center; font-size: 10px; color: rgba(255,255,255,0.5);
     margin-top: 10px;
   }
 
-  /* === 買取条件 === */
-  .condition-section {
-    background: #fff3cd; padding: 16px;
+  /* === こんなお悩み === */
+  .worry-section { background: #f0f7f3; padding: 24px 16px; }
+  .worry-title {
+    font-size: 20px; font-weight: 900; text-align: center; color: #1A1311;
+    margin-bottom: 14px;
   }
-  .condition-title {
-    font-size: 16px; font-weight: 900; color: #856404; text-align: center;
-    margin-bottom: 8px;
-  }
-  .condition-list {
+  .worry-title .green { color: #027B4B; }
+  .worry-list {
     max-width: 500px; margin: 0 auto;
-    font-size: 13px; color: #856404; line-height: 1.8;
+    display: flex; flex-direction: column; gap: 8px;
   }
-  .condition-list li { margin-bottom: 2px; }
-  .condition-ok { color: #155724; font-weight: 700; }
-  .condition-ng { color: #721c24; font-weight: 700; }
+  .worry-item {
+    background: #fff; padding: 10px 16px; border-radius: 6px;
+    font-size: 14px; font-weight: 700; color: #333;
+    border-left: 4px solid #79af9b;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .worry-item::before { content: '😟 '; }
+  .worry-resolve {
+    text-align: center; margin-top: 16px;
+    font-size: 16px; font-weight: 900; color: #027B4B;
+  }
+  .worry-resolve .arrow { display: block; font-size: 24px; margin-bottom: 4px; }
+
+  /* === 累計実績 === */
+  .track-section {
+    background: #027B4B; padding: 20px 16px; text-align: center;
+  }
+  .track-section .section-title { color: #fff; padding-bottom: 6px; }
+  .track-numbers {
+    display: flex; justify-content: center; gap: 20px;
+    max-width: 500px; margin: 0 auto;
+  }
+  .track-item { text-align: center; }
+  .track-item .track-num {
+    font-size: 36px; font-weight: 900; color: #ffd700; line-height: 1.2;
+  }
+  .track-item .track-num small { font-size: 16px; color: #fff; }
+  .track-item .track-label {
+    font-size: 12px; color: rgba(255,255,255,0.8);
+  }
+  .track-note {
+    font-size: 10px; color: rgba(255,255,255,0.5); margin-top: 8px;
+  }
+
+  /* === 選ばれる理由 === */
+  .reason-section { background: #fff; padding: 20px 16px; }
+  .reason-list { max-width: 500px; margin: 0 auto; }
+  .reason-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 16px 0; border-bottom: 1px solid #eee;
+  }
+  .reason-item:last-child { border-bottom: none; }
+  .reason-num {
+    width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+    background: #79af9b; color: #fff; font-size: 20px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .reason-content .reason-title {
+    font-size: 16px; font-weight: 900; color: #1A1311; margin-bottom: 2px;
+  }
+  .reason-content .reason-desc {
+    font-size: 13px; color: #666; line-height: 1.5;
+  }
+
+  /* === 安心の取り組み === */
+  .trust-section { background: #f8faf8; padding: 20px 16px; }
+  .trust-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    max-width: 500px; margin: 10px auto 0;
+  }
+  .trust-card {
+    background: #fff; border-radius: 8px; padding: 14px 10px;
+    text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .trust-card .trust-icon { font-size: 28px; margin-bottom: 6px; }
+  .trust-card .trust-label {
+    font-size: 11px; font-weight: 900; color: #1A1311; line-height: 1.3;
+  }
+  .trust-card .trust-desc {
+    font-size: 10px; color: #888; margin-top: 2px;
+  }
+
+  /* === 買取の流れ === */
+  .flow-section { background: #fff; padding: 20px 16px; }
+  .flow-steps { max-width: 500px; margin: 10px auto 0; }
+  .flow-step {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 0; border-bottom: 1px dashed #ddd;
+  }
+  .flow-step:last-child { border-bottom: none; }
+  .flow-step .step-num {
+    width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+    background: #79af9b; color: #fff; font-size: 18px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .flow-step .step-title { font-size: 15px; font-weight: 900; color: #1A1311; }
+  .flow-step .step-desc { font-size: 12px; color: #666; }
+
+  /* === お客様の声 === */
+  .voice-section { background: #f0f7f3; padding: 20px 16px; }
+  .voice-list { max-width: 500px; margin: 10px auto 0; }
+  .voice-card {
+    background: #fff; border-radius: 8px; padding: 16px;
+    margin-bottom: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .voice-card .voice-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 6px;
+  }
+  .voice-card .voice-profile {
+    font-size: 13px; font-weight: 700; color: #1A1311;
+  }
+  .voice-card .voice-stars { color: #f1c40f; font-size: 14px; }
+  .voice-card .voice-text {
+    font-size: 13px; color: #555; line-height: 1.6;
+  }
+
+  /* === FAQ === */
+  .faq-section { background: #fff; padding: 20px 16px; }
+  .faq-list { max-width: 500px; margin: 10px auto 0; }
+  .faq-item { border-bottom: 1px solid #eee; padding: 14px 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-size: 14px; font-weight: 900; color: #1A1311;
+    display: flex; align-items: flex-start; gap: 8px;
+  }
+  .faq-q .q-icon {
+    background: #027B4B; color: #fff; font-size: 12px; font-weight: 900;
+    width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .faq-a {
+    font-size: 13px; color: #555; line-height: 1.6;
+    margin-top: 6px; padding-left: 32px;
+  }
 
   /* === その他買取品目 === */
-  .other-section {
-    background: #fff; padding: 20px 16px;
-  }
+  .other-section { background: #f8f9fa; padding: 20px 16px; }
   .other-grid {
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;
     max-width: 500px; margin: 10px auto 0;
   }
   .other-card {
-    text-align: center; border: 2px solid #eee; border-radius: 6px; overflow: hidden;
+    text-align: center; border: 2px solid #e0ece4; border-radius: 6px; overflow: hidden;
+    background: #fff;
   }
-  .other-card img { width: 100%; height: 65px; object-fit: cover; }
+  .other-card img { width: 100%; height: 60px; object-fit: cover; }
   .other-card .card-label {
     font-size: 10px; font-weight: 700; color: #333; padding: 4px 2px;
-    background: #f5f5f5;
   }
 
   /* === 注釈・会社情報 === */
@@ -292,7 +356,7 @@
 
   /* === フッター === */
   .lp-footer {
-    background: #1a1a2e; padding: 16px; text-align: center;
+    background: #1A1311; padding: 16px; text-align: center;
     max-width: 600px; margin: 0 auto;
   }
   .lp-footer .footer-text { font-size: 10px; color: #999; }
@@ -301,27 +365,35 @@
   .fixed-cta {
     display: none;
     position: fixed; bottom: 0; left: 0; right: 0;
-    background: #e74c3c; padding: 10px 16px; text-align: center;
-    box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
     z-index: 100;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
   }
-  .fixed-cta a {
-    color: #fff; text-decoration: none; font-size: 24px; font-weight: 900;
-    letter-spacing: 2px;
+  .fixed-cta-inner {
+    display: flex; max-width: 600px; margin: 0 auto;
   }
-  .fixed-cta .fixed-sub { font-size: 10px; color: rgba(255,255,255,0.9); }
+  .fixed-cta .fixed-btn {
+    flex: 1; display: flex; align-items: center; justify-content: center;
+    gap: 4px; padding: 12px 8px; text-decoration: none;
+    font-size: 14px; font-weight: 900; color: #fff;
+  }
+  .fixed-btn.phone-btn { background: #027B4B; }
+  .fixed-btn.web-btn { background: #EF7701; }
+  .fixed-btn .btn-icon { font-size: 18px; }
+  .fixed-btn .btn-label { line-height: 1.2; }
+  .fixed-btn .btn-sub { font-size: 9px; font-weight: 400; display: block; }
 
   /* レスポンシブ */
   @media (max-width: 600px) {
     .fv-main { font-size: 7vw; }
-    .fv-sub { font-size: 5vw; }
-    .fv-photos img { width: 42vw; height: 28vw; }
-    .cta-section .cta-phone { font-size: 8vw; }
+    .fv-main .accent { font-size: 8.5vw; }
+    .cta-phone-btn { font-size: 7vw; }
     .section-title { font-size: 5vw; }
     .worry-title { font-size: 5vw; }
-    .target-grid { grid-template-columns: repeat(2, 1fr); }
+    .fv-stats .stat-num { font-size: 7vw; }
+    .track-item .track-num { font-size: 8vw; }
     .fixed-cta { display: block; }
-    body { padding-bottom: 60px; }
+    body { padding-bottom: 56px; }
+    .ng-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -337,24 +409,34 @@
 <!-- ファーストビュー -->
 <div class="section">
   <div class="fv">
-    <div class="fv-badge">出張買取</div>
-    <div class="fv-catch">使わなくなったタイヤ・ホイール</div>
+    <div class="fv-label">出張買取</div>
     <div class="fv-main">
       <span class="accent">タイヤ・ホイール</span><br>
       高価買取します！
     </div>
-    <div class="fv-sub">ご自宅までお伺いして査定</div>
+    <div class="fv-sub">ご自宅まで出張査定・その場でお支払い※</div>
 
-    <div class="fv-photos">
-      <img src="img/tire_ho1.jpg?v=1" alt="RAYS ホイール＋タイヤセット">
-      <img src="img/wheel_rim_bs.jpg?v=1" alt="RAYS VOLK RACING ホイール">
+    <div class="fv-photo">
+      <img src="img/tire_ho1.jpg?v=2" alt="ホイール＋タイヤセット">
+      <img src="img/wheel_rim_bs.jpg?v=2" alt="VOLK RACING ホイール">
     </div>
 
-    <div class="fv-badges">
-      <div class="badge">出張料・査定料 <strong>無料</strong></div>
-      <div class="badge">4本セットから</div>
-      <div class="badge">お断りOK</div>
-      <div class="badge red">現金即払い※</div>
+    <div class="fv-points">
+      <div class="point">出張料 <strong>無料</strong></div>
+      <div class="point">査定料 <strong>無料</strong></div>
+      <div class="point">4本セットから</div>
+      <div class="point highlight">現金即払い※</div>
+    </div>
+
+    <div class="fv-stats">
+      <div class="stat">
+        <div class="stat-num">3,700<small>万点</small></div>
+        <div class="stat-label">累計買取点数※1</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">顧客満足度</div>
+        <div class="stat-label">&nbsp;</div>
+      </div>
     </div>
   </div>
 </div>
@@ -363,48 +445,61 @@
 <div class="section">
   <div class="cta-section">
     <div class="cta-note">まずはお気軽にお電話ください</div>
-    <div class="cta-phone"><a href="tel:0120612818">0120-612-818</a></div>
-    <div class="cta-sub">【24時間・365日受付】通話料無料</div>
+    <a href="tel:0120612818" class="cta-phone-btn">
+      <span class="phone-icon">&#9742;</span> 0120-612-818
+    </a>
+    <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
   </div>
 </div>
 
-<!-- こんなお悩みありませんか -->
-<div class="section">
-  <div class="worry-section">
-    <div class="worry-title">こんな<span class="red">お悩み</span>ありませんか？</div>
-    <div class="worry-list">
-      <div class="worry-item">車を手放してタイヤが余った</div>
-      <div class="worry-item">スタッドレスを買い替えたい</div>
-      <div class="worry-item">ホイールを交換して古いのが不要</div>
-      <div class="worry-item">ガレージに置き場所がない</div>
-      <div class="worry-item">重くて持ち運びできない</div>
-      <div class="worry-item">価値がわからない</div>
-    </div>
-  </div>
-</div>
-
-<!-- 買取対象品目 -->
+<!-- 取扱商品 -->
 <div class="section">
   <div class="target-section">
-    <div class="section-title">買取<span class="red">対象品目</span></div>
+    <div class="section-title">買取<span class="green">対象商品</span><span class="underline"></span></div>
     <div class="target-grid">
       <div class="target-card">
-        <img src="img/tire_ho1.jpg?v=1" alt="タイヤ＋ホイールセット">
+        <img src="img/tire_ho1.jpg?v=2" alt="タイヤ＋ホイールセット">
         <div class="card-name">タイヤ＋ホイールセット</div>
       </div>
       <div class="target-card">
-        <img src="img/wheel_rim_bs.jpg?v=1" alt="アルミホイール">
-        <div class="card-name">アルミホイール単体</div>
+        <img src="img/wheel_rim_bs.jpg?v=2" alt="アルミホイール">
+        <div class="card-name">アルミホイール（4本）</div>
       </div>
       <div class="target-card">
-        <img src="img/tire_studless_bs.jpg?v=1" alt="スタッドレスタイヤ">
+        <img src="img/tire_studless_bs.jpg?v=2" alt="スタッドレスタイヤ">
         <div class="card-name">スタッドレスタイヤ</div>
       </div>
       <div class="target-card">
-        <img src="img/tire_ta1.jpg?v=1" alt="サマータイヤ">
+        <img src="img/tire_ta1.jpg?v=2" alt="サマータイヤ">
         <div class="card-name">サマータイヤ</div>
       </div>
     </div>
+    <div class="target-note">※乗用車（四輪車）用の4本セットが買取対象です</div>
+  </div>
+</div>
+
+<!-- 対応メーカー -->
+<div class="section">
+  <div class="maker-section">
+    <div class="section-title">対応<span class="green">メーカー・ブランド</span><span class="underline"></span></div>
+    <div class="maker-grid">
+      <div class="maker-tag">RAYS</div>
+      <div class="maker-tag">BBS</div>
+      <div class="maker-tag">ENKEI</div>
+      <div class="maker-tag">WORK</div>
+      <div class="maker-tag">SSR</div>
+      <div class="maker-tag">Weds</div>
+      <div class="maker-tag">ブリヂストン</div>
+      <div class="maker-tag">ヨコハマ</div>
+      <div class="maker-tag">ダンロップ</div>
+      <div class="maker-tag">トーヨー</div>
+      <div class="maker-tag">ミシュラン</div>
+      <div class="maker-tag">ピレリ</div>
+      <div class="maker-tag">トヨタ純正</div>
+      <div class="maker-tag">BMW純正</div>
+      <div class="maker-tag">ベンツ純正</div>
+    </div>
+    <div class="maker-note">上記以外のメーカーも査定対象です</div>
   </div>
 </div>
 
@@ -412,40 +507,56 @@
 <div class="section">
   <div class="cta-section">
     <div class="cta-note">タイヤの査定だけでもOK！</div>
-    <div class="cta-phone"><a href="tel:0120612818">0120-612-818</a></div>
-    <div class="cta-sub">【24時間・365日受付】通話料無料</div>
+    <a href="tel:0120612818" class="cta-phone-btn">
+      <span class="phone-icon">&#9742;</span> 0120-612-818
+    </a>
+    <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
+  </div>
+</div>
+
+<!-- 買取不可商品 -->
+<div class="section">
+  <div class="ng-section">
+    <div class="section-title">買取<span class="red" style="color:#c0392b;">できないもの</span><span class="underline" style="background:#c0392b;"></span></div>
+    <div class="ng-grid">
+      <div class="ng-item"><span class="ng-icon">&#10005;</span> スチールホイール</div>
+      <div class="ng-item"><span class="ng-icon">&#10005;</span> 1〜3本のみ</div>
+      <div class="ng-item"><span class="ng-icon">&#10005;</span> タイヤチェーン</div>
+      <div class="ng-item"><span class="ng-icon">&#10005;</span> オートバイ用</div>
+      <div class="ng-item"><span class="ng-icon">&#10005;</span> 車体パーツ・バンパー</div>
+      <div class="ng-item"><span class="ng-icon">&#10005;</span> カーナビ・電装品</div>
+    </div>
   </div>
 </div>
 
 <!-- 買取相場情報 -->
 <div class="section">
   <div class="price-section">
-    <div class="section-title">買取<span class="red">相場情報</span></div>
-    <div class="price-subtitle">※買取相場は一例です。状態・時期により金額は変動します。</div>
+    <div class="section-title">買取<span class="green">相場情報</span><span class="underline" style="background:#79af9b;"></span></div>
     <div class="price-grid">
       <div class="price-card">
-        <img src="img/tire_souba01.jpg?v=1" alt="Weds VELVA + ブリザック VRX3">
+        <img src="img/tire_souba01.jpg?v=2" alt="Weds VELVA + ブリザック VRX3">
         <div class="price-info">
           <div class="price-name">Weds VELVA 19インチ +<br>ブリザック VRX3</div>
           <div class="price-amount">110,000<small>円</small></div>
         </div>
       </div>
       <div class="price-card">
-        <img src="img/tire_souba02.jpg?v=1" alt="GRスープラ純正 + ブリザック VRX3">
+        <img src="img/tire_souba02.jpg?v=2" alt="GRスープラ純正 + ブリザック VRX3">
         <div class="price-info">
           <div class="price-name">GRスープラ RZ 純正19インチ +<br>ブリザック VRX3</div>
           <div class="price-amount">150,000<small>円</small></div>
         </div>
       </div>
       <div class="price-card">
-        <img src="img/tire_souba03.jpg?v=1" alt="ロールスロイス ゴースト純正 + アイスガード">
+        <img src="img/tire_souba03.jpg?v=2" alt="ロールスロイス ゴースト純正">
         <div class="price-info">
           <div class="price-name">ロールスロイス ゴースト純正 +<br>アイスガード G075</div>
           <div class="price-amount">120,000<small>円</small></div>
         </div>
       </div>
       <div class="price-card">
-        <img src="img/tire_souba06.jpg?v=1" alt="アイスガード iG70">
+        <img src="img/tire_souba06.jpg?v=2" alt="アイスガード iG70">
         <div class="price-info">
           <div class="price-name">ヨコハマ アイスガード iG70<br>265/40R20</div>
           <div class="price-amount">95,000<small>円</small></div>
@@ -456,34 +567,58 @@
   </div>
 </div>
 
-<!-- 買取条件の注意事項 -->
-<div class="section">
-  <div class="condition-section">
-    <div class="condition-title">買取対象についてのご案内</div>
-    <ul class="condition-list">
-      <li><span class="condition-ok">◯</span> 乗用車（四輪車）のアルミホイール・タイヤ（4本セット）</li>
-      <li><span class="condition-ng">✕</span> スチールホイール</li>
-      <li><span class="condition-ng">✕</span> 1〜3本のみ（4本セットが条件です）</li>
-      <li><span class="condition-ng">✕</span> タイヤチェーン</li>
-      <li><span class="condition-ng">✕</span> オートバイ用タイヤ・ホイール</li>
-      <li><span class="condition-ng">✕</span> 車体パーツ・カーナビ・電装品等</li>
-    </ul>
-  </div>
-</div>
-
 <!-- CTA 3 -->
 <div class="section">
   <div class="cta-section">
-    <div class="cta-note">買取対象か迷ったらお電話を！</div>
-    <div class="cta-phone"><a href="tel:0120612818">0120-612-818</a></div>
-    <div class="cta-sub">【24時間・365日受付】通話料無料</div>
+    <div class="cta-note">お持ちのタイヤの価値を確認しませんか？</div>
+    <a href="tel:0120612818" class="cta-phone-btn">
+      <span class="phone-icon">&#9742;</span> 0120-612-818
+    </a>
+    <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
+  </div>
+</div>
+
+<!-- こんなお悩みありませんか -->
+<div class="section">
+  <div class="worry-section">
+    <div class="worry-title">こんな<span class="green">お悩み</span>ありませんか？</div>
+    <div class="worry-list">
+      <div class="worry-item">車を手放してタイヤが余った</div>
+      <div class="worry-item">スタッドレスを買い替えたい</div>
+      <div class="worry-item">ホイールを交換して古いものが残っている</div>
+      <div class="worry-item">ガレージに置き場所がない</div>
+      <div class="worry-item">重くて持ち運びできない</div>
+      <div class="worry-item">価値があるのかわからない</div>
+    </div>
+    <div class="worry-resolve">
+      <span class="arrow">&#9660;</span>
+      バイセルの出張買取が解決します！
+    </div>
+  </div>
+</div>
+
+<!-- 累計実績 -->
+<div class="section">
+  <div class="track-section">
+    <div class="section-title" style="color:#fff;">バイセルの実績</div>
+    <div class="track-numbers">
+      <div class="track-item">
+        <div class="track-num">3,700<small>万点+</small></div>
+        <div class="track-label">累計買取点数※1</div>
+      </div>
+      <div class="track-item">
+        <div class="track-num">1,400<small>名+</small></div>
+        <div class="track-label">査定士在籍</div>
+      </div>
+    </div>
+    <div class="track-note">※1 2015年〜2024年の合計買取点数</div>
   </div>
 </div>
 
 <!-- 選ばれる理由 -->
 <div class="section">
   <div class="reason-section">
-    <div class="section-title">バイセルが<span class="red">選ばれる理由</span></div>
+    <div class="section-title">バイセルが<span class="green">選ばれる理由</span><span class="underline"></span></div>
     <div class="reason-list">
       <div class="reason-item">
         <div class="reason-num">1</div>
@@ -517,10 +652,45 @@
   </div>
 </div>
 
+<!-- 安心・信頼の取り組み -->
+<div class="section">
+  <div class="trust-section">
+    <div class="section-title">安心・信頼の<span class="green">取り組み</span><span class="underline"></span></div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon">&#127970;</div>
+        <div class="trust-label">東証上場企業</div>
+        <div class="trust-desc">グロース市場上場</div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">&#128274;</div>
+        <div class="trust-label">クーリングオフ</div>
+        <div class="trust-desc">8日間対応</div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">&#128222;</div>
+        <div class="trust-label">フォローコール</div>
+        <div class="trust-desc">査定後にご確認</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 4 -->
+<div class="section">
+  <div class="cta-section">
+    <div class="cta-note">お見積もりだけでも大歓迎！</div>
+    <a href="tel:0120612818" class="cta-phone-btn">
+      <span class="phone-icon">&#9742;</span> 0120-612-818
+    </a>
+    <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
+  </div>
+</div>
+
 <!-- 買取の流れ -->
 <div class="section">
   <div class="flow-section">
-    <div class="section-title">買取の<span class="red">流れ</span></div>
+    <div class="section-title">出張買取の<span class="green">流れ</span><span class="underline"></span></div>
     <div class="flow-steps">
       <div class="flow-step">
         <div class="step-num">1</div>
@@ -540,7 +710,7 @@
         <div class="step-num">3</div>
         <div class="step-text">
           <div class="step-title">査定結果のご説明</div>
-          <div class="step-desc">金額とその理由をわかりやすくご説明します。ご納得いただけない場合はお断りOK。</div>
+          <div class="step-desc">金額とその理由をわかりやすくご説明。ご納得いただけない場合はお断りOK。</div>
         </div>
       </div>
       <div class="flow-step">
@@ -554,19 +724,95 @@
   </div>
 </div>
 
-<!-- CTA 4 -->
+<!-- お客様の声 -->
+<div class="section">
+  <div class="voice-section">
+    <div class="section-title">お客様の<span class="green">声</span><span class="underline"></span></div>
+    <div class="voice-list">
+      <div class="voice-card">
+        <div class="voice-header">
+          <div class="voice-profile">50代男性・東京都</div>
+          <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+        <div class="voice-text">車を買い替えた際に不要になったホイール4本を査定していただきました。重くて自分では運べなかったので、自宅まで来てくれるのはとても助かりました。</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-header">
+          <div class="voice-profile">40代男性・神奈川県</div>
+          <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+        <div class="voice-text">ガレージに眠っていたスタッドレス+ホイールセットを買い取っていただきました。思っていたより高い金額がつき、満足しています。</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-header">
+          <div class="voice-profile">60代男性・埼玉県</div>
+          <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        </div>
+        <div class="voice-text">査定だけのつもりで電話しましたが、丁寧に説明いただき、納得のうえでお願いしました。クーリングオフの説明もあり安心でした。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 5 -->
 <div class="section">
   <div class="cta-section">
-    <div class="cta-note">お見積もりだけでも大歓迎！</div>
-    <div class="cta-phone"><a href="tel:0120612818">0120-612-818</a></div>
-    <div class="cta-sub">【24時間・365日受付】通話料無料</div>
+    <div class="cta-note">査定だけでもOK！お気軽にお電話ください</div>
+    <a href="tel:0120612818" class="cta-phone-btn">
+      <span class="phone-icon">&#9742;</span> 0120-612-818
+    </a>
+    <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section">
+  <div class="faq-section">
+    <div class="section-title">よくある<span class="green">ご質問</span><span class="underline"></span></div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="q-icon">Q</span>
+          <span>タイヤの溝が少なくても買取できますか？</span>
+        </div>
+        <div class="faq-a">状態を拝見したうえで査定いたします。まずはお気軽にご相談ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="q-icon">Q</span>
+          <span>4本揃っていない場合はどうなりますか？</span>
+        </div>
+        <div class="faq-a">申し訳ございませんが、4本セットでの買取とさせていただいております。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="q-icon">Q</span>
+          <span>査定後にキャンセルしても費用はかかりますか？</span>
+        </div>
+        <div class="faq-a">キャンセル料は一切かかりません。査定だけでもお気軽にご依頼ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="q-icon">Q</span>
+          <span>スタッドレスタイヤだけでも買い取れますか？</span>
+        </div>
+        <div class="faq-a">はい、4本セットであればスタッドレスタイヤのみでも査定可能です。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="q-icon">Q</span>
+          <span>タイヤと一緒に他のものも査定してもらえますか？</span>
+        </div>
+        <div class="faq-a">もちろんです。着物・ブランド品・貴金属など、他の買取品目もまとめて査定可能です。</div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- その他買取品目 -->
 <div class="section">
   <div class="other-section">
-    <div class="section-title">その他の<span class="red">買取品目</span></div>
+    <div class="section-title">その他の<span class="green">買取品目</span><span class="underline"></span></div>
     <div class="other-grid">
       <div class="other-card">
         <img src="img/kimono.jpg" alt="着物">
@@ -604,15 +850,28 @@
   </div>
 </div>
 
+<!-- CTA 6 -->
+<div class="section">
+  <div class="cta-section">
+    <div class="cta-note">まずはお電話でご相談ください</div>
+    <a href="tel:0120612818" class="cta-phone-btn">
+      <span class="phone-icon">&#9742;</span> 0120-612-818
+    </a>
+    <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
+  </div>
+</div>
+
 <!-- 注釈 -->
 <div class="disclaimers">
   ※お支払いは内容によって振込対応となる場合もございます。<br>
-  ※未成年者からの買取はできません。（成年の方でも20歳未満の方からの酒類の買取はできません）<br>
+  ※未成年者からの買取はできません。<br>
   ※買取をご希望される場合、法に基づき「運転免許証」「マイナンバーカード」「健康保険証」などのご本人確認書類を査定士にご提示ください。<br>
-  ※季節事情または地域により出張査定や即日での対応が難しい場合もございます。<br>
+  ※季節事情または地域により出張査定や最短即日での対応が難しい場合もございます。<br>
   ※内容により宅配査定・店舗査定をご案内する場合がございます。<br>
   ※タイヤ・ホイールの買取は乗用車（四輪車）用の4本セットに限ります。<br>
-  ※スチールホイール、タイヤチェーン、オートバイ用は買取対象外です。
+  ※スチールホイール、タイヤチェーン、オートバイ用は買取対象外です。<br>
+  ※1 2015年〜2024年の合計買取点数。<br>
+  ※買取相場は一例です。状態・時期により金額は変動します。
 </div>
 <div class="company-info">
   運営会社：株式会社BuySell Technologies<br>
@@ -622,13 +881,21 @@
 
 <!-- フッター -->
 <div class="lp-footer">
-  <div class="footer-text">© BuySell Technologies</div>
+  <div class="footer-text">&copy; BuySell Technologies</div>
 </div>
 
 <!-- 固定CTA（スマホ） -->
 <div class="fixed-cta">
-  <a href="tel:0120612818">0120-612-818</a>
-  <div class="fixed-sub">【24時間受付】タップで電話</div>
+  <div class="fixed-cta-inner">
+    <a href="tel:0120612818" class="fixed-btn phone-btn">
+      <span class="btn-icon">&#9742;</span>
+      <span class="btn-label">電話で相談<span class="btn-sub">24時間受付</span></span>
+    </a>
+    <a href="tel:0120612818" class="fixed-btn web-btn">
+      <span class="btn-icon">&#9993;</span>
+      <span class="btn-label">Web申し込み<span class="btn-sub">簡単30秒</span></span>
+    </a>
+  </div>
 </div>
 
 </body>
