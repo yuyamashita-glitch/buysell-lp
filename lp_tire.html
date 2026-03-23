@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>タイヤ・ホイール買取｜出張買取のバイセル</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* === ヘッダー === */
+  .lp-header {
+    background: #f5d000; margin: 0; padding: 0; line-height: 0; overflow: hidden;
+  }
+  .lp-header img { width: 100%; display: block; margin-bottom: -4px; }
+
+  /* === ファーストビュー === */
+  .fv {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #fff; text-align: center; padding: 30px 20px 24px;
+    position: relative; overflow: hidden;
+  }
+  .fv::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse at 20% 80%, rgba(255,255,255,0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .fv-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: #fff; font-size: 14px; font-weight: 900;
+    padding: 6px 24px; border-radius: 30px; margin-bottom: 12px;
+    letter-spacing: 3px;
+    box-shadow: 0 3px 10px rgba(231,76,60,0.4);
+    position: relative; z-index: 1;
+  }
+  .fv-catch {
+    font-size: 16px; font-weight: 700; margin-bottom: 6px;
+    position: relative; z-index: 1;
+  }
+  .fv-main {
+    font-size: 36px; font-weight: 900; line-height: 1.2; margin-bottom: 8px;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    position: relative; z-index: 1;
+  }
+  .fv-main .accent { color: #f1c40f; }
+  .fv-sub {
+    font-size: 20px; font-weight: 900; color: #f1c40f;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+  .fv-photos {
+    display: flex; justify-content: center; gap: 10px; margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+  .fv-photos img {
+    width: 160px; height: 110px; object-fit: cover; border-radius: 6px;
+    border: 3px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  }
+  .fv-badges {
+    display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;
+    margin-bottom: 8px;
+    position: relative; z-index: 1;
+  }
+  .fv-badges .badge {
+    background: rgba(255,255,255,0.95); color: #1a1a2e; font-size: 12px; font-weight: 900;
+    padding: 6px 14px; border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .fv-badges .badge.red {
+    background: #e74c3c; color: #fff;
+  }
+
+  /* === CTA（共通） === */
+  .cta-section {
+    background: #e74c3c; padding: 20px 16px; text-align: center;
+  }
+  .cta-section .cta-label {
+    font-size: 14px; color: #fff; font-weight: 700; margin-bottom: 4px;
+    letter-spacing: 1px;
+  }
+  .cta-section .cta-phone {
+    font-size: 40px; font-weight: 900; color: #fff; letter-spacing: 3px;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+    line-height: 1.2;
+  }
+  .cta-section .cta-phone a { color: #fff; text-decoration: none; }
+  .cta-section .cta-sub {
+    font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 4px;
+  }
+  .cta-section .cta-note {
+    font-size: 13px; color: #ffd700; font-weight: 700; margin-bottom: 6px;
+  }
+
+  /* === セクション共通 === */
+  .section { max-width: 600px; margin: 0 auto; }
+  .section-title {
+    font-size: 22px; font-weight: 900; text-align: center;
+    padding: 20px 16px 10px; color: #1a1a2e;
+  }
+  .section-title .red { color: #e74c3c; }
+  .section-title .num {
+    display: inline-block; background: #e74c3c; color: #fff;
+    width: 32px; height: 32px; border-radius: 50%; font-size: 18px;
+    line-height: 32px; margin-right: 4px;
+  }
+
+  /* === こんなお悩み === */
+  .worry-section {
+    background: #fff; padding: 20px 16px;
+  }
+  .worry-title {
+    font-size: 20px; font-weight: 900; text-align: center; color: #1a1a2e;
+    margin-bottom: 14px;
+  }
+  .worry-title .red { color: #e74c3c; }
+  .worry-list {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+    max-width: 500px; margin: 0 auto;
+  }
+  .worry-item {
+    background: #f8f9fa; padding: 8px 16px; border-radius: 6px;
+    font-size: 14px; font-weight: 700; color: #333;
+    border-left: 4px solid #0f3460;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+
+  /* === 買取対象 === */
+  .target-section {
+    background: #f8f9fa; padding: 20px 16px;
+  }
+  .target-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+    max-width: 500px; margin: 10px auto 0;
+  }
+  .target-card {
+    background: #fff; border-radius: 8px; overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  .target-card img {
+    width: 100%; height: 120px; object-fit: cover;
+  }
+  .target-card .card-name {
+    padding: 8px; font-size: 13px; font-weight: 900; color: #1a1a2e;
+    background: #f0f4f8;
+  }
+
+  /* === 選ばれる理由 === */
+  .reason-section {
+    background: #fff; padding: 20px 16px;
+  }
+  .reason-list {
+    max-width: 500px; margin: 0 auto;
+  }
+  .reason-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .reason-item:last-child { border-bottom: none; }
+  .reason-num {
+    width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+    background: #0f3460; color: #f1c40f; font-size: 20px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .reason-content {}
+  .reason-content .reason-title {
+    font-size: 16px; font-weight: 900; color: #1a1a2e; margin-bottom: 2px;
+  }
+  .reason-content .reason-desc {
+    font-size: 13px; color: #666; line-height: 1.5;
+  }
+
+  /* === 買取の流れ === */
+  .flow-section {
+    background: #f8f9fa; padding: 20px 16px;
+  }
+  .flow-steps {
+    max-width: 500px; margin: 10px auto 0;
+  }
+  .flow-step {
+    display: flex; align-items: center; gap: 14px;
+    background: #fff; border-radius: 8px; padding: 14px 16px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .flow-step .step-num {
+    width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+    background: #e74c3c; color: #fff; font-size: 16px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .flow-step .step-text {}
+  .flow-step .step-title { font-size: 15px; font-weight: 900; color: #1a1a2e; }
+  .flow-step .step-desc { font-size: 12px; color: #666; }
+
+  /* === その他買取品目 === */
+  .other-section {
+    background: #fff; padding: 20px 16px;
+  }
+  .other-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;
+    max-width: 500px; margin: 10px auto 0;
+  }
+  .other-card {
+    text-align: center; border: 2px solid #eee; border-radius: 6px; overflow: hidden;
+  }
+  .other-card img { width: 100%; height: 65px; object-fit: cover; }
+  .other-card .card-label {
+    font-size: 10px; font-weight: 700; color: #333; padding: 4px 2px;
+    background: #f5f5f5;
+  }
+
+  /* === 注釈・会社情報 === */
+  .disclaimers {
+    max-width: 600px; margin: 0 auto;
+    padding: 12px 16px; font-size: 10px; color: #888; line-height: 1.8;
+    background: #f9f9f9;
+  }
+  .company-info {
+    max-width: 600px; margin: 0 auto;
+    padding: 10px 16px; font-size: 10px; color: #555; text-align: center;
+    background: #eee; font-weight: 700;
+  }
+
+  /* === フッター === */
+  .lp-footer {
+    background: #1a1a2e; padding: 16px; text-align: center;
+    max-width: 600px; margin: 0 auto;
+  }
+  .lp-footer .footer-text { font-size: 10px; color: #999; }
+
+  /* === 固定CTA（スマホ） === */
+  .fixed-cta {
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: #e74c3c; padding: 10px 16px; text-align: center;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+    z-index: 100;
+  }
+  .fixed-cta a {
+    color: #fff; text-decoration: none; font-size: 24px; font-weight: 900;
+    letter-spacing: 2px;
+  }
+  .fixed-cta .fixed-sub { font-size: 10px; color: rgba(255,255,255,0.9); }
+
+  /* レスポンシブ */
+  @media (max-width: 600px) {
+    .fv-main { font-size: 7vw; }
+    .fv-sub { font-size: 5vw; }
+    .fv-photos img { width: 42vw; height: 28vw; }
+    .cta-section .cta-phone { font-size: 8vw; }
+    .section-title { font-size: 5vw; }
+    .worry-title { font-size: 5vw; }
+    .target-grid { grid-template-columns: repeat(2, 1fr); }
+    .fixed-cta { display: block; }
+    body { padding-bottom: 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<div class="section">
+  <div class="lp-header">
+    <img src="img/header_official.jpg?v=4" alt="バイセル - テレビCMでおなじみ！買取はバイセル 878787 東証上場企業">
+  </div>
+</div>
+
+<!-- ファーストビュー -->
+<div class="section">
+  <div class="fv">
+    <div class="fv-badge">出張買取</div>
+    <div class="fv-catch">使わなくなったタイヤ・ホイール</div>
+    <div class="fv-main">
+      <span class="accent">タイヤ・ホイール</span><br>
+      高価買取します！
+    </div>
+    <div class="fv-sub">ご自宅までお伺いして査定</div>
+
+    <div class="fv-photos">
+      <img src="img/tire_wheel.jpg?v=1" alt="タイヤ付きホイール">
+      <img src="img/wheel_rim.jpg?v=1" alt="アルミホイール">
+    </div>
+
+    <div class="fv-badges">
+      <div class="badge">出張料・査定料 <strong>無料</strong></div>
+      <div class="badge">1点からOK</div>
+      <div class="badge">お断りOK</div>
+      <div class="badge red">現金即払い※</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 1 -->
+<div class="section">
+  <div class="cta-section">
+    <div class="cta-note">まずはお気軽にお電話ください</div>
+    <div class="cta-phone"><a href="tel:0120612818">0120-612-818</a></div>
+    <div class="cta-sub">【24時間・365日受付】通話料無料</div>
+  </div>
+</div>
+
+<!-- こんなお悩みありませんか -->
+<div class="section">
+  <div class="worry-section">
+    <div class="worry-title">こんな<span class="red">お悩み</span>ありませんか？</div>
+    <div class="worry-list">
+      <div class="worry-item">車を手放してタイヤが余った</div>
+      <div class="worry-item">スタッドレスを買い替えたい</div>
+      <div class="worry-item">ホイールを交換して古いのが不要</div>
+      <div class="worry-item">ガレージに置き場所がない</div>
+      <div class="worry-item">重くて持ち運びできない</div>
+      <div class="worry-item">価値がわからない</div>
+    </div>
+  </div>
+</div>
+
+<!-- 買取対象品目 -->
+<div class="section">
+  <div class="target-section">
+    <div class="section-title">買取<span class="red">対象品目</span></div>
+    <div class="target-grid">
+      <div class="target-card">
+        <img src="img/tire_wheel.jpg?v=1" alt="タイヤ＋ホイールセット">
+        <div class="card-name">タイヤ＋ホイールセット</div>
+      </div>
+      <div class="target-card">
+        <img src="img/wheel_rim.jpg?v=1" alt="アルミホイール">
+        <div class="card-name">アルミホイール単体</div>
+      </div>
+      <div class="target-card">
+        <img src="img/tire_studless.jpg?v=1" alt="スタッドレスタイヤ">
+        <div class="card-name">スタッドレスタイヤ</div>
+      </div>
+      <div class="target-card">
+        <img src="img/tire_stack.jpg?v=1" alt="サマータイヤ">
+        <div class="card-name">サマータイヤ</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 2 -->
+<div class="section">
+  <div class="cta-section">
+    <div class="cta-note">タイヤの査定だけでもOK！</div>
+    <div class="cta-phone"><a href="tel:0120612818">0120-612-818</a></div>
+    <div class="cta-sub">【24時間・365日受付】通話料無料</div>
+  </div>
+</div>
+
+<!-- 選ばれる理由 -->
+<div class="section">
+  <div class="reason-section">
+    <div class="section-title">バイセルが<span class="red">選ばれる理由</span></div>
+    <div class="reason-list">
+      <div class="reason-item">
+        <div class="reason-num">1</div>
+        <div class="reason-content">
+          <div class="reason-title">ご自宅まで出張査定</div>
+          <div class="reason-desc">重いタイヤを持ち運ぶ必要はありません。ご自宅のガレージや玄関先で査定いたします。</div>
+        </div>
+      </div>
+      <div class="reason-item">
+        <div class="reason-num">2</div>
+        <div class="reason-content">
+          <div class="reason-title">その場で現金化※</div>
+          <div class="reason-desc">査定にご納得いただければ、その場でお支払い。面倒な手続きは不要です。</div>
+        </div>
+      </div>
+      <div class="reason-item">
+        <div class="reason-num">3</div>
+        <div class="reason-content">
+          <div class="reason-title">経験豊富な査定士</div>
+          <div class="reason-desc">タイヤの状態・ブランド・ホイールの価値をしっかり見極めます。</div>
+        </div>
+      </div>
+      <div class="reason-item">
+        <div class="reason-num">4</div>
+        <div class="reason-content">
+          <div class="reason-title">手数料すべて無料</div>
+          <div class="reason-desc">出張料・査定料・キャンセル料、すべて無料。お気軽にご依頼ください。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 買取の流れ -->
+<div class="section">
+  <div class="flow-section">
+    <div class="section-title">買取の<span class="red">流れ</span></div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <div class="step-title">お電話でお申し込み</div>
+          <div class="step-desc">24時間365日受付。ご都合の良い日時をお伝えください。</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <div class="step-title">査定士がご自宅に訪問</div>
+          <div class="step-desc">ご予約の日時にお伺いし、その場で丁寧に査定します。</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <div class="step-title">査定結果のご説明</div>
+          <div class="step-desc">金額とその理由をわかりやすくご説明します。ご納得いただけない場合はお断りOK。</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          <div class="step-title">その場でお支払い※</div>
+          <div class="step-desc">ご成約後、その場で現金にてお支払いいたします。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 3 -->
+<div class="section">
+  <div class="cta-section">
+    <div class="cta-note">お見積もりだけでも大歓迎！</div>
+    <div class="cta-phone"><a href="tel:0120612818">0120-612-818</a></div>
+    <div class="cta-sub">【24時間・365日受付】通話料無料</div>
+  </div>
+</div>
+
+<!-- その他買取品目 -->
+<div class="section">
+  <div class="other-section">
+    <div class="section-title">その他の<span class="red">買取品目</span></div>
+    <div class="other-grid">
+      <div class="other-card">
+        <img src="img/kimono.jpg" alt="着物">
+        <div class="card-label">着物</div>
+      </div>
+      <div class="other-card">
+        <img src="img/kikinzoku.jpg" alt="貴金属">
+        <div class="card-label">貴金属</div>
+      </div>
+      <div class="other-card">
+        <img src="img/brand.jpg" alt="ブランド品">
+        <div class="card-label">ブランド品</div>
+      </div>
+      <div class="other-card">
+        <img src="img/kosen.jpg" alt="古銭">
+        <div class="card-label">古銭</div>
+      </div>
+      <div class="other-card">
+        <img src="img/kitte.jpg" alt="切手">
+        <div class="card-label">切手</div>
+      </div>
+      <div class="other-card">
+        <img src="img/osake.jpg" alt="お酒">
+        <div class="card-label">お酒</div>
+      </div>
+      <div class="other-card">
+        <img src="img/kottou.jpg" alt="骨董品">
+        <div class="card-label">骨董品</div>
+      </div>
+      <div class="other-card">
+        <img src="img/gakki.jpg" alt="楽器">
+        <div class="card-label">楽器</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 注釈 -->
+<div class="disclaimers">
+  ※お支払いは内容によって振込対応となる場合もございます。<br>
+  ※未成年者からの買取はできません。（成年の方でも20歳未満の方からの酒類の買取はできません）<br>
+  ※買取をご希望される場合、法に基づき「運転免許証」「マイナンバーカード」「健康保険証」などのご本人確認書類を査定士にご提示ください。<br>
+  ※季節事情または地域により出張査定や即日での対応が難しい場合もございます。<br>
+  ※内容により宅配査定・店舗査定をご案内する場合がございます。
+</div>
+<div class="company-info">
+  運営会社：株式会社BuySell Technologies<br>
+  〒160-0004 東京都新宿区四谷4-28-8 PALTビル<br>
+  【東京都公安委員会】古物商許可番号：第301041408603号
+</div>
+
+<!-- フッター -->
+<div class="lp-footer">
+  <div class="footer-text">© BuySell Technologies</div>
+</div>
+
+<!-- 固定CTA（スマホ） -->
+<div class="fixed-cta">
+  <a href="tel:0120612818">0120-612-818</a>
+  <div class="fixed-sub">【24時間受付】タップで電話</div>
+</div>
+
+</body>
+</html>
