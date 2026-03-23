@@ -107,7 +107,7 @@
     box-shadow: 0 3px 8px rgba(0,0,0,0.2);
     line-height: 1.2; margin: 0 auto; max-width: 400px;
   }
-  .cta-phone-btn .phone-icon { font-size: 24px; vertical-align: middle; margin-right: 4px; }
+
   .cta-sub {
     font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 6px;
   }
@@ -207,12 +207,11 @@
     border-left: 4px solid #79af9b;
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   }
-  .worry-item::before { content: '😟 '; }
+  .worry-item::before { content: ''; }
   .worry-resolve {
     text-align: center; margin-top: 16px;
     font-size: 16px; font-weight: 900; color: #027B4B;
   }
-  .worry-resolve .arrow { display: block; font-size: 24px; margin-bottom: 4px; }
 
   /* === 累計実績 === */
   .track-section {
@@ -265,7 +264,6 @@
     background: #fff; border-radius: 8px; padding: 14px 10px;
     text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   }
-  .trust-card .trust-icon { font-size: 28px; margin-bottom: 6px; }
   .trust-card .trust-label {
     font-size: 11px; font-weight: 900; color: #1A1311; line-height: 1.3;
   }
@@ -303,7 +301,7 @@
   .voice-card .voice-profile {
     font-size: 13px; font-weight: 700; color: #1A1311;
   }
-  .voice-card .voice-stars { color: #f1c40f; font-size: 14px; }
+  .voice-card .voice-stars { display: none; }
   .voice-card .voice-text {
     font-size: 13px; color: #555; line-height: 1.6;
   }
@@ -378,7 +376,6 @@
   }
   .fixed-btn.phone-btn { background: #027B4B; }
   .fixed-btn.web-btn { background: #EF7701; }
-  .fixed-btn .btn-icon { font-size: 18px; }
   .fixed-btn .btn-label { line-height: 1.2; }
   .fixed-btn .btn-sub { font-size: 9px; font-weight: 400; display: block; }
 
@@ -446,7 +443,7 @@
   <div class="cta-section">
     <div class="cta-note">まずはお気軽にお電話ください</div>
     <a href="tel:0120612818" class="cta-phone-btn">
-      <span class="phone-icon">&#9742;</span> 0120-612-818
+      0120-612-818
     </a>
     <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
   </div>
@@ -508,7 +505,7 @@
   <div class="cta-section">
     <div class="cta-note">タイヤの査定だけでもOK！</div>
     <a href="tel:0120612818" class="cta-phone-btn">
-      <span class="phone-icon">&#9742;</span> 0120-612-818
+      0120-612-818
     </a>
     <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
   </div>
@@ -519,12 +516,12 @@
   <div class="ng-section">
     <div class="section-title">買取<span class="red" style="color:#c0392b;">できないもの</span><span class="underline" style="background:#c0392b;"></span></div>
     <div class="ng-grid">
-      <div class="ng-item"><span class="ng-icon">&#10005;</span> スチールホイール</div>
-      <div class="ng-item"><span class="ng-icon">&#10005;</span> 1〜3本のみ</div>
-      <div class="ng-item"><span class="ng-icon">&#10005;</span> タイヤチェーン</div>
-      <div class="ng-item"><span class="ng-icon">&#10005;</span> オートバイ用</div>
-      <div class="ng-item"><span class="ng-icon">&#10005;</span> 車体パーツ・バンパー</div>
-      <div class="ng-item"><span class="ng-icon">&#10005;</span> カーナビ・電装品</div>
+      <div class="ng-item"><span class="ng-icon">X</span> スチールホイール</div>
+      <div class="ng-item"><span class="ng-icon">X</span> 1〜3本のみ</div>
+      <div class="ng-item"><span class="ng-icon">X</span> タイヤチェーン</div>
+      <div class="ng-item"><span class="ng-icon">X</span> オートバイ用</div>
+      <div class="ng-item"><span class="ng-icon">X</span> 車体パーツ・バンパー</div>
+      <div class="ng-item"><span class="ng-icon">X</span> カーナビ・電装品</div>
     </div>
   </div>
 </div>
@@ -572,7 +569,7 @@
   <div class="cta-section">
     <div class="cta-note">お持ちのタイヤの価値を確認しませんか？</div>
     <a href="tel:0120612818" class="cta-phone-btn">
-      <span class="phone-icon">&#9742;</span> 0120-612-818
+      0120-612-818
     </a>
     <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
   </div>
@@ -591,7 +588,6 @@
       <div class="worry-item">価値があるのかわからない</div>
     </div>
     <div class="worry-resolve">
-      <span class="arrow">&#9660;</span>
       バイセルの出張買取が解決します！
     </div>
   </div>
@@ -658,17 +654,14 @@
     <div class="section-title">安心・信頼の<span class="green">取り組み</span><span class="underline"></span></div>
     <div class="trust-grid">
       <div class="trust-card">
-        <div class="trust-icon">&#127970;</div>
         <div class="trust-label">東証上場企業</div>
         <div class="trust-desc">グロース市場上場</div>
       </div>
       <div class="trust-card">
-        <div class="trust-icon">&#128274;</div>
         <div class="trust-label">クーリングオフ</div>
         <div class="trust-desc">8日間対応</div>
       </div>
       <div class="trust-card">
-        <div class="trust-icon">&#128222;</div>
         <div class="trust-label">フォローコール</div>
         <div class="trust-desc">査定後にご確認</div>
       </div>
@@ -681,7 +674,7 @@
   <div class="cta-section">
     <div class="cta-note">お見積もりだけでも大歓迎！</div>
     <a href="tel:0120612818" class="cta-phone-btn">
-      <span class="phone-icon">&#9742;</span> 0120-612-818
+      0120-612-818
     </a>
     <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
   </div>
@@ -732,21 +725,21 @@
       <div class="voice-card">
         <div class="voice-header">
           <div class="voice-profile">50代男性・東京都</div>
-          <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="voice-stars"></div>
         </div>
         <div class="voice-text">車を買い替えた際に不要になったホイール4本を査定していただきました。重くて自分では運べなかったので、自宅まで来てくれるのはとても助かりました。</div>
       </div>
       <div class="voice-card">
         <div class="voice-header">
           <div class="voice-profile">40代男性・神奈川県</div>
-          <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="voice-stars"></div>
         </div>
         <div class="voice-text">ガレージに眠っていたスタッドレス+ホイールセットを買い取っていただきました。思っていたより高い金額がつき、満足しています。</div>
       </div>
       <div class="voice-card">
         <div class="voice-header">
           <div class="voice-profile">60代男性・埼玉県</div>
-          <div class="voice-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          <div class="voice-stars"></div>
         </div>
         <div class="voice-text">査定だけのつもりで電話しましたが、丁寧に説明いただき、納得のうえでお願いしました。クーリングオフの説明もあり安心でした。</div>
       </div>
@@ -759,7 +752,7 @@
   <div class="cta-section">
     <div class="cta-note">査定だけでもOK！お気軽にお電話ください</div>
     <a href="tel:0120612818" class="cta-phone-btn">
-      <span class="phone-icon">&#9742;</span> 0120-612-818
+      0120-612-818
     </a>
     <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
   </div>
@@ -855,7 +848,7 @@
   <div class="cta-section">
     <div class="cta-note">まずはお電話でご相談ください</div>
     <a href="tel:0120612818" class="cta-phone-btn">
-      <span class="phone-icon">&#9742;</span> 0120-612-818
+      0120-612-818
     </a>
     <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
   </div>
@@ -888,11 +881,9 @@
 <div class="fixed-cta">
   <div class="fixed-cta-inner">
     <a href="tel:0120612818" class="fixed-btn phone-btn">
-      <span class="btn-icon">&#9742;</span>
       <span class="btn-label">電話で相談<span class="btn-sub">24時間受付</span></span>
     </a>
     <a href="tel:0120612818" class="fixed-btn web-btn">
-      <span class="btn-icon">&#9993;</span>
       <span class="btn-label">Web申し込み<span class="btn-sub">簡単30秒</span></span>
     </a>
   </div>
