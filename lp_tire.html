@@ -23,9 +23,8 @@
     background: #fff; padding: 8px 12px;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .lp-header .header-logo {
-    font-size: 24px; font-weight: 900; color: #1A1311;
-    line-height: 1;
+  .lp-header .header-logo img {
+    height: 28px; width: auto;
   }
   .lp-header .header-phone-btn {
     display: flex; align-items: center; gap: 6px;
@@ -68,8 +67,10 @@
   }
   .fv-catch .green { color: #027B4B; }
   .fv-brand {
-    font-size: 48px; font-weight: 900; color: #1A1311;
-    line-height: 1.1; margin-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  .fv-brand img {
+    height: 50px; width: auto;
   }
   .fv-photo {
     width: 100%; max-width: 500px; margin: 0 auto;
@@ -397,7 +398,7 @@
   /* レスポンシブ */
   @media (max-width: 600px) {
     .fv-catch { font-size: 5vw; }
-    .fv-brand { font-size: 12vw; }
+    .fv-brand img { height: 10vw; }
     .cta-phone-btn { font-size: 7vw; }
     .fv-badge-item { width: 28vw; height: 28vw; }
     .fv-badge-item .badge-main { font-size: 5.5vw; }
@@ -415,7 +416,7 @@
 <!-- ヘッダー -->
 <div class="section">
   <div class="lp-header">
-    <div class="header-logo">バイセル</div>
+    <div class="header-logo"><img src="img/logo_buysell.png?v=1" alt="バイセル"></div>
     <a href="tel:0120612818" class="header-phone-btn">
       0120-612-818
       <span class="phone-sub">通話料無料</span>
@@ -431,7 +432,7 @@
       <div class="cat-tag">ホイール</div>
     </div>
     <div class="fv-catch"><span class="green">タイヤ・ホイール</span>の<span class="green">高価買取</span>なら</div>
-    <div class="fv-brand">バイセル</div>
+    <div class="fv-brand"><img src="img/logo_buysell.png?v=1" alt="バイセル"></div>
 
     <div class="fv-photo">
       <img src="img/tire_ho1.jpg?v=3" alt="ホイール＋タイヤセット">
