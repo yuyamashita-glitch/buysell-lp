@@ -51,7 +51,18 @@
   /* === ファーストビュー === */
   .fv {
     background: #d4edda;
+    background-image:
+      radial-gradient(circle at 10% 90%, rgba(2,123,75,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 90% 10%, rgba(2,123,75,0.06) 0%, transparent 40%),
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 0%, transparent 70%);
     text-align: center; padding: 20px 16px 0;
+    position: relative; overflow: hidden;
+  }
+  .fv::before {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 60px;
+    background: linear-gradient(0deg, rgba(255,255,255,0.5) 0%, transparent 100%);
+    pointer-events: none;
   }
   .fv-categories {
     display: flex; gap: 8px; justify-content: center; margin-bottom: 10px;
@@ -112,7 +123,23 @@
 
   /* === CTA === */
   .cta-section {
-    background: #027B4B; padding: 16px; text-align: center;
+    background: linear-gradient(135deg, #027B4B 0%, #015c38 100%);
+    padding: 16px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; top: -30px; right: -30px;
+    width: 100px; height: 100px; border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    pointer-events: none;
+  }
+  .cta-section::after {
+    content: '';
+    position: absolute; bottom: -20px; left: -20px;
+    width: 80px; height: 80px; border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    pointer-events: none;
   }
   .cta-section .cta-note {
     font-size: 13px; color: #ffd700; font-weight: 700; margin-bottom: 4px;
@@ -129,6 +156,12 @@
     font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 6px;
   }
   .cta-sub-bold { font-weight: 700; color: #fff; }
+
+  /* === セクション区切り装飾 === */
+  .section-divider {
+    height: 4px; max-width: 600px; margin: 0 auto;
+    background: linear-gradient(90deg, #027B4B, #79af9b, #d4edda, #79af9b, #027B4B);
+  }
 
   /* === 取扱商品 === */
   .target-section { background: #fff; padding: 20px 16px; }
@@ -149,7 +182,11 @@
   }
 
   /* === メーカー === */
-  .maker-section { background: #f8faf8; padding: 20px 16px; }
+  .maker-section {
+    background: #f8faf8;
+    background-image: radial-gradient(circle at 100% 0%, rgba(2,123,75,0.04) 0%, transparent 50%);
+    padding: 20px 16px;
+  }
   .maker-grid {
     display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
     max-width: 500px; margin: 10px auto 0;
@@ -179,8 +216,12 @@
 
   /* === 買取相場 === */
   .price-section {
-    background: linear-gradient(180deg, #1A1311 0%, #2d2520 100%);
+    background: linear-gradient(135deg, #1A1311 0%, #2d2520 50%, #1A1311 100%);
+    background-image:
+      linear-gradient(135deg, #1A1311 0%, #2d2520 50%, #1A1311 100%),
+      repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.02) 20px, rgba(255,255,255,0.02) 40px);
     padding: 20px 16px;
+    position: relative;
   }
   .price-section .section-title { color: #fff; }
   .price-section .section-title .green { color: #79af9b; }
@@ -207,7 +248,13 @@
   }
 
   /* === こんなお悩み === */
-  .worry-section { background: #f0f7f3; padding: 24px 16px; }
+  .worry-section {
+    background: #f0f7f3;
+    background-image:
+      radial-gradient(circle at 0% 100%, rgba(2,123,75,0.06) 0%, transparent 40%),
+      radial-gradient(circle at 100% 0%, rgba(2,123,75,0.04) 0%, transparent 40%);
+    padding: 24px 16px;
+  }
   .worry-title {
     font-size: 20px; font-weight: 900; text-align: center; color: #1A1311;
     margin-bottom: 14px;
@@ -226,12 +273,19 @@
   .worry-item::before { content: ''; }
   .worry-resolve {
     text-align: center; margin-top: 16px;
-    font-size: 16px; font-weight: 900; color: #027B4B;
+    font-size: 16px; font-weight: 900; color: #fff;
+    background: #027B4B; padding: 10px 16px; border-radius: 8px;
+    max-width: 400px; margin-left: auto; margin-right: auto;
   }
 
   /* === 累計実績 === */
   .track-section {
-    background: #027B4B; padding: 20px 16px; text-align: center;
+    background: linear-gradient(135deg, #027B4B 0%, #015c38 50%, #027B4B 100%);
+    background-image:
+      linear-gradient(135deg, #027B4B 0%, #015c38 50%, #027B4B 100%),
+      radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(255,255,255,0.05) 0%, transparent 40%);
+    padding: 20px 16px; text-align: center;
   }
   .track-section .section-title { color: #fff; padding-bottom: 6px; }
   .track-numbers {
@@ -251,7 +305,11 @@
   }
 
   /* === 選ばれる理由 === */
-  .reason-section { background: #fff; padding: 20px 16px; }
+  .reason-section {
+    background: #fff;
+    background-image: linear-gradient(180deg, #fff 0%, #f8fdf8 100%);
+    padding: 20px 16px;
+  }
   .reason-list { max-width: 500px; margin: 0 auto; }
   .reason-item {
     display: flex; align-items: flex-start; gap: 14px;
@@ -271,20 +329,24 @@
   }
 
   /* === 安心の取り組み === */
-  .trust-section { background: #f8faf8; padding: 20px 16px; }
+  .trust-section {
+    background: linear-gradient(180deg, #e8f5e9 0%, #f8faf8 100%);
+    padding: 20px 16px;
+  }
   .trust-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
     max-width: 500px; margin: 10px auto 0;
   }
   .trust-card {
-    background: #fff; border-radius: 8px; padding: 14px 10px;
-    text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    background: #fff; border-radius: 8px; padding: 16px 10px;
+    text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-top: 3px solid #79af9b;
   }
   .trust-card .trust-label {
-    font-size: 11px; font-weight: 900; color: #1A1311; line-height: 1.3;
+    font-size: 13px; font-weight: 900; color: #027B4B; line-height: 1.3;
   }
   .trust-card .trust-desc {
-    font-size: 10px; color: #888; margin-top: 2px;
+    font-size: 10px; color: #888; margin-top: 4px;
   }
 
   /* === 買取の流れ === */
@@ -304,7 +366,11 @@
   .flow-step .step-desc { font-size: 12px; color: #666; }
 
   /* === お客様の声 === */
-  .voice-section { background: #f0f7f3; padding: 20px 16px; }
+  .voice-section {
+    background: #f0f7f3;
+    background-image: radial-gradient(circle at 50% 0%, rgba(2,123,75,0.05) 0%, transparent 60%);
+    padding: 20px 16px;
+  }
   .voice-list { max-width: 500px; margin: 10px auto 0; }
   .voice-card {
     background: #fff; border-radius: 8px; padding: 16px;
