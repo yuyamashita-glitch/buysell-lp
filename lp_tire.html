@@ -63,7 +63,7 @@
     display: flex; gap: 8px; justify-content: center;
   }
   .fv-photo img {
-    width: 48%; height: auto; aspect-ratio: 3/2; object-fit: cover;
+    width: 48%; height: auto; object-fit: contain;
     border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
   .fv-points {
@@ -123,7 +123,7 @@
     background: #f8faf8; border-radius: 8px; overflow: hidden;
     border: 2px solid #e0ece4; text-align: center;
   }
-  .target-card img { width: 100%; height: 110px; object-fit: cover; }
+  .target-card img { width: 100%; height: auto; object-fit: contain; }
   .target-card .card-name {
     padding: 8px; font-size: 13px; font-weight: 900; color: #1A1311;
   }
@@ -167,24 +167,23 @@
   }
   .price-section .section-title { color: #fff; }
   .price-section .section-title .green { color: #79af9b; }
-  .price-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+  .price-list {
     max-width: 500px; margin: 10px auto 0;
   }
-  .price-card {
-    background: #fff; border-radius: 8px; overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  .price-row {
+    display: flex; align-items: center; justify-content: space-between;
+    background: #fff; padding: 10px 14px; margin-bottom: 6px;
+    border-radius: 6px;
   }
-  .price-card img { width: 100%; height: 95px; object-fit: cover; }
-  .price-card .price-info { padding: 8px 10px; }
-  .price-card .price-name {
-    font-size: 11px; font-weight: 700; color: #555; line-height: 1.3;
-    margin-bottom: 4px; min-height: 28px;
+  .price-row .price-name {
+    font-size: 12px; font-weight: 700; color: #333; line-height: 1.4;
+    flex: 1;
   }
-  .price-card .price-amount {
-    font-size: 24px; font-weight: 900; color: #c0392b; line-height: 1;
+  .price-row .price-amount {
+    font-size: 22px; font-weight: 900; color: #c0392b; white-space: nowrap;
+    margin-left: 12px;
   }
-  .price-card .price-amount small { font-size: 13px; }
+  .price-row .price-amount small { font-size: 12px; }
   .price-note {
     text-align: center; font-size: 10px; color: rgba(255,255,255,0.5);
     margin-top: 10px;
@@ -335,7 +334,7 @@
     text-align: center; border: 2px solid #e0ece4; border-radius: 6px; overflow: hidden;
     background: #fff;
   }
-  .other-card img { width: 100%; height: 60px; object-fit: cover; }
+  .other-card img { width: 100%; height: 60px; object-fit: contain; }
   .other-card .card-label {
     font-size: 10px; font-weight: 700; color: #333; padding: 4px 2px;
   }
@@ -415,7 +414,7 @@
 
     <div class="fv-photo">
       <img src="img/tire_ho1.jpg?v=2" alt="ホイール＋タイヤセット">
-      <img src="img/wheel_rim_bs.jpg?v=2" alt="VOLK RACING ホイール">
+      <img src="img/tire_ho2.jpg?v=1" alt="ホイール＋タイヤ 4本セット">
     </div>
 
     <div class="fv-points">
@@ -530,34 +529,30 @@
 <div class="section">
   <div class="price-section">
     <div class="section-title">買取<span class="green">相場情報</span><span class="underline" style="background:#79af9b;"></span></div>
-    <div class="price-grid">
-      <div class="price-card">
-        <img src="img/tire_souba01.jpg?v=2" alt="Weds VELVA + ブリザック VRX3">
-        <div class="price-info">
-          <div class="price-name">Weds VELVA 19インチ +<br>ブリザック VRX3</div>
-          <div class="price-amount">110,000<small>円</small></div>
-        </div>
+    <div class="price-list">
+      <div class="price-row">
+        <div class="price-name">GRスープラ RZ 純正19インチ + ブリザック VRX3</div>
+        <div class="price-amount">150,000<small>円</small></div>
       </div>
-      <div class="price-card">
-        <img src="img/tire_souba02.jpg?v=2" alt="GRスープラ純正 + ブリザック VRX3">
-        <div class="price-info">
-          <div class="price-name">GRスープラ RZ 純正19インチ +<br>ブリザック VRX3</div>
-          <div class="price-amount">150,000<small>円</small></div>
-        </div>
+      <div class="price-row">
+        <div class="price-name">ロールスロイス ゴースト純正20インチ + アイスガード G075</div>
+        <div class="price-amount">120,000<small>円</small></div>
       </div>
-      <div class="price-card">
-        <img src="img/tire_souba03.jpg?v=2" alt="ロールスロイス ゴースト純正">
-        <div class="price-info">
-          <div class="price-name">ロールスロイス ゴースト純正 +<br>アイスガード G075</div>
-          <div class="price-amount">120,000<small>円</small></div>
-        </div>
+      <div class="price-row">
+        <div class="price-name">Weds VELVA 19インチ + ブリザック VRX3</div>
+        <div class="price-amount">110,000<small>円</small></div>
       </div>
-      <div class="price-card">
-        <img src="img/tire_souba06.jpg?v=2" alt="アイスガード iG70">
-        <div class="price-info">
-          <div class="price-name">ヨコハマ アイスガード iG70<br>265/40R20</div>
-          <div class="price-amount">95,000<small>円</small></div>
-        </div>
+      <div class="price-row">
+        <div class="price-name">ヨコハマ アイスガード iG70 265/40R20</div>
+        <div class="price-amount">95,000<small>円</small></div>
+      </div>
+      <div class="price-row">
+        <div class="price-name">ブリヂストン ブリザック DM-V3 265/65R17</div>
+        <div class="price-amount">20,000<small>円</small></div>
+      </div>
+      <div class="price-row">
+        <div class="price-name">ダンロップ ウインターマックス SJ8+ 225/60R18</div>
+        <div class="price-amount">20,000<small>円</small></div>
       </div>
     </div>
     <div class="price-note">※上記は買取相場の一例です。実際の買取金額は商品の状態等により異なります。</div>
