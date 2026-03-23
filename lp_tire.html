@@ -20,9 +20,27 @@
 
   /* === ヘッダー === */
   .lp-header {
-    background: #f5d000; margin: 0; padding: 0; line-height: 0; overflow: hidden;
+    background: #fff; padding: 10px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 2px solid #eee;
   }
-  .lp-header img { width: 100%; display: block; margin-bottom: -4px; }
+  .lp-header .header-logo {
+    font-size: 20px; font-weight: 900; color: #1A1311;
+    text-decoration: none; line-height: 1.2;
+  }
+  .lp-header .header-logo .logo-sub {
+    display: block; font-size: 10px; font-weight: 700; color: #027B4B;
+  }
+  .lp-header .header-right {
+    text-align: right;
+  }
+  .lp-header .header-phone {
+    font-size: 18px; font-weight: 900; color: #027B4B;
+    text-decoration: none; letter-spacing: 1px;
+  }
+  .lp-header .header-badge {
+    font-size: 9px; color: #888; display: block;
+  }
 
   /* === セクション共通 === */
   .section { max-width: 600px; margin: 0 auto; }
@@ -398,7 +416,14 @@
 <!-- ヘッダー -->
 <div class="section">
   <div class="lp-header">
-    <img src="img/header_official.jpg?v=4" alt="バイセル - テレビCMでおなじみ！買取はバイセル 878787 東証上場企業">
+    <div class="header-logo">
+      バイセル
+      <span class="logo-sub">東証グロース上場</span>
+    </div>
+    <div class="header-right">
+      <a href="tel:0120612818" class="header-phone">0120-612-818</a>
+      <span class="header-badge">24時間受付 / 通話料無料</span>
+    </div>
   </div>
 </div>
 
