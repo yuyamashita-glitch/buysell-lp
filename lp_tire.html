@@ -64,6 +64,14 @@
     background: linear-gradient(0deg, rgba(255,255,255,0.5) 0%, transparent 100%);
     pointer-events: none; z-index: 1;
   }
+  /* FV上部装飾 */
+  .fv-deco-upper {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none; z-index: 0; overflow: hidden;
+  }
+  .fv-deco-upper svg {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  }
   /* FV街並みイラスト */
   .fv-cityscape {
     position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
@@ -507,6 +515,107 @@
 <!-- ファーストビュー -->
 <div class="section">
   <div class="fv">
+    <!-- 上部装飾（ホイール・タイヤ跡・ドット） -->
+    <div class="fv-deco-upper">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <!-- 左上：大きめホイール -->
+        <g transform="translate(22, 18)" opacity="0.13">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="#027B4B" stroke-width="5"/>
+          <circle cx="30" cy="30" r="20" fill="none" stroke="#027B4B" stroke-width="2"/>
+          <circle cx="30" cy="30" r="9" fill="none" stroke="#027B4B" stroke-width="3"/>
+          <line x1="30" y1="2" x2="30" y2="11" stroke="#027B4B" stroke-width="2.5"/>
+          <line x1="30" y1="49" x2="30" y2="58" stroke="#027B4B" stroke-width="2.5"/>
+          <line x1="2" y1="30" x2="11" y2="30" stroke="#027B4B" stroke-width="2.5"/>
+          <line x1="49" y1="30" x2="58" y2="30" stroke="#027B4B" stroke-width="2.5"/>
+          <line x1="10" y1="10" x2="17" y2="17" stroke="#027B4B" stroke-width="2"/>
+          <line x1="50" y1="50" x2="43" y2="43" stroke="#027B4B" stroke-width="2"/>
+          <line x1="50" y1="10" x2="43" y2="17" stroke="#027B4B" stroke-width="2"/>
+          <line x1="10" y1="50" x2="17" y2="43" stroke="#027B4B" stroke-width="2"/>
+        </g>
+
+        <!-- 右上：小さめホイール -->
+        <g transform="translate(340, 25)" opacity="0.10">
+          <circle cx="22" cy="22" r="20" fill="none" stroke="#027B4B" stroke-width="4"/>
+          <circle cx="22" cy="22" r="14" fill="none" stroke="#027B4B" stroke-width="1.5"/>
+          <circle cx="22" cy="22" r="6" fill="none" stroke="#027B4B" stroke-width="2.5"/>
+          <line x1="22" y1="2" x2="22" y2="8" stroke="#027B4B" stroke-width="2"/>
+          <line x1="22" y1="36" x2="22" y2="42" stroke="#027B4B" stroke-width="2"/>
+          <line x1="2" y1="22" x2="8" y2="22" stroke="#027B4B" stroke-width="2"/>
+          <line x1="36" y1="22" x2="42" y2="22" stroke="#027B4B" stroke-width="2"/>
+          <line x1="8" y1="8" x2="13" y2="13" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="36" y1="36" x2="31" y2="31" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="36" y1="8" x2="31" y2="13" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="8" y1="36" x2="13" y2="31" stroke="#027B4B" stroke-width="1.5"/>
+        </g>
+
+        <!-- 左のタイヤ跡（縦カーブ） -->
+        <path d="M12 80 Q8 130 16 180 Q22 220 14 260" fill="none" stroke="#027B4B" stroke-width="3" opacity="0.06" stroke-linecap="round"/>
+        <path d="M18 80 Q14 130 22 180 Q28 220 20 260" fill="none" stroke="#027B4B" stroke-width="3" opacity="0.06" stroke-linecap="round"/>
+        <!-- 左タイヤ跡のトレッドパターン -->
+        <g opacity="0.04">
+          <line x1="9" y1="95" x2="21" y2="93" stroke="#027B4B" stroke-width="2"/>
+          <line x1="8" y1="110" x2="20" y2="108" stroke="#027B4B" stroke-width="2"/>
+          <line x1="8" y1="125" x2="20" y2="123" stroke="#027B4B" stroke-width="2"/>
+          <line x1="9" y1="140" x2="21" y2="138" stroke="#027B4B" stroke-width="2"/>
+          <line x1="11" y1="155" x2="23" y2="153" stroke="#027B4B" stroke-width="2"/>
+          <line x1="13" y1="170" x2="25" y2="168" stroke="#027B4B" stroke-width="2"/>
+          <line x1="15" y1="185" x2="27" y2="183" stroke="#027B4B" stroke-width="2"/>
+          <line x1="16" y1="200" x2="28" y2="198" stroke="#027B4B" stroke-width="2"/>
+          <line x1="15" y1="215" x2="27" y2="213" stroke="#027B4B" stroke-width="2"/>
+          <line x1="14" y1="230" x2="26" y2="228" stroke="#027B4B" stroke-width="2"/>
+          <line x1="13" y1="245" x2="25" y2="243" stroke="#027B4B" stroke-width="2"/>
+        </g>
+
+        <!-- 右のタイヤ跡（縦カーブ） -->
+        <path d="M388 60 Q392 110 384 160 Q378 200 386 240" fill="none" stroke="#027B4B" stroke-width="3" opacity="0.06" stroke-linecap="round"/>
+        <path d="M382 60 Q386 110 378 160 Q372 200 380 240" fill="none" stroke="#027B4B" stroke-width="3" opacity="0.06" stroke-linecap="round"/>
+        <!-- 右タイヤ跡のトレッドパターン -->
+        <g opacity="0.04">
+          <line x1="379" y1="75" x2="391" y2="73" stroke="#027B4B" stroke-width="2"/>
+          <line x1="380" y1="90" x2="392" y2="88" stroke="#027B4B" stroke-width="2"/>
+          <line x1="381" y1="105" x2="393" y2="103" stroke="#027B4B" stroke-width="2"/>
+          <line x1="382" y1="120" x2="394" y2="118" stroke="#027B4B" stroke-width="2"/>
+          <line x1="381" y1="135" x2="393" y2="133" stroke="#027B4B" stroke-width="2"/>
+          <line x1="380" y1="150" x2="392" y2="148" stroke="#027B4B" stroke-width="2"/>
+          <line x1="379" y1="165" x2="391" y2="163" stroke="#027B4B" stroke-width="2"/>
+          <line x1="378" y1="180" x2="390" y2="178" stroke="#027B4B" stroke-width="2"/>
+          <line x1="377" y1="195" x2="389" y2="193" stroke="#027B4B" stroke-width="2"/>
+          <line x1="378" y1="210" x2="390" y2="208" stroke="#027B4B" stroke-width="2"/>
+          <line x1="380" y1="225" x2="392" y2="223" stroke="#027B4B" stroke-width="2"/>
+        </g>
+
+        <!-- 散りばめドット装飾 -->
+        <circle cx="80" cy="15" r="3" fill="#027B4B" opacity="0.07"/>
+        <circle cx="95" cy="35" r="2" fill="#027B4B" opacity="0.06"/>
+        <circle cx="320" cy="12" r="2.5" fill="#027B4B" opacity="0.06"/>
+        <circle cx="305" cy="45" r="2" fill="#027B4B" opacity="0.05"/>
+        <circle cx="70" cy="55" r="2" fill="#027B4B" opacity="0.05"/>
+        <circle cx="340" cy="70" r="3" fill="#027B4B" opacity="0.06"/>
+        <circle cx="365" cy="90" r="2" fill="#027B4B" opacity="0.05"/>
+        <circle cx="45" cy="90" r="2.5" fill="#027B4B" opacity="0.06"/>
+
+        <!-- 左下に小さいホイール -->
+        <g transform="translate(30, 280)" opacity="0.08">
+          <circle cx="16" cy="16" r="14" fill="none" stroke="#027B4B" stroke-width="3"/>
+          <circle cx="16" cy="16" r="5" fill="none" stroke="#027B4B" stroke-width="2"/>
+          <line x1="16" y1="2" x2="16" y2="7" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="16" y1="25" x2="16" y2="30" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="2" y1="16" x2="7" y2="16" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="25" y1="16" x2="30" y2="16" stroke="#027B4B" stroke-width="1.5"/>
+        </g>
+
+        <!-- 右中に小さいホイール -->
+        <g transform="translate(355, 160)" opacity="0.07">
+          <circle cx="14" cy="14" r="12" fill="none" stroke="#027B4B" stroke-width="2.5"/>
+          <circle cx="14" cy="14" r="4" fill="none" stroke="#027B4B" stroke-width="2"/>
+          <line x1="14" y1="2" x2="14" y2="6" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="14" y1="22" x2="14" y2="26" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="2" y1="14" x2="6" y2="14" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="22" y1="14" x2="26" y2="14" stroke="#027B4B" stroke-width="1.5"/>
+        </g>
+      </svg>
+    </div>
+
     <!-- 街並み+車イラスト -->
     <div class="fv-cityscape">
       <svg viewBox="0 0 600 120" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
