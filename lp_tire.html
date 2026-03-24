@@ -491,6 +491,32 @@
     font-size: 10px; color: #999; text-align: right; margin-top: 10px;
   }
 
+  /* === 写真バナー === */
+  .photo-banner {
+    position: relative; overflow: hidden;
+    height: 160px; display: flex; align-items: center; justify-content: center;
+  }
+  .photo-banner img {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .photo-banner-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(2,123,75,0.75) 0%, rgba(2,123,75,0.55) 100%);
+  }
+  .photo-banner-text {
+    position: relative; z-index: 1; text-align: center;
+    color: #fff; padding: 0 20px;
+  }
+  .photo-banner-text .banner-main {
+    font-size: 20px; font-weight: 900; line-height: 1.4;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .photo-banner-text .banner-sub {
+    font-size: 13px; font-weight: 700; margin-top: 6px;
+    opacity: 0.9;
+  }
+
   /* === お客様の声 === */
   .voice-section {
     background: #f0f7f3;
@@ -1083,6 +1109,18 @@
   </div>
 </div>
 
+<!-- 写真バナー1: 出張査定イメージ -->
+<div class="section">
+  <div class="photo-banner">
+    <img src="img/tire_ho1.jpg?v=5" alt="タイヤ・ホイール出張買取">
+    <div class="photo-banner-overlay"></div>
+    <div class="photo-banner-text">
+      <div class="banner-main">重いタイヤもご自宅で<br>そのまま査定・買取</div>
+      <div class="banner-sub">出張料・査定料・キャンセル料 すべて無料</div>
+    </div>
+  </div>
+</div>
+
 <!-- 累計実績 -->
 <div class="section">
   <div class="track-section">
@@ -1134,6 +1172,18 @@
           <div class="reason-desc">出張料・査定料・キャンセル料、すべて無料。お気軽にご依頼ください。</div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- 写真バナー2: ホイール査定 -->
+<div class="section">
+  <div class="photo-banner">
+    <img src="img/tire_tu1.jpg?v=5" alt="ホイール査定">
+    <div class="photo-banner-overlay"></div>
+    <div class="photo-banner-text">
+      <div class="banner-main">プロの査定士が<br>1本1本丁寧に査定</div>
+      <div class="banner-sub">ブランド・状態・市場価値をしっかり見極めます</div>
     </div>
   </div>
 </div>
@@ -1241,6 +1291,18 @@
         <div class="flow-timeline-desc">フォローコール（ご不明点の確認）</div>
       </div>
       <div class="flow-timeline-note">※所要時間はお品物の点数や状態によって異なります</div>
+    </div>
+  </div>
+</div>
+
+<!-- 写真バナー3: タイヤセット -->
+<div class="section">
+  <div class="photo-banner">
+    <img src="img/tire_set1.jpg?v=5" alt="タイヤ・ホイールセット">
+    <div class="photo-banner-overlay"></div>
+    <div class="photo-banner-text">
+      <div class="banner-main">4本セットでまとめて<br>高価買取</div>
+      <div class="banner-sub">ご自宅のガレージ・玄関先まで査定士がお伺いします</div>
     </div>
   </div>
 </div>
