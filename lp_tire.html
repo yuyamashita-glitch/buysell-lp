@@ -55,7 +55,7 @@
       radial-gradient(circle at 10% 90%, rgba(2,123,75,0.08) 0%, transparent 50%),
       radial-gradient(circle at 90% 10%, rgba(2,123,75,0.06) 0%, transparent 40%),
       radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 0%, transparent 70%);
-    text-align: center; padding: 20px 16px 0;
+    text-align: center; padding: 20px 16px 10px;
     position: relative; overflow: hidden;
   }
   .fv::before {
@@ -64,66 +64,13 @@
     background: linear-gradient(0deg, rgba(255,255,255,0.5) 0%, transparent 100%);
     pointer-events: none; z-index: 1;
   }
-  /* FV装飾: 道路シルエット + 車 */
-  .fv-deco-road {
-    position: absolute; bottom: 0; left: 0; right: 0; height: 100%;
+  /* FV街並みイラスト */
+  .fv-cityscape {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
     pointer-events: none; z-index: 0;
-    overflow: hidden;
   }
-  .fv-deco-road::before {
-    content: '';
-    position: absolute; bottom: 0; left: 0; right: 0; height: 28px;
-    background: rgba(2,123,75,0.10);
-    border-top: 2px dashed rgba(2,123,75,0.18);
-  }
-  .fv-deco-road::after {
-    content: '';
-    position: absolute; bottom: 0; left: 0; right: 0; height: 28px;
-    background-image:
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Cpath d='M25 28 L30 18 Q32 14 36 14 L84 14 Q88 14 90 18 L95 28 Z' fill='%23027B4B' opacity='0.13'/%3E%3Crect x='28' y='28' width='64' height='8' rx='2' fill='%23027B4B' opacity='0.13'/%3E%3Ccircle cx='38' cy='36' r='6' fill='%23027B4B' opacity='0.15'/%3E%3Ccircle cx='82' cy='36' r='6' fill='%23027B4B' opacity='0.15'/%3E%3Ccircle cx='38' cy='36' r='3' fill='%23d4edda' opacity='0.6'/%3E%3Ccircle cx='82' cy='36' r='3' fill='%23d4edda' opacity='0.6'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: 90px auto;
-    background-position: 8% bottom;
-  }
-  /* 右側の車シルエット */
-  .fv-deco-car-right {
-    position: absolute; bottom: 0; right: 5%; width: 80px; height: 36px;
-    pointer-events: none; z-index: 0;
-    background-image:
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Cpath d='M15 28 L22 16 Q24 12 28 12 L72 12 Q80 12 85 16 L95 22 L105 22 L105 28 Z' fill='%23027B4B' opacity='0.12'/%3E%3Crect x='12' y='28' width='96' height='8' rx='2' fill='%23027B4B' opacity='0.12'/%3E%3Ccircle cx='32' cy='36' r='6' fill='%23027B4B' opacity='0.15'/%3E%3Ccircle cx='88' cy='36' r='6' fill='%23027B4B' opacity='0.15'/%3E%3Ccircle cx='32' cy='36' r='3' fill='%23d4edda' opacity='0.5'/%3E%3Ccircle cx='88' cy='36' r='3' fill='%23d4edda' opacity='0.5'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom right;
-  }
-  /* タイヤ装飾（左上・右上） */
-  .fv-deco-tire-left {
-    position: absolute; top: 14px; left: -18px; width: 60px; height: 60px;
-    pointer-events: none; z-index: 0; opacity: 0.10;
-    background-image:
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='28' fill='none' stroke='%23027B4B' stroke-width='6'/%3E%3Ccircle cx='30' cy='30' r='10' fill='none' stroke='%23027B4B' stroke-width='3'/%3E%3Cline x1='30' y1='2' x2='30' y2='20' stroke='%23027B4B' stroke-width='2'/%3E%3Cline x1='30' y1='40' x2='30' y2='58' stroke='%23027B4B' stroke-width='2'/%3E%3Cline x1='2' y1='30' x2='20' y2='30' stroke='%23027B4B' stroke-width='2'/%3E%3Cline x1='40' y1='30' x2='58' y2='30' stroke='%23027B4B' stroke-width='2'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .fv-deco-tire-right {
-    position: absolute; top: 50px; right: -12px; width: 50px; height: 50px;
-    pointer-events: none; z-index: 0; opacity: 0.08;
-    background-image:
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='28' fill='none' stroke='%23027B4B' stroke-width='6'/%3E%3Ccircle cx='30' cy='30' r='10' fill='none' stroke='%23027B4B' stroke-width='3'/%3E%3Cline x1='30' y1='2' x2='30' y2='20' stroke='%23027B4B' stroke-width='2'/%3E%3Cline x1='30' y1='40' x2='30' y2='58' stroke='%23027B4B' stroke-width='2'/%3E%3Cline x1='2' y1='30' x2='20' y2='30' stroke='%23027B4B' stroke-width='2'/%3E%3Cline x1='40' y1='30' x2='58' y2='30' stroke='%23027B4B' stroke-width='2'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  /* タイヤ跡（斜めライン） */
-  .fv-deco-tracks {
-    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    pointer-events: none; z-index: 0;
-    background-image:
-      repeating-linear-gradient(
-        -30deg,
-        transparent,
-        transparent 18px,
-        rgba(2,123,75,0.03) 18px,
-        rgba(2,123,75,0.03) 20px
-      );
+  .fv-cityscape svg {
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
   }
   .fv-categories {
     display: flex; gap: 8px; justify-content: center; margin-bottom: 10px;
@@ -560,11 +507,168 @@
 <!-- ファーストビュー -->
 <div class="section">
   <div class="fv">
-    <div class="fv-deco-tracks"></div>
-    <div class="fv-deco-tire-left"></div>
-    <div class="fv-deco-tire-right"></div>
-    <div class="fv-deco-road"></div>
-    <div class="fv-deco-car-right"></div>
+    <!-- 街並み+車イラスト -->
+    <div class="fv-cityscape">
+      <svg viewBox="0 0 600 120" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+        <!-- 奥のビル群（薄め） -->
+        <rect x="10" y="30" width="35" height="70" rx="2" fill="#4a9e73" opacity="0.25"/>
+        <rect x="14" y="36" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="24" y="36" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="14" y="50" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="24" y="50" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="14" y="64" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="24" y="64" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+
+        <rect x="55" y="45" width="28" height="55" rx="2" fill="#4a9e73" opacity="0.2"/>
+        <rect x="59" y="50" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="68" y="50" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="59" y="62" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="68" y="62" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+
+        <rect x="130" y="20" width="40" height="80" rx="2" fill="#4a9e73" opacity="0.22"/>
+        <rect x="135" y="26" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="146" y="26" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="157" y="26" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="135" y="40" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="146" y="40" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="157" y="40" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="135" y="54" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="146" y="54" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="157" y="54" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="135" y="68" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="146" y="68" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="157" y="68" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+
+        <rect x="420" y="35" width="32" height="65" rx="2" fill="#4a9e73" opacity="0.2"/>
+        <rect x="424" y="40" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="433" y="40" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="442" y="40" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="424" y="52" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="433" y="52" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="442" y="52" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+
+        <rect x="500" y="25" width="38" height="75" rx="2" fill="#4a9e73" opacity="0.25"/>
+        <rect x="505" y="31" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="515" y="31" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="525" y="31" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="505" y="45" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="515" y="45" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="525" y="45" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="505" y="59" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="515" y="59" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="525" y="59" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+
+        <rect x="548" y="50" width="25" height="50" rx="2" fill="#4a9e73" opacity="0.18"/>
+        <rect x="552" y="55" width="5" height="6" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="560" y="55" width="5" height="6" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="552" y="66" width="5" height="6" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="560" y="66" width="5" height="6" rx="1" fill="#d4edda" opacity="0.5"/>
+
+        <!-- 手前のビル（濃いめ） -->
+        <rect x="90" y="55" width="30" height="45" rx="2" fill="#3d8c65" opacity="0.3"/>
+        <rect x="94" y="60" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="103" y="60" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="112" y="60" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="94" y="72" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="103" y="72" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="112" y="72" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="94" y="84" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="103" y="84" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="112" y="84" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+
+        <rect x="460" y="50" width="30" height="50" rx="2" fill="#3d8c65" opacity="0.3"/>
+        <rect x="464" y="55" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="473" y="55" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="482" y="55" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="464" y="67" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="473" y="67" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="482" y="67" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+
+        <!-- 木（丸い樹冠+幹） -->
+        <rect x="185" y="72" width="4" height="18" fill="#4a9e73" opacity="0.35"/>
+        <circle cx="187" cy="66" r="12" fill="#3d8c65" opacity="0.3"/>
+        <circle cx="182" cy="68" r="9" fill="#4a9e73" opacity="0.25"/>
+        <circle cx="193" cy="69" r="8" fill="#4a9e73" opacity="0.22"/>
+
+        <rect x="232" y="76" width="3" height="14" fill="#4a9e73" opacity="0.35"/>
+        <circle cx="234" cy="70" r="10" fill="#3d8c65" opacity="0.28"/>
+        <circle cx="229" cy="72" r="7" fill="#4a9e73" opacity="0.22"/>
+
+        <rect x="350" y="70" width="4" height="20" fill="#4a9e73" opacity="0.35"/>
+        <circle cx="352" cy="64" r="13" fill="#3d8c65" opacity="0.3"/>
+        <circle cx="346" cy="67" r="9" fill="#4a9e73" opacity="0.25"/>
+        <circle cx="359" cy="66" r="8" fill="#4a9e73" opacity="0.22"/>
+
+        <rect x="395" y="76" width="3" height="14" fill="#4a9e73" opacity="0.35"/>
+        <circle cx="397" cy="71" r="9" fill="#3d8c65" opacity="0.25"/>
+        <circle cx="392" cy="73" r="6" fill="#4a9e73" opacity="0.2"/>
+
+        <rect x="580" y="74" width="3" height="16" fill="#4a9e73" opacity="0.35"/>
+        <circle cx="582" cy="68" r="10" fill="#3d8c65" opacity="0.28"/>
+
+        <!-- 地面（道路） -->
+        <rect x="0" y="100" width="600" height="20" fill="#4a9e73" opacity="0.15"/>
+        <line x1="0" y1="100" x2="600" y2="100" stroke="#3d8c65" stroke-width="1.5" opacity="0.25"/>
+        <!-- 白い破線（道路センターライン） -->
+        <line x1="0" y1="108" x2="600" y2="108" stroke="#fff" stroke-width="2" stroke-dasharray="12,8" opacity="0.3"/>
+
+        <!-- 車1: セダン（左向き走行・緑系） -->
+        <g transform="translate(60, 86)">
+          <path d="M8 14 L14 4 Q16 0 20 0 L44 0 Q48 0 50 4 L56 14 Z" fill="#027B4B" opacity="0.5"/>
+          <rect x="4" y="14" width="56" height="10" rx="3" fill="#027B4B" opacity="0.45"/>
+          <rect x="16" y="2" width="12" height="10" rx="1" fill="#a8dbc5" opacity="0.5"/>
+          <rect x="32" y="2" width="14" height="10" rx="1" fill="#a8dbc5" opacity="0.5"/>
+          <circle cx="16" cy="26" r="5" fill="#027B4B" opacity="0.55"/>
+          <circle cx="48" cy="26" r="5" fill="#027B4B" opacity="0.55"/>
+          <circle cx="16" cy="26" r="2.5" fill="#d4edda" opacity="0.5"/>
+          <circle cx="48" cy="26" r="2.5" fill="#d4edda" opacity="0.5"/>
+        </g>
+
+        <!-- 車2: SUV（右向き走行・濃い緑） -->
+        <g transform="translate(250, 84)">
+          <path d="M10 16 L16 4 Q18 0 22 0 L50 0 Q54 0 55 3 L58 10 L64 10 L64 16 Z" fill="#1a6b2a" opacity="0.45"/>
+          <rect x="6" y="16" width="62" height="12" rx="3" fill="#1a6b2a" opacity="0.4"/>
+          <rect x="18" y="2" width="14" height="12" rx="1" fill="#a8dbc5" opacity="0.45"/>
+          <rect x="36" y="2" width="16" height="12" rx="1" fill="#a8dbc5" opacity="0.45"/>
+          <circle cx="20" cy="30" r="6" fill="#1a6b2a" opacity="0.5"/>
+          <circle cx="54" cy="30" r="6" fill="#1a6b2a" opacity="0.5"/>
+          <circle cx="20" cy="30" r="3" fill="#d4edda" opacity="0.45"/>
+          <circle cx="54" cy="30" r="3" fill="#d4edda" opacity="0.45"/>
+        </g>
+
+        <!-- 車3: コンパクトカー（右側） -->
+        <g transform="translate(450, 88)">
+          <path d="M7 12 L12 4 Q14 0 18 0 L38 0 Q42 0 44 4 L49 12 Z" fill="#027B4B" opacity="0.4"/>
+          <rect x="4" y="12" width="48" height="9" rx="3" fill="#027B4B" opacity="0.38"/>
+          <rect x="14" y="2" width="10" height="9" rx="1" fill="#a8dbc5" opacity="0.45"/>
+          <rect x="28" y="2" width="12" height="9" rx="1" fill="#a8dbc5" opacity="0.45"/>
+          <circle cx="14" cy="22" r="4.5" fill="#027B4B" opacity="0.5"/>
+          <circle cx="42" cy="22" r="4.5" fill="#027B4B" opacity="0.5"/>
+          <circle cx="14" cy="22" r="2" fill="#d4edda" opacity="0.45"/>
+          <circle cx="42" cy="22" r="2" fill="#d4edda" opacity="0.45"/>
+        </g>
+
+        <!-- 車4: 小さいセダン（左端近く） -->
+        <g transform="translate(180, 90)" opacity="0.7">
+          <path d="M6 10 L10 3 Q12 0 15 0 L33 0 Q36 0 38 3 L42 10 Z" fill="#3d8c65" opacity="0.4"/>
+          <rect x="3" y="10" width="42" height="8" rx="2" fill="#3d8c65" opacity="0.38"/>
+          <circle cx="12" cy="20" r="4" fill="#3d8c65" opacity="0.5"/>
+          <circle cx="36" cy="20" r="4" fill="#3d8c65" opacity="0.5"/>
+          <circle cx="12" cy="20" r="2" fill="#d4edda" opacity="0.4"/>
+          <circle cx="36" cy="20" r="2" fill="#d4edda" opacity="0.4"/>
+        </g>
+
+        <!-- 車5: ワゴン（右端） -->
+        <g transform="translate(540, 88)" opacity="0.6">
+          <path d="M5 12 L10 3 Q12 0 16 0 L42 0 L45 5 L48 5 L48 12 Z" fill="#1a6b2a" opacity="0.4"/>
+          <rect x="3" y="12" width="48" height="9" rx="2" fill="#1a6b2a" opacity="0.35"/>
+          <circle cx="13" cy="22" r="4.5" fill="#1a6b2a" opacity="0.45"/>
+          <circle cx="40" cy="22" r="4.5" fill="#1a6b2a" opacity="0.45"/>
+          <circle cx="13" cy="22" r="2" fill="#d4edda" opacity="0.4"/>
+          <circle cx="40" cy="22" r="2" fill="#d4edda" opacity="0.4"/>
+        </g>
+      </svg>
+    </div>
     <div class="fv-categories">
       <div class="cat-tag">タイヤ</div>
       <div class="cat-tag">ホイール</div>
