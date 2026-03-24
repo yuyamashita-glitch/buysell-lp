@@ -282,22 +282,73 @@
     margin-bottom: 14px;
   }
   .worry-title .green { color: #027B4B; }
-  .worry-list {
+  .worry-cards {
     max-width: 500px; margin: 0 auto;
-    display: flex; flex-direction: column; gap: 8px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
   }
-  .worry-item {
-    background: #fff; padding: 10px 16px; border-radius: 6px;
-    font-size: 14px; font-weight: 700; color: #333;
-    border-left: 4px solid #79af9b;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  .worry-card {
+    background: #fff; border-radius: 10px; padding: 16px 10px 12px;
+    text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border: 1px solid #e0ece4;
   }
-  .worry-item::before { content: ''; }
+  .worry-card-icon {
+    width: 56px; height: 56px; margin: 0 auto 10px;
+    background: #e8f5ee; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 900; color: #027B4B;
+    line-height: 1.2;
+  }
+  .worry-card-text {
+    font-size: 12px; font-weight: 700; color: #333; line-height: 1.5;
+  }
+  /* 下矢印 */
+  .worry-arrow {
+    text-align: center; margin: 16px 0;
+  }
+  .worry-arrow-inner {
+    display: inline-block;
+    width: 0; height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 16px solid #79af9b;
+  }
+  /* ピッタリバナー */
   .worry-resolve {
-    text-align: center; margin-top: 16px;
-    font-size: 16px; font-weight: 900; color: #fff;
-    background: #027B4B; padding: 10px 16px; border-radius: 8px;
-    max-width: 400px; margin-left: auto; margin-right: auto;
+    max-width: 500px; margin: 0 auto;
+    background: #027B4B; border-radius: 12px;
+    padding: 20px 16px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .worry-resolve::before {
+    content: '';
+    position: absolute; top: -20px; right: -20px;
+    width: 80px; height: 80px; border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .worry-resolve::after {
+    content: '';
+    position: absolute; bottom: -15px; left: -15px;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .worry-resolve-sub {
+    font-size: 13px; font-weight: 700; color: #ffd700; margin-bottom: 4px;
+  }
+  .worry-resolve-main {
+    font-size: 20px; font-weight: 900; color: #fff; line-height: 1.4;
+  }
+  .worry-resolve-main .highlight {
+    background: #fff; color: #027B4B; padding: 2px 8px;
+    border-radius: 4px; display: inline-block; margin: 0 2px;
+  }
+  .worry-resolve-features {
+    display: flex; justify-content: center; gap: 8px;
+    margin-top: 12px; flex-wrap: wrap;
+  }
+  .worry-resolve-tag {
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+    color: #fff; font-size: 12px; font-weight: 700;
+    padding: 4px 12px; border-radius: 20px;
   }
 
   /* === 累計実績 === */
@@ -372,20 +423,73 @@
   }
 
   /* === 買取の流れ === */
-  .flow-section { background: #fff; padding: 20px 16px; }
-  .flow-steps { max-width: 500px; margin: 10px auto 0; }
+  .flow-section { background: #f0f7f3; padding: 24px 16px; }
+  .flow-steps { max-width: 500px; margin: 10px auto 0; position: relative; }
+  /* タイムラインの縦線 */
+  .flow-steps::before {
+    content: '';
+    position: absolute; top: 24px; bottom: 24px; left: 23px;
+    width: 3px; background: #c8e6d5; border-radius: 2px;
+  }
   .flow-step {
-    display: flex; align-items: center; gap: 14px;
-    padding: 14px 0; border-bottom: 1px dashed #ddd;
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 0 0 20px; position: relative;
   }
-  .flow-step:last-child { border-bottom: none; }
+  .flow-step:last-child { padding-bottom: 0; }
   .flow-step .step-num {
-    width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
-    background: #79af9b; color: #fff; font-size: 18px; font-weight: 900;
-    display: flex; align-items: center; justify-content: center;
+    width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+    background: #027B4B; color: #fff; font-weight: 900;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; z-index: 1;
+    box-shadow: 0 2px 8px rgba(2,123,75,0.25);
   }
-  .flow-step .step-title { font-size: 15px; font-weight: 900; color: #1A1311; }
-  .flow-step .step-desc { font-size: 12px; color: #666; }
+  .flow-step .step-num .num-label {
+    font-size: 9px; line-height: 1; letter-spacing: 0.5px;
+  }
+  .flow-step .step-num .num-value {
+    font-size: 20px; line-height: 1;
+  }
+  .flow-step .step-body {
+    background: #fff; border-radius: 10px; padding: 14px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    flex: 1; border: 1px solid #e0ece4;
+    position: relative;
+  }
+  /* 吹き出し三角 */
+  .flow-step .step-body::before {
+    content: '';
+    position: absolute; left: -8px; top: 16px;
+    width: 0; height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #fff;
+  }
+  .flow-step .step-title { font-size: 15px; font-weight: 900; color: #1A1311; margin-bottom: 4px; }
+  .flow-step .step-desc { font-size: 12px; color: #666; line-height: 1.6; }
+  /* タイムライン詳細 */
+  .flow-timeline {
+    max-width: 500px; margin: 20px auto 0;
+    background: #fff; border-radius: 12px; padding: 18px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #e0ece4;
+  }
+  .flow-timeline-title {
+    font-size: 14px; font-weight: 900; color: #027B4B;
+    text-align: center; margin-bottom: 14px;
+    padding-bottom: 10px; border-bottom: 2px dashed #c8e6d5;
+  }
+  .flow-timeline-row {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 6px 0; font-size: 13px;
+  }
+  .flow-timeline-time {
+    font-weight: 900; color: #027B4B; white-space: nowrap;
+    min-width: 52px;
+  }
+  .flow-timeline-desc { color: #555; }
+  .flow-timeline-note {
+    font-size: 10px; color: #999; text-align: right; margin-top: 10px;
+  }
 
   /* === お客様の声 === */
   .voice-section {
@@ -947,16 +1051,34 @@
 <div class="section">
   <div class="worry-section">
     <div class="worry-title">こんな<span class="green">お悩み</span>ありませんか？</div>
-    <div class="worry-list">
-      <div class="worry-item">車を手放してタイヤが余った</div>
-      <div class="worry-item">スタッドレスを買い替えたい</div>
-      <div class="worry-item">ホイールを交換して古いものが残っている</div>
-      <div class="worry-item">ガレージに置き場所がない</div>
-      <div class="worry-item">重くて持ち運びできない</div>
-      <div class="worry-item">価値があるのかわからない</div>
+    <div class="worry-cards">
+      <div class="worry-card">
+        <div class="worry-card-icon">重い<br>...</div>
+        <div class="worry-card-text">タイヤが重くて<br>店舗に持ち込めない</div>
+      </div>
+      <div class="worry-card">
+        <div class="worry-card-icon">置場<br>...</div>
+        <div class="worry-card-text">ガレージに<br>置き場所がない</div>
+      </div>
+      <div class="worry-card">
+        <div class="worry-card-icon">？</div>
+        <div class="worry-card-text">価値があるのか<br>わからない</div>
+      </div>
     </div>
+
+    <div class="worry-arrow"><div class="worry-arrow-inner"></div></div>
+
     <div class="worry-resolve">
-      バイセルの出張買取が解決します！
+      <div class="worry-resolve-sub">そんな方は</div>
+      <div class="worry-resolve-main">
+        <span class="highlight">バイセル</span>がピッタリ！
+      </div>
+      <div class="worry-resolve-features">
+        <span class="worry-resolve-tag">高く売りたい</span>
+        <span class="worry-resolve-tag">簡単に売りたい</span>
+        <span class="worry-resolve-tag">重くて運べない</span>
+        <span class="worry-resolve-tag">まとめて売りたい</span>
+      </div>
     </div>
   </div>
 </div>
@@ -1054,33 +1176,71 @@
     <div class="section-title">出張買取の<span class="green">流れ</span><span class="underline"></span></div>
     <div class="flow-steps">
       <div class="flow-step">
-        <div class="step-num">1</div>
-        <div class="step-text">
-          <div class="step-title">お電話でお申し込み</div>
-          <div class="step-desc">24時間365日受付。ご都合の良い日時をお伝えください。</div>
+        <div class="step-num">
+          <span class="num-label">STEP</span>
+          <span class="num-value">01</span>
+        </div>
+        <div class="step-body">
+          <div class="step-title">まずはお申し込み</div>
+          <div class="step-desc">お電話1本でOK。24時間365日受付しております。お品物の内容やご都合の良い日時をお伝えください。</div>
         </div>
       </div>
       <div class="flow-step">
-        <div class="step-num">2</div>
-        <div class="step-text">
-          <div class="step-title">査定士がご自宅に訪問</div>
-          <div class="step-desc">ご予約の日時にお伺いし、その場で丁寧に査定します。</div>
+        <div class="step-num">
+          <span class="num-label">STEP</span>
+          <span class="num-value">02</span>
+        </div>
+        <div class="step-body">
+          <div class="step-title">査定日時を決める</div>
+          <div class="step-desc">お客様のご都合に合わせて、査定の日時を調整いたします。最短で即日の訪問も可能です。</div>
         </div>
       </div>
       <div class="flow-step">
-        <div class="step-num">3</div>
-        <div class="step-text">
-          <div class="step-title">査定結果のご説明</div>
-          <div class="step-desc">金額とその理由をわかりやすくご説明。ご納得いただけない場合はお断りOK。</div>
+        <div class="step-num">
+          <span class="num-label">STEP</span>
+          <span class="num-value">03</span>
+        </div>
+        <div class="step-body">
+          <div class="step-title">ご自宅で査定</div>
+          <div class="step-desc">査定士がご自宅に訪問し、ガレージや玄関先でタイヤ・ホイールを丁寧に査定。金額とその理由をわかりやすくご説明します。ご納得いただけない場合はお断りOKです。</div>
         </div>
       </div>
       <div class="flow-step">
-        <div class="step-num">4</div>
-        <div class="step-text">
-          <div class="step-title">その場でお支払い※</div>
-          <div class="step-desc">ご成約後、その場で現金にてお支払いいたします。</div>
+        <div class="step-num">
+          <span class="num-label">STEP</span>
+          <span class="num-value">04</span>
+        </div>
+        <div class="step-body">
+          <div class="step-title">その場で現金買取※</div>
+          <div class="step-desc">ご成約後、その場で現金にてお支払いいたします。重いタイヤの搬出もお任せください。</div>
         </div>
       </div>
+    </div>
+
+    <!-- 査定当日タイムライン -->
+    <div class="flow-timeline">
+      <div class="flow-timeline-title">査定当日のスケジュール例（午前9時予約の場合）</div>
+      <div class="flow-timeline-row">
+        <div class="flow-timeline-time">08:45</div>
+        <div class="flow-timeline-desc">査定士より到着前のご連絡</div>
+      </div>
+      <div class="flow-timeline-row">
+        <div class="flow-timeline-time">09:00</div>
+        <div class="flow-timeline-desc">査定士がご自宅に到着</div>
+      </div>
+      <div class="flow-timeline-row">
+        <div class="flow-timeline-time">09:15</div>
+        <div class="flow-timeline-desc">タイヤ・ホイールの査定開始（平均約30〜60分）</div>
+      </div>
+      <div class="flow-timeline-row">
+        <div class="flow-timeline-time">10:00</div>
+        <div class="flow-timeline-desc">査定結果のご説明・お支払い</div>
+      </div>
+      <div class="flow-timeline-row">
+        <div class="flow-timeline-time">10:30</div>
+        <div class="flow-timeline-desc">フォローコール（ご不明点の確認）</div>
+      </div>
+      <div class="flow-timeline-note">※所要時間はお品物の点数や状態によって異なります</div>
     </div>
   </div>
 </div>
