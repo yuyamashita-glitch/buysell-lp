@@ -292,11 +292,13 @@
     border: 1px solid #e0ece4;
   }
   .worry-card-icon {
-    width: 56px; height: 56px; margin: 0 auto 10px;
+    width: 64px; height: 64px; margin: 0 auto 10px;
     background: #e8f5ee; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 13px; font-weight: 900; color: #027B4B;
-    line-height: 1.2;
+    padding: 12px;
+  }
+  .worry-card-icon svg {
+    width: 100%; height: 100%;
   }
   .worry-card-text {
     font-size: 12px; font-weight: 700; color: #333; line-height: 1.5;
@@ -1079,15 +1081,62 @@
     <div class="worry-title">こんな<span class="green">お悩み</span>ありませんか？</div>
     <div class="worry-cards">
       <div class="worry-card">
-        <div class="worry-card-icon">重い<br>...</div>
+        <div class="worry-card-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <!-- 困っている人がタイヤを持ち上げようとしている -->
+            <circle cx="20" cy="8" r="4" fill="#027B4B"/>
+            <path d="M20 12 L20 24" stroke="#027B4B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M20 14 L12 20" stroke="#027B4B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M20 14 L28 18" stroke="#027B4B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M20 24 L14 32" stroke="#027B4B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M20 24 L26 32" stroke="#027B4B" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- タイヤ -->
+            <circle cx="30" cy="22" r="7" fill="none" stroke="#027B4B" stroke-width="2.5" opacity="0.7"/>
+            <circle cx="30" cy="22" r="3" fill="none" stroke="#027B4B" stroke-width="1.5" opacity="0.7"/>
+            <!-- 汗マーク -->
+            <path d="M8 6 Q7 9 8 10" stroke="#79af9b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M6 9 Q5 12 6 13" stroke="#79af9b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
         <div class="worry-card-text">タイヤが重くて<br>店舗に持ち込めない</div>
       </div>
       <div class="worry-card">
-        <div class="worry-card-icon">置場<br>...</div>
+        <div class="worry-card-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <!-- ガレージ -->
+            <path d="M4 18 L20 6 L36 18" fill="none" stroke="#027B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="8" y="18" width="24" height="18" fill="none" stroke="#027B4B" stroke-width="2" rx="1"/>
+            <!-- タイヤが積み重なっている -->
+            <circle cx="17" cy="30" r="4.5" fill="none" stroke="#027B4B" stroke-width="2" opacity="0.7"/>
+            <circle cx="17" cy="30" r="1.5" fill="#027B4B" opacity="0.5"/>
+            <circle cx="25" cy="30" r="4.5" fill="none" stroke="#027B4B" stroke-width="2" opacity="0.7"/>
+            <circle cx="25" cy="30" r="1.5" fill="#027B4B" opacity="0.5"/>
+            <circle cx="21" cy="23" r="4.5" fill="none" stroke="#027B4B" stroke-width="2" opacity="0.7"/>
+            <circle cx="21" cy="23" r="1.5" fill="#027B4B" opacity="0.5"/>
+            <!-- バツマーク -->
+            <line x1="33" y1="8" x2="37" y2="12" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/>
+            <line x1="37" y1="8" x2="33" y2="12" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
         <div class="worry-card-text">ガレージに<br>置き場所がない</div>
       </div>
       <div class="worry-card">
-        <div class="worry-card-icon">？</div>
+        <div class="worry-card-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <!-- タイヤ -->
+            <circle cx="20" cy="22" r="10" fill="none" stroke="#027B4B" stroke-width="2.5"/>
+            <circle cx="20" cy="22" r="4" fill="none" stroke="#027B4B" stroke-width="2"/>
+            <line x1="20" y1="12" x2="20" y2="16" stroke="#027B4B" stroke-width="1.5"/>
+            <line x1="20" y1="28" x2="20" y2="32" stroke="#027B4B" stroke-width="1.5"/>
+            <line x1="10" y1="22" x2="14" y2="22" stroke="#027B4B" stroke-width="1.5"/>
+            <line x1="26" y1="22" x2="30" y2="22" stroke="#027B4B" stroke-width="1.5"/>
+            <!-- はてなマーク -->
+            <path d="M17 5 Q17 2 20 2 Q23 2 23 5 Q23 7 20 8 L20 10" fill="none" stroke="#EF7701" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="20" cy="13" r="1.2" fill="#EF7701"/>
+            <!-- 円マーク -->
+            <text x="34" y="10" font-size="10" font-weight="900" fill="#79af9b" font-family="sans-serif">?</text>
+          </svg>
+        </div>
         <div class="worry-card-text">価値があるのか<br>わからない</div>
       </div>
     </div>
