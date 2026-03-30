@@ -22,7 +22,6 @@
   }
 
   .page-label { font-size: 14px; color: #666; margin-bottom: -10px; font-weight: 700; }
-
   .chirashi { width: 520px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
 
   /* === 表面 === */
@@ -50,30 +49,32 @@
   .main-title .big { font-size: 36px; color: #fff; display: block; line-height: 1.1; text-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
   .main-title .mid { font-size: 36px; color: #ffd700; }
 
-  /* 複数アイテムグリッド（トイザらス風） */
-  .front-photos {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 8px;
-    padding: 0 16px;
+  /* メイン写真1枚（白背景・丸角） */
+  .front-hero {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    display: inline-block;
   }
-  .front-photos img {
-    width: 46%;
-    max-width: 220px;
+  .front-hero img {
+    width: 240px;
     object-fit: contain;
-    filter: drop-shadow(3px 4px 8px rgba(0,0,0,0.4));
+    display: block;
   }
 
+  /* バラもOK（写真付き） */
   .bara-appeal {
-    display: flex; align-items: center; gap: 12px; background: #fff;
-    border-radius: 10px; padding: 10px 14px; margin: 6px 0 8px;
+    display: flex; align-items: center; gap: 10px; background: #fff;
+    border-radius: 10px; padding: 8px 14px; margin: 6px 0 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.3); max-width: 440px; width: 100%;
-    justify-content: center;
   }
-  .bara-text { text-align: center; }
+  .bara-appeal img {
+    width: 70px; height: 70px; object-fit: contain; flex-shrink: 0;
+  }
+  .bara-text { text-align: left; }
   .bara-main { font-size: 15px; font-weight: 900; color: #c41e24; line-height: 1.4; }
-  .bara-main strong { font-size: 18px; }
   .bara-sub { font-size: 10px; font-weight: 700; color: #1a6b2a; margin-top: 2px; }
 
   .front-badges { display: flex; gap: 6px; justify-content: center; margin-top: 10px; flex-wrap: wrap; }
@@ -93,7 +94,6 @@
     display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 900; flex-shrink: 0;
   }
 
-  /* 電話CTA */
   .cta-phone {
     background: #c41e24; padding: 12px 16px; text-align: center;
   }
@@ -108,23 +108,27 @@
   .back-header h2 { color: #fff; font-size: 17px; font-weight: 900; }
   .back-header h2 span { color: #ffd700; }
 
-  .back-subtitle {
-    background: #fff; text-align: center; padding: 5px;
-    font-size: 12px; font-weight: 700; color: #c41e24; border-bottom: 2px solid #ffd700;
+  /* 買取対象品目（テキストリスト） */
+  .items-list-section { padding: 12px 16px; }
+  .items-list-section h3 {
+    font-size: 14px; font-weight: 900; color: #1a6b2a; text-align: center;
+    background: #fff; padding: 6px; border-radius: 6px; margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
 
-  /* 買取実績（白カード・緑ベース） */
-  .results-section { padding: 10px 12px 6px; }
-  .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 480px; margin: 0 auto; }
-  .result-item { border-radius: 8px; overflow: hidden; text-align: center; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-  .result-item .item-img { width: 100%; height: 120px; overflow: hidden; background: #fff; display: flex; align-items: center; justify-content: center; padding: 6px; }
-  .result-item .item-img img { width: 100%; height: 100%; object-fit: contain; }
-  .result-item .item-name {
-    font-size: 8px; font-weight: 700; padding: 2px 3px 1px;
-    background: #1a6b2a; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  .items-category { margin-bottom: 10px; }
+  .items-category-title {
+    font-size: 13px; font-weight: 900; color: #ffd700;
+    border-bottom: 2px solid #ffd700; padding-bottom: 3px; margin-bottom: 6px;
   }
-  .result-item .item-price { font-size: 13px; font-weight: 900; color: #c41e24; padding: 1px 3px 2px; line-height: 1.2; background: #fff; }
-  .result-item .item-price .en { font-size: 9px; font-weight: 700; }
+  .items-text-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px;
+  }
+  .items-text-grid .text-item {
+    background: #fff; color: #333; font-size: 11px; font-weight: 700;
+    padding: 6px 4px; border-radius: 4px; text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  }
 
   /* メッセージ帯 */
   .back-message {
@@ -134,7 +138,7 @@
   }
   .back-message span { color: #c41e24; }
 
-  /* その他買取品目 */
+  /* その他買取品目（テキスト） */
   .other-items { padding: 5px 8px 6px; }
   .other-items h3 {
     font-size: 14px; font-weight: 900; color: #1a6b2a; text-align: center;
@@ -144,11 +148,14 @@
   .other-subtitle {
     text-align: center; font-size: 11px; font-weight: 700; color: #fff; margin-bottom: 6px;
   }
-  .other-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
-  .other-item { text-align: center; border-radius: 5px; overflow: hidden; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
-  .other-item .other-img { width: 100%; height: 70px; overflow: hidden; background: #fff; }
-  .other-item .other-img img { width: 100%; height: 100%; object-fit: cover; }
-  .other-item .other-name { font-size: 9px; font-weight: 700; color: #1a6b2a; padding: 3px 2px; background: #fff; }
+  .other-text-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;
+  }
+  .other-text-grid .text-item {
+    background: #fff; color: #333; font-size: 11px; font-weight: 700;
+    padding: 8px 4px; border-radius: 4px; text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  }
 
   /* 注釈 */
   .disclaimers {
@@ -173,16 +180,13 @@
   .back-footer .phone-number { font-size: 36px; font-weight: 900; color: #fff; letter-spacing: 2px; line-height: 1.2; }
   .back-footer .phone-hours { font-size: 10px; color: #fff; }
 
-  /* レスポンシブ */
   @media (max-width: 560px) {
     .chirashi { width: 100%; }
     .catch-copy { font-size: 3.5vw; }
     .main-title .big { font-size: 7vw; }
     .main-title .mid { font-size: 7vw; }
     .cta-phone .phone { font-size: 8vw; }
-    .showcase-item img { height: 18vw; }
-    .result-item .item-img { height: 13vw; }
-    .other-item .other-img { height: 14vw; }
+    .front-hero img { width: 50vw; }
     .back-footer .phone-number { font-size: 7vw; }
   }
 </style>
@@ -205,12 +209,12 @@
       <span class="mid">まとめて買取します！</span>
     </div>
 
-    <div class="front-photos">
-      <img src="img/lego_box_closed_nobg.png?v=2" alt="レゴ®ブロック ボックス">
-      <img src="img/lego_box_full_nobg.png?v=3" alt="レゴ®ブロック バラ">
+    <div class="front-hero">
+      <img src="img/lego_box_closed_nobg.png?v=3" alt="レゴ®ブロック ボックス">
     </div>
 
     <div class="bara-appeal">
+      <img src="img/lego_box_full_nobg.png?v=4" alt="レゴ®ブロック バラ">
       <div class="bara-text">
         <p class="bara-main">レゴ®ブロックのバラもOK！</p>
         <p class="bara-sub">押入れに眠っているレゴ®ブロック・ゲーム機、まとめてお売りください</p>
@@ -245,33 +249,33 @@
     <h2><span>レゴ®ブロック・ゲーム機</span> 買取対象品目</h2>
   </div>
 
-  <div class="back-subtitle">実際の買取実績をご紹介！※買取価格は一例です。状態等により変動いたします。</div>
+  <div class="items-list-section">
+    <h3>こんなお品物を査定しています</h3>
 
-  <div class="results-section">
-    <div class="results-grid">
-      <div class="result-item">
-        <div class="item-img"><img src="img/lego_main_nobg.png?v=2" alt="レゴ®ブロック まとめ"></div>
-        <div class="item-name">レゴ®ブロック まとめ</div>
+    <div class="items-category">
+      <div class="items-category-title">レゴ®ブロック</div>
+      <div class="items-text-grid">
+        <div class="text-item">レゴ®ブロック セット</div>
+        <div class="text-item">レゴ®ブロック バラ</div>
+        <div class="text-item">マインクラフト</div>
+        <div class="text-item">スーパーマリオ</div>
+        <div class="text-item">スター・ウォーズ</div>
+        <div class="text-item">テクニック</div>
       </div>
-      <div class="result-item">
-        <div class="item-img"><img src="img/lego_open_nobg.png?v=2" alt="レゴ®ブロック セット"></div>
-        <div class="item-name">レゴ®ブロック セット</div>
-      </div>
-      <div class="result-item">
-        <div class="item-img"><img src="img/game_ps1_nobg.png?v=1" alt="PlayStation"></div>
-        <div class="item-name">PlayStation</div>
-      </div>
-      <div class="result-item">
-        <div class="item-img"><img src="img/game_psp_nobg.png?v=1" alt="PSP"></div>
-        <div class="item-name">PSP</div>
-      </div>
-      <div class="result-item">
-        <div class="item-img"><img src="img/game_3ds_nobg.png?v=1" alt="3DS"></div>
-        <div class="item-name">Nintendo 3DS</div>
-      </div>
-      <div class="result-item">
-        <div class="item-img"><img src="img/game_sfc_soft_nobg.png?v=1" alt="SFCソフト"></div>
-        <div class="item-name">SFCソフトまとめ</div>
+    </div>
+
+    <div class="items-category">
+      <div class="items-category-title">ゲーム機・ゲームソフト</div>
+      <div class="items-text-grid">
+        <div class="text-item">Nintendo Switch</div>
+        <div class="text-item">ファミコン</div>
+        <div class="text-item">スーパーファミコン</div>
+        <div class="text-item">Nintendo 64</div>
+        <div class="text-item">ゲームボーイ</div>
+        <div class="text-item">PlayStation</div>
+        <div class="text-item">PSP</div>
+        <div class="text-item">Nintendo 3DS</div>
+        <div class="text-item">ゲームソフト各種</div>
       </div>
     </div>
   </div>
@@ -280,43 +284,18 @@
     お子さま・お孫さまの<span>レゴ®ブロック・ゲーム機</span>、<br>まとめて査定いたします!
   </div>
 
-  <!-- その他買取品目 -->
   <div class="other-items">
     <h3>押入れ・クローゼットに眠っていませんか？</h3>
     <p class="other-subtitle">レゴ®ブロック・ゲーム機以外もまとめて査定OK！</p>
-    <div class="other-grid">
-      <div class="other-item">
-        <div class="other-img"><img src="img/kimono.jpg" alt="着物"></div>
-        <div class="other-name">着物</div>
-      </div>
-      <div class="other-item">
-        <div class="other-img"><img src="img/kikinzoku.jpg" alt="貴金属"></div>
-        <div class="other-name">貴金属</div>
-      </div>
-      <div class="other-item">
-        <div class="other-img"><img src="img/brand.jpg" alt="ブランド品"></div>
-        <div class="other-name">ブランド品</div>
-      </div>
-      <div class="other-item">
-        <div class="other-img"><img src="img/kosen.jpg" alt="古銭"></div>
-        <div class="other-name">古銭</div>
-      </div>
-      <div class="other-item">
-        <div class="other-img"><img src="img/kitte.jpg" alt="切手"></div>
-        <div class="other-name">切手</div>
-      </div>
-      <div class="other-item">
-        <div class="other-img"><img src="img/osake.jpg" alt="お酒"></div>
-        <div class="other-name">お酒</div>
-      </div>
-      <div class="other-item">
-        <div class="other-img"><img src="img/kottou.jpg" alt="骨董品"></div>
-        <div class="other-name">骨董品</div>
-      </div>
-      <div class="other-item">
-        <div class="other-img"><img src="img/gakki.jpg" alt="楽器"></div>
-        <div class="other-name">楽器</div>
-      </div>
+    <div class="other-text-grid">
+      <div class="text-item">着物</div>
+      <div class="text-item">貴金属</div>
+      <div class="text-item">ブランド品</div>
+      <div class="text-item">古銭</div>
+      <div class="text-item">切手</div>
+      <div class="text-item">お酒</div>
+      <div class="text-item">骨董品</div>
+      <div class="text-item">楽器</div>
     </div>
   </div>
 
