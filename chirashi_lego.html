@@ -53,15 +53,34 @@
   .front-hero {
     background: #fff;
     border-radius: 16px;
-    padding: 16px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     display: inline-block;
   }
   .front-hero img {
-    width: 240px;
+    width: 160px;
     object-fit: contain;
     display: block;
+  }
+
+  /* 訴求テキスト */
+  .front-appeal-list {
+    display: flex; flex-wrap: wrap; gap: 5px; justify-content: center;
+    margin-bottom: 8px; max-width: 460px;
+  }
+  .appeal-item {
+    background: #fff; color: #1a6b2a; font-size: 12px; font-weight: 900;
+    padding: 5px 12px; border-radius: 20px; border: 2px solid #ffd700;
+  }
+  .appeal-item.highlight {
+    background: #ffd700; color: #c41e24; border-color: #c41e24;
+  }
+
+  .front-sub-copy {
+    font-size: 13px; font-weight: 900; color: #fff; line-height: 1.6;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3); margin-bottom: 6px;
+    text-align: center;
   }
 
   /* バラもOK（写真付き） */
@@ -186,7 +205,7 @@
     .main-title .big { font-size: 7vw; }
     .main-title .mid { font-size: 7vw; }
     .cta-phone .phone { font-size: 8vw; }
-    .front-hero img { width: 50vw; }
+    .front-hero img { width: 36vw; }
     .back-footer .phone-number { font-size: 7vw; }
   }
 </style>
@@ -213,10 +232,26 @@
       <img src="img/lego_box_closed_nobg.png?v=3" alt="レゴ®ブロック ボックス">
     </div>
 
+    <div class="front-sub-copy">
+      レゴ®ブロック・ゲーム機・ゲームソフト<br>
+      箱なし・説明書なし・バラでもOK！
+    </div>
+
+    <div class="front-appeal-list">
+      <div class="appeal-item">セット品</div>
+      <div class="appeal-item">バラのブロック</div>
+      <div class="appeal-item">ファミコン</div>
+      <div class="appeal-item">スーファミ</div>
+      <div class="appeal-item">Nintendo 64</div>
+      <div class="appeal-item">Switch</div>
+      <div class="appeal-item">PlayStation</div>
+      <div class="appeal-item">ゲームソフト各種</div>
+    </div>
+
     <div class="bara-appeal">
       <img src="img/lego_box_full_nobg.png?v=4" alt="レゴ®ブロック バラ">
       <div class="bara-text">
-        <p class="bara-main">レゴ®ブロックのバラもOK！</p>
+        <p class="bara-main">バラのレゴ®ブロックもOK！</p>
         <p class="bara-sub">押入れに眠っているレゴ®ブロック・ゲーム機、まとめてお売りください</p>
       </div>
     </div>
