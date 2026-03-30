@@ -49,32 +49,34 @@
   .main-title .big { font-size: 36px; color: #fff; display: block; line-height: 1.1; text-shadow: 2px 2px 0 rgba(0,0,0,0.3); }
   .main-title .mid { font-size: 36px; color: #ffd700; }
 
-  /* メイン写真1枚（白背景・丸角） */
-  .front-hero {
+  /* 4アイテム円形グリッド */
+  .front-circles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 0 12px;
+  }
+  .circle-item {
+    text-align: center;
+  }
+  .circle-item .circle-img {
+    width: 100px; height: 100px;
     background: #fff;
-    border-radius: 16px;
-    padding: 12px;
-    margin-bottom: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-    display: inline-block;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    padding: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    border: 3px solid #ffd700;
   }
-  .front-hero img {
-    width: 160px;
+  .circle-item .circle-img img {
+    width: 100%; height: 100%;
     object-fit: contain;
-    display: block;
   }
-
-  /* 訴求テキスト */
-  .front-appeal-list {
-    display: flex; flex-wrap: wrap; gap: 5px; justify-content: center;
-    margin-bottom: 8px; max-width: 460px;
-  }
-  .appeal-item {
-    background: #fff; color: #1a6b2a; font-size: 12px; font-weight: 900;
-    padding: 5px 12px; border-radius: 20px; border: 2px solid #ffd700;
-  }
-  .appeal-item.highlight {
-    background: #ffd700; color: #c41e24; border-color: #c41e24;
+  .circle-item .circle-label {
+    font-size: 9px; font-weight: 900; color: #fff;
+    margin-top: 4px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
   }
 
   .front-sub-copy {
@@ -205,7 +207,7 @@
     .main-title .big { font-size: 7vw; }
     .main-title .mid { font-size: 7vw; }
     .cta-phone .phone { font-size: 8vw; }
-    .front-hero img { width: 36vw; }
+    .circle-item .circle-img { width: 20vw; height: 20vw; }
     .back-footer .phone-number { font-size: 7vw; }
   }
 </style>
@@ -228,24 +230,27 @@
       <span class="mid">まとめて買取します！</span>
     </div>
 
-    <div class="front-hero">
-      <img src="img/lego_box_closed_nobg.png?v=3" alt="レゴ®ブロック ボックス">
+    <div class="front-circles">
+      <div class="circle-item">
+        <div class="circle-img"><img src="img/lego_box_closed_nobg.png?v=3" alt="レゴ®ブロック"></div>
+        <div class="circle-label">レゴ®ブロック</div>
+      </div>
+      <div class="circle-item">
+        <div class="circle-img"><img src="img/game_switch_nobg.png?v=2" alt="Nintendo Switch"></div>
+        <div class="circle-label">ゲーム機</div>
+      </div>
+      <div class="circle-item">
+        <div class="circle-img"><img src="img/game_sfc_soft_nobg.png?v=2" alt="ゲームソフト"></div>
+        <div class="circle-label">ゲームソフト</div>
+      </div>
+      <div class="circle-item">
+        <div class="circle-img"><img src="img/game_famicom_nobg.png?v=3" alt="レトロゲーム"></div>
+        <div class="circle-label">レトロゲーム</div>
+      </div>
     </div>
 
     <div class="front-sub-copy">
-      レゴ®ブロック・ゲーム機・ゲームソフト<br>
       箱なし・説明書なし・バラでもOK！
-    </div>
-
-    <div class="front-appeal-list">
-      <div class="appeal-item">セット品</div>
-      <div class="appeal-item">バラのブロック</div>
-      <div class="appeal-item">ファミコン</div>
-      <div class="appeal-item">スーファミ</div>
-      <div class="appeal-item">Nintendo 64</div>
-      <div class="appeal-item">Switch</div>
-      <div class="appeal-item">PlayStation</div>
-      <div class="appeal-item">ゲームソフト各種</div>
     </div>
 
     <div class="bara-appeal">
