@@ -52,10 +52,10 @@
 
   /* 複数アイテムグリッド（トイザらス風） */
   .items-showcase {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
-    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 16px;
     margin-bottom: 8px;
     width: 100%;
   }
@@ -64,19 +64,21 @@
     background: none;
     text-align: center;
     padding: 0;
+    flex: 1;
+    max-width: 160px;
   }
   .showcase-item img {
     width: 100%;
-    height: 100px;
+    height: 130px;
     object-fit: contain;
     filter: drop-shadow(2px 3px 4px rgba(0,0,0,0.4));
   }
   .showcase-item .item-label {
-    font-size: 8px;
+    font-size: 9px;
     font-weight: 900;
     color: #fff;
     background: rgba(0,0,0,0.5);
-    padding: 1px 4px;
+    padding: 1px 6px;
     border-radius: 3px;
     display: inline-block;
     margin-top: 2px;
@@ -223,7 +225,7 @@
       <span class="mid">まとめて買取します！</span>
     </div>
 
-    <!-- 複数アイテムグリッド -->
+    <!-- レゴブロックのみ -->
     <div class="items-showcase">
       <div class="showcase-item">
         <img src="img/lego_box_full_nobg.png?v=3" alt="レゴ®ブロック ボックス">
@@ -236,26 +238,6 @@
       <div class="showcase-item">
         <img src="img/lego_mario_nobg.png?v=2" alt="レゴ®ブロック スーパーマリオ">
         <div class="item-label">スーパーマリオ</div>
-      </div>
-      <div class="showcase-item">
-        <img src="img/game_switch_nobg.png?v=1" alt="Nintendo Switch">
-        <div class="item-label">Switch</div>
-      </div>
-      <div class="showcase-item">
-        <img src="img/game_famicom_nobg.png?v=2" alt="ファミコン">
-        <div class="item-label">ファミコン</div>
-      </div>
-      <div class="showcase-item">
-        <img src="img/game_sfc_nobg.png?v=2" alt="スーパーファミコン">
-        <div class="item-label">スーファミ</div>
-      </div>
-      <div class="showcase-item">
-        <img src="img/game_gbc_nobg.png?v=1" alt="ゲームボーイカラー">
-        <div class="item-label">ゲームボーイ</div>
-      </div>
-      <div class="showcase-item">
-        <img src="img/game_n64.jpg?v=2" alt="Nintendo 64">
-        <div class="item-label">N64</div>
       </div>
     </div>
 
