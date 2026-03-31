@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>タイヤ・ホイール買取｜出張買取のバイセル</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #f5f5f5;
+    color: #1A1311;
+    line-height: 1.6;
+  }
+
+  /* === ヘッダー === */
+  .lp-header {
+    background: #fff; padding: 8px 12px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .lp-header .header-logo img {
+    height: 28px; width: auto;
+  }
+  .lp-header .header-phone-btn {
+    display: flex; align-items: center; gap: 6px;
+    background: #027B4B; color: #fff; text-decoration: none;
+    padding: 8px 16px; border-radius: 6px;
+    font-size: 16px; font-weight: 900; letter-spacing: 1px;
+  }
+  .lp-header .header-phone-btn .phone-sub {
+    font-size: 9px; font-weight: 400; display: block;
+  }
+
+  /* === セクション共通 === */
+  .section { max-width: 600px; margin: 0 auto; }
+  .section-title {
+    font-size: 22px; font-weight: 900; text-align: center;
+    padding: 24px 16px 12px; color: #1A1311;
+  }
+  .section-title .green { color: #027B4B; }
+  .section-title .underline {
+    display: block; width: 60px; height: 3px;
+    background: #79af9b; margin: 8px auto 0; border-radius: 2px;
+  }
+
+  /* === ファーストビュー === */
+  .fv {
+    background: #d4edda;
+    background-image:
+      radial-gradient(circle at 10% 90%, rgba(2,123,75,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 90% 10%, rgba(2,123,75,0.06) 0%, transparent 40%),
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 0%, transparent 70%);
+    text-align: center; padding: 20px 16px 10px;
+    position: relative; overflow: hidden;
+  }
+  .fv::before {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 60px;
+    background: linear-gradient(0deg, rgba(255,255,255,0.5) 0%, transparent 100%);
+    pointer-events: none; z-index: 1;
+  }
+  /* FV上部装飾 */
+  .fv-deco-upper {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none; z-index: 0; overflow: hidden;
+  }
+  .fv-deco-upper svg {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  }
+  /* FV街並みイラスト */
+  .fv-cityscape {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+    pointer-events: none; z-index: 0;
+  }
+  .fv-cityscape svg {
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
+  }
+  .fv-categories {
+    display: flex; gap: 8px; justify-content: center; margin-bottom: 10px;
+    position: relative; z-index: 2;
+  }
+  .fv-categories .cat-tag {
+    background: #fff; border: 2px solid #027B4B; color: #027B4B;
+    font-size: 13px; font-weight: 900; padding: 4px 16px;
+    border-radius: 4px;
+  }
+  .fv-catch {
+    font-size: 20px; font-weight: 900; color: #1A1311;
+    margin-bottom: 4px; line-height: 1.3;
+    position: relative; z-index: 2;
+  }
+  .fv-catch .green { color: #027B4B; }
+  .fv-brand {
+    margin-bottom: 16px;
+    position: relative; z-index: 2;
+    padding: 50px 50px;
+  }
+  .fv-brand img {
+    height: 50px; width: auto;
+  }
+  .fv-photo {
+    width: 100%; max-width: 500px; margin: 0 auto;
+    display: flex; gap: 8px; justify-content: center;
+    background: #fff; border-radius: 12px 12px 0 0; padding: 16px 12px 0;
+    position: relative; z-index: 2;
+  }
+  .fv-photo img {
+    width: 48%; height: auto; object-fit: contain;
+  }
+  .fv-badges {
+    display: flex; justify-content: center; gap: 10px;
+    background: #fff; padding: 16px 12px 20px;
+    max-width: 500px; margin: 0 auto;
+    position: relative; z-index: 2;
+  }
+  .fv-badge-item {
+    width: 100px; height: 100px; border-radius: 50%;
+    background: #EF7701; color: #fff;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; line-height: 1.2;
+  }
+  .fv-badge-item .badge-top {
+    font-size: 10px; font-weight: 700;
+  }
+  .fv-badge-item .badge-main {
+    font-size: 22px; font-weight: 900;
+  }
+  .fv-badge-item .badge-main small {
+    font-size: 11px;
+  }
+  .fv-badge-item .badge-bottom {
+    font-size: 9px; font-weight: 400;
+  }
+  .fv-note {
+    font-size: 10px; color: #888; background: #fff;
+    max-width: 500px; margin: 0 auto; padding: 0 12px 10px;
+    text-align: right;
+    position: relative; z-index: 2;
+  }
+
+  /* === CTA === */
+  .cta-section {
+    background: linear-gradient(135deg, #027B4B 0%, #015c38 100%);
+    padding: 16px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; top: -30px; right: -30px;
+    width: 100px; height: 100px; border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    pointer-events: none;
+  }
+  .cta-section::after {
+    content: '';
+    position: absolute; bottom: -20px; left: -20px;
+    width: 80px; height: 80px; border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    pointer-events: none;
+  }
+  .cta-section .cta-note {
+    font-size: 13px; color: #ffd700; font-weight: 700; margin-bottom: 4px;
+  }
+  .cta-phone-btn {
+    display: block; background: #fff; color: #027B4B;
+    font-size: 32px; font-weight: 900; letter-spacing: 2px;
+    padding: 10px 16px; border-radius: 8px; text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    line-height: 1.2; margin: 0 auto; max-width: 400px;
+  }
+
+  .cta-sub {
+    font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 6px;
+  }
+  .cta-sub-bold { font-weight: 700; color: #fff; }
+
+  /* === セクション区切り装飾 === */
+  .section-divider {
+    height: 4px; max-width: 600px; margin: 0 auto;
+    background: linear-gradient(90deg, #027B4B, #79af9b, #d4edda, #79af9b, #027B4B);
+  }
+
+  /* === 取扱商品 === */
+  .target-section { background: #fff; padding: 20px 16px; }
+  .target-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+    max-width: 500px; margin: 10px auto 0;
+  }
+  .target-card {
+    background: #f8faf8; border-radius: 8px; overflow: hidden;
+    border: 2px solid #e0ece4; text-align: center;
+  }
+  .target-card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+  .target-card .card-name {
+    padding: 8px; font-size: 13px; font-weight: 900; color: #1A1311;
+  }
+  .target-note {
+    text-align: center; font-size: 11px; color: #888; margin-top: 10px;
+  }
+
+  /* === メーカー === */
+  .maker-section {
+    background: #f8faf8;
+    background-image: radial-gradient(circle at 100% 0%, rgba(2,123,75,0.04) 0%, transparent 50%);
+    padding: 20px 16px;
+  }
+  .maker-grid {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+    max-width: 500px; margin: 10px auto 0;
+  }
+  .maker-tag {
+    background: #fff; border: 1px solid #ddd; padding: 6px 14px;
+    border-radius: 20px; font-size: 12px; font-weight: 700; color: #333;
+  }
+  .maker-note {
+    text-align: center; font-size: 12px; color: #027B4B; font-weight: 700;
+    margin-top: 10px;
+  }
+
+  /* === 買取不可 === */
+  .ng-section { background: #fff; padding: 20px 16px; }
+  .ng-section .section-title .red { color: #c0392b; }
+  .ng-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+    max-width: 500px; margin: 10px auto 0;
+  }
+  .ng-item {
+    display: flex; align-items: center; gap: 8px;
+    background: #fef2f2; padding: 8px 12px; border-radius: 6px;
+    font-size: 13px; font-weight: 700; color: #721c24;
+  }
+  .ng-icon { font-size: 16px; flex-shrink: 0; }
+
+  /* === 買取相場 === */
+  .price-section {
+    background: linear-gradient(135deg, #1A1311 0%, #2d2520 50%, #1A1311 100%);
+    background-image:
+      linear-gradient(135deg, #1A1311 0%, #2d2520 50%, #1A1311 100%),
+      repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.02) 20px, rgba(255,255,255,0.02) 40px);
+    padding: 20px 16px;
+    position: relative;
+  }
+  .price-section .section-title { color: #fff; }
+  .price-section .section-title .green { color: #79af9b; }
+  .price-list {
+    max-width: 500px; margin: 10px auto 0;
+  }
+  .price-row {
+    display: flex; align-items: center; justify-content: space-between;
+    background: #fff; padding: 10px 14px; margin-bottom: 6px;
+    border-radius: 6px;
+  }
+  .price-row .price-name {
+    font-size: 12px; font-weight: 700; color: #333; line-height: 1.4;
+    flex: 1;
+  }
+  .price-row .price-amount {
+    font-size: 22px; font-weight: 900; color: #c0392b; white-space: nowrap;
+    margin-left: 12px;
+  }
+  .price-row .price-amount small { font-size: 12px; }
+  .price-note {
+    text-align: center; font-size: 10px; color: rgba(255,255,255,0.5);
+    margin-top: 10px;
+  }
+
+  /* === こんなお悩み === */
+  .worry-section {
+    background: #f0f7f3;
+    background-image:
+      radial-gradient(circle at 0% 100%, rgba(2,123,75,0.06) 0%, transparent 40%),
+      radial-gradient(circle at 100% 0%, rgba(2,123,75,0.04) 0%, transparent 40%);
+    padding: 24px 16px;
+  }
+  .worry-title {
+    font-size: 20px; font-weight: 900; text-align: center; color: #1A1311;
+    margin-bottom: 14px;
+  }
+  .worry-title .green { color: #027B4B; }
+  .worry-cards {
+    max-width: 500px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+  }
+  .worry-card {
+    background: #fff; border-radius: 10px; padding: 16px 10px 12px;
+    text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border: 1px solid #e0ece4;
+  }
+  .worry-card-icon {
+    width: 64px; height: 64px; margin: 0 auto 10px;
+    background: #e8f5ee; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    padding: 12px;
+  }
+  .worry-card-icon svg {
+    width: 100%; height: 100%;
+  }
+  .worry-card-text {
+    font-size: 12px; font-weight: 700; color: #333; line-height: 1.5;
+  }
+  /* 下矢印 */
+  .worry-arrow {
+    text-align: center; margin: 16px 0;
+  }
+  .worry-arrow-inner {
+    display: inline-block;
+    width: 0; height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 16px solid #79af9b;
+  }
+  /* ピッタリバナー */
+  .worry-resolve {
+    max-width: 500px; margin: 0 auto;
+    background: #027B4B; border-radius: 12px;
+    padding: 20px 16px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .worry-resolve::before {
+    content: '';
+    position: absolute; top: -20px; right: -20px;
+    width: 80px; height: 80px; border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .worry-resolve::after {
+    content: '';
+    position: absolute; bottom: -15px; left: -15px;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .worry-resolve-sub {
+    font-size: 13px; font-weight: 700; color: #ffd700; margin-bottom: 4px;
+  }
+  .worry-resolve-main {
+    font-size: 20px; font-weight: 900; color: #fff; line-height: 1.4;
+  }
+  .worry-resolve-main .highlight {
+    background: #fff; color: #027B4B; padding: 2px 8px;
+    border-radius: 4px; display: inline-block; margin: 0 2px;
+  }
+  .worry-resolve-features {
+    display: flex; justify-content: center; gap: 8px;
+    margin-top: 12px; flex-wrap: wrap;
+  }
+  .worry-resolve-tag {
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+    color: #fff; font-size: 12px; font-weight: 700;
+    padding: 4px 12px; border-radius: 20px;
+  }
+
+  /* === 累計実績 === */
+  .track-section {
+    background: linear-gradient(135deg, #027B4B 0%, #015c38 50%, #027B4B 100%);
+    background-image:
+      linear-gradient(135deg, #027B4B 0%, #015c38 50%, #027B4B 100%),
+      radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(255,255,255,0.05) 0%, transparent 40%);
+    padding: 20px 16px; text-align: center;
+  }
+  .track-section .section-title { color: #fff; padding-bottom: 6px; }
+  .track-numbers {
+    display: flex; justify-content: center; gap: 20px;
+    max-width: 500px; margin: 0 auto;
+  }
+  .track-item { text-align: center; }
+  .track-item .track-num {
+    font-size: 36px; font-weight: 900; color: #ffd700; line-height: 1.2;
+  }
+  .track-item .track-num small { font-size: 16px; color: #fff; }
+  .track-item .track-label {
+    font-size: 12px; color: rgba(255,255,255,0.8);
+  }
+  .track-note {
+    font-size: 10px; color: rgba(255,255,255,0.5); margin-top: 8px;
+  }
+
+  /* === 選ばれる理由 === */
+  .reason-section {
+    background: #fff;
+    background-image: linear-gradient(180deg, #fff 0%, #f8fdf8 100%);
+    padding: 20px 16px;
+  }
+  .reason-list { max-width: 500px; margin: 0 auto; }
+  .reason-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 16px 0; border-bottom: 1px solid #eee;
+  }
+  .reason-item:last-child { border-bottom: none; }
+  .reason-num {
+    width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+    background: #79af9b; color: #fff; font-size: 20px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .reason-content .reason-title {
+    font-size: 16px; font-weight: 900; color: #1A1311; margin-bottom: 2px;
+  }
+  .reason-content .reason-desc {
+    font-size: 13px; color: #666; line-height: 1.5;
+  }
+
+  /* === 安心の取り組み === */
+  .trust-section {
+    background: linear-gradient(180deg, #e8f5e9 0%, #f8faf8 100%);
+    padding: 20px 16px;
+  }
+  .trust-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    max-width: 500px; margin: 10px auto 0;
+  }
+  .trust-card {
+    background: #fff; border-radius: 8px; padding: 16px 10px;
+    text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-top: 3px solid #79af9b;
+  }
+  .trust-card .trust-label {
+    font-size: 13px; font-weight: 900; color: #027B4B; line-height: 1.3;
+  }
+  .trust-card .trust-desc {
+    font-size: 10px; color: #888; margin-top: 4px;
+  }
+
+  /* === 買取の流れ === */
+  .flow-section { background: #f0f7f3; padding: 24px 16px; }
+  .flow-steps { max-width: 500px; margin: 10px auto 0; position: relative; }
+  /* タイムラインの縦線 */
+  .flow-steps::before {
+    content: '';
+    position: absolute; top: 24px; bottom: 24px; left: 23px;
+    width: 3px; background: #c8e6d5; border-radius: 2px;
+  }
+  .flow-step {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 0 0 20px; position: relative;
+  }
+  .flow-step:last-child { padding-bottom: 0; }
+  .flow-step .step-num {
+    width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+    background: #027B4B; color: #fff; font-weight: 900;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; z-index: 1;
+    box-shadow: 0 2px 8px rgba(2,123,75,0.25);
+  }
+  .flow-step .step-num .num-label {
+    font-size: 9px; line-height: 1; letter-spacing: 0.5px;
+  }
+  .flow-step .step-num .num-value {
+    font-size: 20px; line-height: 1;
+  }
+  .flow-step .step-body {
+    background: #fff; border-radius: 10px; padding: 14px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    flex: 1; border: 1px solid #e0ece4;
+    position: relative;
+  }
+  /* 吹き出し三角 */
+  .flow-step .step-body::before {
+    content: '';
+    position: absolute; left: -8px; top: 16px;
+    width: 0; height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #fff;
+  }
+  .flow-step .step-title { font-size: 15px; font-weight: 900; color: #1A1311; margin-bottom: 4px; }
+  .flow-step .step-desc { font-size: 12px; color: #666; line-height: 1.6; }
+  /* タイムライン詳細 */
+  .flow-timeline {
+    max-width: 500px; margin: 20px auto 0;
+    background: #fff; border-radius: 12px; padding: 18px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #e0ece4;
+  }
+  .flow-timeline-title {
+    font-size: 14px; font-weight: 900; color: #027B4B;
+    text-align: center; margin-bottom: 14px;
+    padding-bottom: 10px; border-bottom: 2px dashed #c8e6d5;
+  }
+  .flow-timeline-row {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 6px 0; font-size: 13px;
+  }
+  .flow-timeline-time {
+    font-weight: 900; color: #027B4B; white-space: nowrap;
+    min-width: 52px;
+  }
+  .flow-timeline-desc { color: #555; }
+  .flow-timeline-note {
+    font-size: 10px; color: #999; text-align: right; margin-top: 10px;
+  }
+
+  /* === 写真バナー === */
+  .photo-banner {
+    position: relative; overflow: hidden;
+    height: 160px; display: flex; align-items: center; justify-content: center;
+  }
+  .photo-banner img {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .photo-banner-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(2,123,75,0.75) 0%, rgba(2,123,75,0.55) 100%);
+  }
+  .photo-banner-text {
+    position: relative; z-index: 1; text-align: center;
+    color: #fff; padding: 0 20px;
+  }
+  .photo-banner-text .banner-main {
+    font-size: 20px; font-weight: 900; line-height: 1.4;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .photo-banner-text .banner-sub {
+    font-size: 13px; font-weight: 700; margin-top: 6px;
+    opacity: 0.9;
+  }
+
+  /* === お客様の声 === */
+  .voice-section {
+    background: #f0f7f3;
+    background-image: radial-gradient(circle at 50% 0%, rgba(2,123,75,0.05) 0%, transparent 60%);
+    padding: 20px 16px;
+  }
+  .voice-list { max-width: 500px; margin: 10px auto 0; }
+  .voice-card {
+    background: #fff; border-radius: 8px; padding: 16px;
+    margin-bottom: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .voice-card .voice-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 6px;
+  }
+  .voice-card .voice-profile {
+    font-size: 13px; font-weight: 700; color: #1A1311;
+  }
+  .voice-card .voice-stars { display: none; }
+  .voice-card .voice-text {
+    font-size: 13px; color: #555; line-height: 1.6;
+  }
+
+  /* === FAQ === */
+  .faq-section { background: #fff; padding: 20px 16px; }
+  .faq-list { max-width: 500px; margin: 10px auto 0; }
+  .faq-item { border-bottom: 1px solid #eee; padding: 14px 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-size: 14px; font-weight: 900; color: #1A1311;
+    display: flex; align-items: flex-start; gap: 8px;
+  }
+  .faq-q .q-icon {
+    background: #027B4B; color: #fff; font-size: 12px; font-weight: 900;
+    width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .faq-a {
+    font-size: 13px; color: #555; line-height: 1.6;
+    margin-top: 6px; padding-left: 32px;
+  }
+
+  /* === その他買取品目 === */
+  .other-section { background: #f8f9fa; padding: 20px 16px; }
+  .other-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px;
+    max-width: 500px; margin: 10px auto 0;
+  }
+  .other-card {
+    text-align: center; border: 2px solid #e0ece4; border-radius: 6px; overflow: hidden;
+    background: #fff;
+  }
+  .other-card img { width: 100%; height: 60px; object-fit: contain; }
+  .other-card .card-label {
+    font-size: 10px; font-weight: 700; color: #333; padding: 4px 2px;
+  }
+
+  /* === 注釈・会社情報 === */
+  .disclaimers {
+    max-width: 600px; margin: 0 auto;
+    padding: 12px 16px; font-size: 10px; color: #888; line-height: 1.8;
+    background: #f9f9f9;
+  }
+  .company-info {
+    max-width: 600px; margin: 0 auto;
+    padding: 10px 16px; font-size: 10px; color: #555; text-align: center;
+    background: #eee; font-weight: 700;
+  }
+
+  /* === フッター === */
+  .lp-footer {
+    background: #1A1311; padding: 16px; text-align: center;
+    max-width: 600px; margin: 0 auto;
+  }
+  .lp-footer .footer-text { font-size: 10px; color: #999; }
+
+  /* === 固定CTA（スマホ） === */
+  .fixed-cta {
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0;
+    z-index: 100;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+  }
+  .fixed-cta-inner {
+    display: flex; max-width: 600px; margin: 0 auto;
+  }
+  .fixed-cta .fixed-btn {
+    flex: 1; display: flex; align-items: center; justify-content: center;
+    gap: 4px; padding: 12px 8px; text-decoration: none;
+    font-size: 14px; font-weight: 900; color: #fff;
+  }
+  .fixed-btn.phone-btn { background: #027B4B; }
+  .fixed-btn.web-btn { background: #EF7701; }
+  .fixed-btn .btn-label { line-height: 1.2; }
+  .fixed-btn .btn-sub { font-size: 9px; font-weight: 400; display: block; }
+
+  /* レスポンシブ */
+  @media (max-width: 600px) {
+    .fv-catch { font-size: 5vw; }
+    .fv-brand img { height: 10vw; }
+    .cta-phone-btn { font-size: 7vw; }
+    .fv-badge-item { width: 28vw; height: 28vw; }
+    .fv-badge-item .badge-main { font-size: 5.5vw; }
+    .section-title { font-size: 5vw; }
+    .worry-title { font-size: 5vw; }
+    .track-item .track-num { font-size: 8vw; }
+    .fixed-cta { display: block; }
+    body { padding-bottom: 56px; }
+    .ng-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<div class="section">
+  <div class="lp-header">
+    <div class="header-logo"><img src="img/logo_buysell.png?v=5" alt="バイセル"></div>
+    <a href="tel:0120949104" class="header-phone-btn">
+      0120-949-104
+      <span class="phone-sub">通話料無料</span>
+    </a>
+  </div>
+</div>
+
+<!-- ファーストビュー -->
+<div class="section">
+  <div class="fv">
+    <!-- 上部装飾（ホイール・タイヤ跡・ドット） -->
+    <div class="fv-deco-upper">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <!-- 左上：大きめホイール -->
+        <g transform="translate(22, 18)" opacity="0.13">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="#027B4B" stroke-width="5"/>
+          <circle cx="30" cy="30" r="20" fill="none" stroke="#027B4B" stroke-width="2"/>
+          <circle cx="30" cy="30" r="9" fill="none" stroke="#027B4B" stroke-width="3"/>
+          <line x1="30" y1="2" x2="30" y2="11" stroke="#027B4B" stroke-width="2.5"/>
+          <line x1="30" y1="49" x2="30" y2="58" stroke="#027B4B" stroke-width="2.5"/>
+          <line x1="2" y1="30" x2="11" y2="30" stroke="#027B4B" stroke-width="2.5"/>
+          <line x1="49" y1="30" x2="58" y2="30" stroke="#027B4B" stroke-width="2.5"/>
+          <line x1="10" y1="10" x2="17" y2="17" stroke="#027B4B" stroke-width="2"/>
+          <line x1="50" y1="50" x2="43" y2="43" stroke="#027B4B" stroke-width="2"/>
+          <line x1="50" y1="10" x2="43" y2="17" stroke="#027B4B" stroke-width="2"/>
+          <line x1="10" y1="50" x2="17" y2="43" stroke="#027B4B" stroke-width="2"/>
+        </g>
+
+        <!-- 右上：小さめホイール -->
+        <g transform="translate(340, 25)" opacity="0.10">
+          <circle cx="22" cy="22" r="20" fill="none" stroke="#027B4B" stroke-width="4"/>
+          <circle cx="22" cy="22" r="14" fill="none" stroke="#027B4B" stroke-width="1.5"/>
+          <circle cx="22" cy="22" r="6" fill="none" stroke="#027B4B" stroke-width="2.5"/>
+          <line x1="22" y1="2" x2="22" y2="8" stroke="#027B4B" stroke-width="2"/>
+          <line x1="22" y1="36" x2="22" y2="42" stroke="#027B4B" stroke-width="2"/>
+          <line x1="2" y1="22" x2="8" y2="22" stroke="#027B4B" stroke-width="2"/>
+          <line x1="36" y1="22" x2="42" y2="22" stroke="#027B4B" stroke-width="2"/>
+          <line x1="8" y1="8" x2="13" y2="13" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="36" y1="36" x2="31" y2="31" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="36" y1="8" x2="31" y2="13" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="8" y1="36" x2="13" y2="31" stroke="#027B4B" stroke-width="1.5"/>
+        </g>
+
+        <!-- 左のタイヤ跡（縦カーブ） -->
+        <path d="M12 80 Q8 130 16 180 Q22 220 14 260" fill="none" stroke="#027B4B" stroke-width="3" opacity="0.06" stroke-linecap="round"/>
+        <path d="M18 80 Q14 130 22 180 Q28 220 20 260" fill="none" stroke="#027B4B" stroke-width="3" opacity="0.06" stroke-linecap="round"/>
+        <!-- 左タイヤ跡のトレッドパターン -->
+        <g opacity="0.04">
+          <line x1="9" y1="95" x2="21" y2="93" stroke="#027B4B" stroke-width="2"/>
+          <line x1="8" y1="110" x2="20" y2="108" stroke="#027B4B" stroke-width="2"/>
+          <line x1="8" y1="125" x2="20" y2="123" stroke="#027B4B" stroke-width="2"/>
+          <line x1="9" y1="140" x2="21" y2="138" stroke="#027B4B" stroke-width="2"/>
+          <line x1="11" y1="155" x2="23" y2="153" stroke="#027B4B" stroke-width="2"/>
+          <line x1="13" y1="170" x2="25" y2="168" stroke="#027B4B" stroke-width="2"/>
+          <line x1="15" y1="185" x2="27" y2="183" stroke="#027B4B" stroke-width="2"/>
+          <line x1="16" y1="200" x2="28" y2="198" stroke="#027B4B" stroke-width="2"/>
+          <line x1="15" y1="215" x2="27" y2="213" stroke="#027B4B" stroke-width="2"/>
+          <line x1="14" y1="230" x2="26" y2="228" stroke="#027B4B" stroke-width="2"/>
+          <line x1="13" y1="245" x2="25" y2="243" stroke="#027B4B" stroke-width="2"/>
+        </g>
+
+        <!-- 右のタイヤ跡（縦カーブ） -->
+        <path d="M388 60 Q392 110 384 160 Q378 200 386 240" fill="none" stroke="#027B4B" stroke-width="3" opacity="0.06" stroke-linecap="round"/>
+        <path d="M382 60 Q386 110 378 160 Q372 200 380 240" fill="none" stroke="#027B4B" stroke-width="3" opacity="0.06" stroke-linecap="round"/>
+        <!-- 右タイヤ跡のトレッドパターン -->
+        <g opacity="0.04">
+          <line x1="379" y1="75" x2="391" y2="73" stroke="#027B4B" stroke-width="2"/>
+          <line x1="380" y1="90" x2="392" y2="88" stroke="#027B4B" stroke-width="2"/>
+          <line x1="381" y1="105" x2="393" y2="103" stroke="#027B4B" stroke-width="2"/>
+          <line x1="382" y1="120" x2="394" y2="118" stroke="#027B4B" stroke-width="2"/>
+          <line x1="381" y1="135" x2="393" y2="133" stroke="#027B4B" stroke-width="2"/>
+          <line x1="380" y1="150" x2="392" y2="148" stroke="#027B4B" stroke-width="2"/>
+          <line x1="379" y1="165" x2="391" y2="163" stroke="#027B4B" stroke-width="2"/>
+          <line x1="378" y1="180" x2="390" y2="178" stroke="#027B4B" stroke-width="2"/>
+          <line x1="377" y1="195" x2="389" y2="193" stroke="#027B4B" stroke-width="2"/>
+          <line x1="378" y1="210" x2="390" y2="208" stroke="#027B4B" stroke-width="2"/>
+          <line x1="380" y1="225" x2="392" y2="223" stroke="#027B4B" stroke-width="2"/>
+        </g>
+
+        <!-- 散りばめドット装飾 -->
+        <circle cx="80" cy="15" r="3" fill="#027B4B" opacity="0.07"/>
+        <circle cx="95" cy="35" r="2" fill="#027B4B" opacity="0.06"/>
+        <circle cx="320" cy="12" r="2.5" fill="#027B4B" opacity="0.06"/>
+        <circle cx="305" cy="45" r="2" fill="#027B4B" opacity="0.05"/>
+        <circle cx="70" cy="55" r="2" fill="#027B4B" opacity="0.05"/>
+        <circle cx="340" cy="70" r="3" fill="#027B4B" opacity="0.06"/>
+        <circle cx="365" cy="90" r="2" fill="#027B4B" opacity="0.05"/>
+        <circle cx="45" cy="90" r="2.5" fill="#027B4B" opacity="0.06"/>
+
+        <!-- 左下に小さいホイール -->
+        <g transform="translate(30, 280)" opacity="0.08">
+          <circle cx="16" cy="16" r="14" fill="none" stroke="#027B4B" stroke-width="3"/>
+          <circle cx="16" cy="16" r="5" fill="none" stroke="#027B4B" stroke-width="2"/>
+          <line x1="16" y1="2" x2="16" y2="7" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="16" y1="25" x2="16" y2="30" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="2" y1="16" x2="7" y2="16" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="25" y1="16" x2="30" y2="16" stroke="#027B4B" stroke-width="1.5"/>
+        </g>
+
+        <!-- 右中に小さいホイール -->
+        <g transform="translate(355, 160)" opacity="0.07">
+          <circle cx="14" cy="14" r="12" fill="none" stroke="#027B4B" stroke-width="2.5"/>
+          <circle cx="14" cy="14" r="4" fill="none" stroke="#027B4B" stroke-width="2"/>
+          <line x1="14" y1="2" x2="14" y2="6" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="14" y1="22" x2="14" y2="26" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="2" y1="14" x2="6" y2="14" stroke="#027B4B" stroke-width="1.5"/>
+          <line x1="22" y1="14" x2="26" y2="14" stroke="#027B4B" stroke-width="1.5"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- 街並み+車イラスト -->
+    <div class="fv-cityscape">
+      <svg viewBox="0 0 600 120" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+        <!-- 奥のビル群（薄め） -->
+        <rect x="10" y="30" width="35" height="70" rx="2" fill="#4a9e73" opacity="0.25"/>
+        <rect x="14" y="36" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="24" y="36" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="14" y="50" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="24" y="50" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="14" y="64" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="24" y="64" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+
+        <rect x="55" y="45" width="28" height="55" rx="2" fill="#4a9e73" opacity="0.2"/>
+        <rect x="59" y="50" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="68" y="50" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="59" y="62" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="68" y="62" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+
+        <rect x="130" y="20" width="40" height="80" rx="2" fill="#4a9e73" opacity="0.22"/>
+        <rect x="135" y="26" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="146" y="26" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="157" y="26" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="135" y="40" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="146" y="40" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="157" y="40" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="135" y="54" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="146" y="54" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="157" y="54" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="135" y="68" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="146" y="68" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="157" y="68" width="7" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+
+        <rect x="420" y="35" width="32" height="65" rx="2" fill="#4a9e73" opacity="0.2"/>
+        <rect x="424" y="40" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="433" y="40" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="442" y="40" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="424" y="52" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="433" y="52" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="442" y="52" width="5" height="7" rx="1" fill="#d4edda" opacity="0.5"/>
+
+        <rect x="500" y="25" width="38" height="75" rx="2" fill="#4a9e73" opacity="0.25"/>
+        <rect x="505" y="31" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="515" y="31" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="525" y="31" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="505" y="45" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="515" y="45" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="525" y="45" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="505" y="59" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="515" y="59" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="525" y="59" width="6" height="8" rx="1" fill="#d4edda" opacity="0.5"/>
+
+        <rect x="548" y="50" width="25" height="50" rx="2" fill="#4a9e73" opacity="0.18"/>
+        <rect x="552" y="55" width="5" height="6" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="560" y="55" width="5" height="6" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="552" y="66" width="5" height="6" rx="1" fill="#d4edda" opacity="0.5"/>
+        <rect x="560" y="66" width="5" height="6" rx="1" fill="#d4edda" opacity="0.5"/>
+
+        <!-- 手前のビル（濃いめ） -->
+        <rect x="90" y="55" width="30" height="45" rx="2" fill="#3d8c65" opacity="0.3"/>
+        <rect x="94" y="60" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="103" y="60" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="112" y="60" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="94" y="72" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="103" y="72" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="112" y="72" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="94" y="84" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="103" y="84" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="112" y="84" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+
+        <rect x="460" y="50" width="30" height="50" rx="2" fill="#3d8c65" opacity="0.3"/>
+        <rect x="464" y="55" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="473" y="55" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="482" y="55" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="464" y="67" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="473" y="67" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+        <rect x="482" y="67" width="5" height="6" rx="1" fill="#d4edda" opacity="0.6"/>
+
+        <!-- 木（丸い樹冠+幹） -->
+        <rect x="185" y="72" width="4" height="18" fill="#4a9e73" opacity="0.35"/>
+        <circle cx="187" cy="66" r="12" fill="#3d8c65" opacity="0.3"/>
+        <circle cx="182" cy="68" r="9" fill="#4a9e73" opacity="0.25"/>
+        <circle cx="193" cy="69" r="8" fill="#4a9e73" opacity="0.22"/>
+
+        <rect x="232" y="76" width="3" height="14" fill="#4a9e73" opacity="0.35"/>
+        <circle cx="234" cy="70" r="10" fill="#3d8c65" opacity="0.28"/>
+        <circle cx="229" cy="72" r="7" fill="#4a9e73" opacity="0.22"/>
+
+        <rect x="350" y="70" width="4" height="20" fill="#4a9e73" opacity="0.35"/>
+        <circle cx="352" cy="64" r="13" fill="#3d8c65" opacity="0.3"/>
+        <circle cx="346" cy="67" r="9" fill="#4a9e73" opacity="0.25"/>
+        <circle cx="359" cy="66" r="8" fill="#4a9e73" opacity="0.22"/>
+
+        <rect x="395" y="76" width="3" height="14" fill="#4a9e73" opacity="0.35"/>
+        <circle cx="397" cy="71" r="9" fill="#3d8c65" opacity="0.25"/>
+        <circle cx="392" cy="73" r="6" fill="#4a9e73" opacity="0.2"/>
+
+        <rect x="580" y="74" width="3" height="16" fill="#4a9e73" opacity="0.35"/>
+        <circle cx="582" cy="68" r="10" fill="#3d8c65" opacity="0.28"/>
+
+        <!-- 地面（道路） -->
+        <rect x="0" y="100" width="600" height="20" fill="#4a9e73" opacity="0.15"/>
+        <line x1="0" y1="100" x2="600" y2="100" stroke="#3d8c65" stroke-width="1.5" opacity="0.25"/>
+        <!-- 白い破線（道路センターライン） -->
+        <line x1="0" y1="108" x2="600" y2="108" stroke="#fff" stroke-width="2" stroke-dasharray="12,8" opacity="0.3"/>
+
+        <!-- 車1: セダン（左向き走行・緑系） -->
+        <g transform="translate(60, 86)">
+          <path d="M8 14 L14 4 Q16 0 20 0 L44 0 Q48 0 50 4 L56 14 Z" fill="#027B4B" opacity="0.5"/>
+          <rect x="4" y="14" width="56" height="10" rx="3" fill="#027B4B" opacity="0.45"/>
+          <rect x="16" y="2" width="12" height="10" rx="1" fill="#a8dbc5" opacity="0.5"/>
+          <rect x="32" y="2" width="14" height="10" rx="1" fill="#a8dbc5" opacity="0.5"/>
+          <circle cx="16" cy="26" r="5" fill="#027B4B" opacity="0.55"/>
+          <circle cx="48" cy="26" r="5" fill="#027B4B" opacity="0.55"/>
+          <circle cx="16" cy="26" r="2.5" fill="#d4edda" opacity="0.5"/>
+          <circle cx="48" cy="26" r="2.5" fill="#d4edda" opacity="0.5"/>
+        </g>
+
+        <!-- 車2: SUV（右向き走行・濃い緑） -->
+        <g transform="translate(250, 84)">
+          <path d="M10 16 L16 4 Q18 0 22 0 L50 0 Q54 0 55 3 L58 10 L64 10 L64 16 Z" fill="#1a6b2a" opacity="0.45"/>
+          <rect x="6" y="16" width="62" height="12" rx="3" fill="#1a6b2a" opacity="0.4"/>
+          <rect x="18" y="2" width="14" height="12" rx="1" fill="#a8dbc5" opacity="0.45"/>
+          <rect x="36" y="2" width="16" height="12" rx="1" fill="#a8dbc5" opacity="0.45"/>
+          <circle cx="20" cy="30" r="6" fill="#1a6b2a" opacity="0.5"/>
+          <circle cx="54" cy="30" r="6" fill="#1a6b2a" opacity="0.5"/>
+          <circle cx="20" cy="30" r="3" fill="#d4edda" opacity="0.45"/>
+          <circle cx="54" cy="30" r="3" fill="#d4edda" opacity="0.45"/>
+        </g>
+
+        <!-- 車3: コンパクトカー（右側） -->
+        <g transform="translate(450, 88)">
+          <path d="M7 12 L12 4 Q14 0 18 0 L38 0 Q42 0 44 4 L49 12 Z" fill="#027B4B" opacity="0.4"/>
+          <rect x="4" y="12" width="48" height="9" rx="3" fill="#027B4B" opacity="0.38"/>
+          <rect x="14" y="2" width="10" height="9" rx="1" fill="#a8dbc5" opacity="0.45"/>
+          <rect x="28" y="2" width="12" height="9" rx="1" fill="#a8dbc5" opacity="0.45"/>
+          <circle cx="14" cy="22" r="4.5" fill="#027B4B" opacity="0.5"/>
+          <circle cx="42" cy="22" r="4.5" fill="#027B4B" opacity="0.5"/>
+          <circle cx="14" cy="22" r="2" fill="#d4edda" opacity="0.45"/>
+          <circle cx="42" cy="22" r="2" fill="#d4edda" opacity="0.45"/>
+        </g>
+
+        <!-- 車4: 小さいセダン（左端近く） -->
+        <g transform="translate(180, 90)" opacity="0.7">
+          <path d="M6 10 L10 3 Q12 0 15 0 L33 0 Q36 0 38 3 L42 10 Z" fill="#3d8c65" opacity="0.4"/>
+          <rect x="3" y="10" width="42" height="8" rx="2" fill="#3d8c65" opacity="0.38"/>
+          <circle cx="12" cy="20" r="4" fill="#3d8c65" opacity="0.5"/>
+          <circle cx="36" cy="20" r="4" fill="#3d8c65" opacity="0.5"/>
+          <circle cx="12" cy="20" r="2" fill="#d4edda" opacity="0.4"/>
+          <circle cx="36" cy="20" r="2" fill="#d4edda" opacity="0.4"/>
+        </g>
+
+        <!-- 車5: ワゴン（右端） -->
+        <g transform="translate(540, 88)" opacity="0.6">
+          <path d="M5 12 L10 3 Q12 0 16 0 L42 0 L45 5 L48 5 L48 12 Z" fill="#1a6b2a" opacity="0.4"/>
+          <rect x="3" y="12" width="48" height="9" rx="2" fill="#1a6b2a" opacity="0.35"/>
+          <circle cx="13" cy="22" r="4.5" fill="#1a6b2a" opacity="0.45"/>
+          <circle cx="40" cy="22" r="4.5" fill="#1a6b2a" opacity="0.45"/>
+          <circle cx="13" cy="22" r="2" fill="#d4edda" opacity="0.4"/>
+          <circle cx="40" cy="22" r="2" fill="#d4edda" opacity="0.4"/>
+        </g>
+      </svg>
+    </div>
+    <div class="fv-categories">
+      <div class="cat-tag">タイヤ</div>
+      <div class="cat-tag">ホイール</div>
+    </div>
+    <div class="fv-catch"><span class="green">タイヤ・ホイール</span>の<span class="green">高価買取</span>なら</div>
+    <div class="fv-brand"><img src="img/logo_buysell.png?v=5" alt="バイセル"></div>
+
+    <div class="fv-photo">
+      <img src="img/tire_ho1.jpg?v=5" alt="ホイール＋タイヤセット">
+      <img src="img/tire_ho2.jpg?v=5" alt="ホイール＋タイヤ 4本セット">
+    </div>
+
+    <div class="fv-badges">
+      <div class="fv-badge-item">
+        <span class="badge-top">手数料</span>
+        <span class="badge-main">0<small>円</small></span>
+      </div>
+      <div class="fv-badge-item">
+        <span class="badge-top">最短</span>
+        <span class="badge-main">即日査定</span>
+        <span class="badge-bottom">即現金化※1</span>
+      </div>
+      <div class="fv-badge-item">
+        <span class="badge-top">査定士の</span>
+        <span class="badge-top">対応満足度</span>
+        <span class="badge-main">94.4<small>%※2</small></span>
+      </div>
+    </div>
+    <div class="fv-note">※1 お支払いは内容により振込対応の場合あり ※2 2026年1月アンケート結果（当社調べ）</div>
+  </div>
+</div>
+
+<!-- CTA 1 -->
+<div class="section">
+  <div class="cta-section">
+    <div class="cta-note">まずはお気軽にお電話ください</div>
+    <a href="tel:0120949104" class="cta-phone-btn">
+      0120-949-104
+    </a>
+    <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
+  </div>
+</div>
+
+<!-- 取扱商品 -->
+<div class="section">
+  <div class="target-section">
+    <div class="section-title">買取<span class="green">対象商品</span><span class="underline"></span></div>
+    <div class="target-grid">
+      <div class="target-card">
+        <img src="img/tire_ho1.jpg?v=5" alt="タイヤ＋ホイールセット">
+        <div class="card-name">タイヤ＋ホイールセット</div>
+      </div>
+      <div class="target-card">
+        <img src="img/tire_tu1.jpg?v=5" alt="アルミホイール">
+        <div class="card-name">アルミホイール（4本）</div>
+      </div>
+      <div class="target-card">
+        <img src="img/tire_studless_bs.jpg?v=5" alt="スタッドレスタイヤ">
+        <div class="card-name">スタッドレスタイヤ</div>
+      </div>
+      <div class="target-card">
+        <img src="img/tire_ta1.jpg?v=5" alt="サマータイヤ">
+        <div class="card-name">サマータイヤ</div>
+      </div>
+    </div>
+    <div class="target-note">※乗用車（四輪車）用の4本セットが買取対象です</div>
+  </div>
+</div>
+
+<!-- 対応メーカー -->
+<div class="section">
+  <div class="maker-section">
+    <div class="section-title">対応<span class="green">メーカー・ブランド</span><span class="underline"></span></div>
+    <div class="maker-grid">
+      <div class="maker-tag">RAYS</div>
+      <div class="maker-tag">BBS</div>
+      <div class="maker-tag">ENKEI</div>
+      <div class="maker-tag">WORK</div>
+      <div class="maker-tag">SSR</div>
+      <div class="maker-tag">Weds</div>
+      <div class="maker-tag">ブリヂストン</div>
+      <div class="maker-tag">ヨコハマ</div>
+      <div class="maker-tag">ダンロップ</div>
+      <div class="maker-tag">トーヨー</div>
+      <div class="maker-tag">ミシュラン</div>
+      <div class="maker-tag">ピレリ</div>
+      <div class="maker-tag">トヨタ純正</div>
+      <div class="maker-tag">BMW純正</div>
+      <div class="maker-tag">ベンツ純正</div>
+    </div>
+    <div class="maker-note">上記以外のメーカーも査定対象です</div>
+  </div>
+</div>
+
+<!-- CTA 2 -->
+<div class="section">
+  <div class="cta-section">
+    <div class="cta-note">タイヤの査定だけでもOK！</div>
+    <a href="tel:0120949104" class="cta-phone-btn">
+      0120-949-104
+    </a>
+    <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
+  </div>
+</div>
+
+<!-- 買取不可商品 -->
+<div class="section">
+  <div class="ng-section">
+    <div class="section-title">買取<span class="red" style="color:#c0392b;">できないもの</span><span class="underline" style="background:#c0392b;"></span></div>
+    <div class="ng-grid">
+      <div class="ng-item"><span class="ng-icon">X</span> スチールホイール</div>
+      <div class="ng-item"><span class="ng-icon">X</span> 1〜3本のみ</div>
+      <div class="ng-item"><span class="ng-icon">X</span> タイヤチェーン</div>
+      <div class="ng-item"><span class="ng-icon">X</span> オートバイ用</div>
+      <div class="ng-item"><span class="ng-icon">X</span> 車体パーツ・バンパー</div>
+      <div class="ng-item"><span class="ng-icon">X</span> カーナビ・電装品</div>
+    </div>
+    <div style="text-align:center; font-size:10px; color:#888; margin-top:10px;">※スチールホイール、タイヤチェーン、オートバイ用は買取対象外です。</div>
+  </div>
+</div>
+
+<!-- 買取相場情報 -->
+<div class="section">
+  <div class="price-section">
+    <div class="section-title">買取<span class="green">相場情報</span><span class="underline" style="background:#79af9b;"></span></div>
+    <div class="price-list">
+      <div class="price-row">
+        <div class="price-name">Weds VELVA 19インチ 7J +40 PCD114.3 アルミホイール<br>+ ブリヂストン ブリザック VRX3 225/55R19 スタッドレス</div>
+        <div class="price-amount">~110,000<small>円</small></div>
+      </div>
+      <div class="price-row">
+        <div class="price-name">トヨタ GRスープラ RZ 純正 19インチ アルミホイール<br>+ ブリヂストン ブリザック VRX3 255/35R19 275/35R19 スタッドレス</div>
+        <div class="price-amount">~150,000<small>円</small></div>
+      </div>
+      <div class="price-row">
+        <div class="price-name">ロールスロイス ゴースト 純正 20インチ 8.5J+25 9.5J+33 PCD120 アルミホイール<br>+ ヨコハマ アイスガード G075 255/45R20 スタッドレス</div>
+        <div class="price-amount">~120,000<small>円</small></div>
+      </div>
+      <div class="price-row">
+        <div class="price-name">ブリヂストン ブリザック DM-V3 265/65R17 2023年製 スタッドレス</div>
+        <div class="price-amount">~20,000<small>円</small></div>
+      </div>
+      <div class="price-row">
+        <div class="price-name">ダンロップ ウインターマックス SJ8+ 225/60R18 スタッドレス</div>
+        <div class="price-amount">~20,000<small>円</small></div>
+      </div>
+    </div>
+    <div class="price-note">※上記は買取相場の一例です。実際の買取金額は商品の状態等により異なります。<br>※お支払いは内容によって振込対応となる場合もございます。</div>
+  </div>
+</div>
+
+<!-- CTA 3 -->
+<div class="section">
+  <div class="cta-section">
+    <div class="cta-note">お持ちのタイヤの価値を確認しませんか？</div>
+    <a href="tel:0120949104" class="cta-phone-btn">
+      0120-949-104
+    </a>
+    <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
+  </div>
+</div>
+
+<!-- こんなお悩みありませんか -->
+<div class="section">
+  <div class="worry-section">
+    <div class="worry-title">こんな<span class="green">お悩み</span>ありませんか？</div>
+    <div class="worry-cards">
+      <div class="worry-card">
+        <div class="worry-card-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <!-- 困っている人がタイヤを持ち上げようとしている -->
+            <circle cx="20" cy="8" r="4" fill="#027B4B"/>
+            <path d="M20 12 L20 24" stroke="#027B4B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M20 14 L12 20" stroke="#027B4B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M20 14 L28 18" stroke="#027B4B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M20 24 L14 32" stroke="#027B4B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M20 24 L26 32" stroke="#027B4B" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- タイヤ -->
+            <circle cx="30" cy="22" r="7" fill="none" stroke="#027B4B" stroke-width="2.5" opacity="0.7"/>
+            <circle cx="30" cy="22" r="3" fill="none" stroke="#027B4B" stroke-width="1.5" opacity="0.7"/>
+            <!-- 汗マーク -->
+            <path d="M8 6 Q7 9 8 10" stroke="#79af9b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M6 9 Q5 12 6 13" stroke="#79af9b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="worry-card-text">タイヤが重くて<br>店舗に持ち込めない</div>
+      </div>
+      <div class="worry-card">
+        <div class="worry-card-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <!-- ガレージ -->
+            <path d="M4 18 L20 6 L36 18" fill="none" stroke="#027B4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="8" y="18" width="24" height="18" fill="none" stroke="#027B4B" stroke-width="2" rx="1"/>
+            <!-- タイヤが積み重なっている -->
+            <circle cx="17" cy="30" r="4.5" fill="none" stroke="#027B4B" stroke-width="2" opacity="0.7"/>
+            <circle cx="17" cy="30" r="1.5" fill="#027B4B" opacity="0.5"/>
+            <circle cx="25" cy="30" r="4.5" fill="none" stroke="#027B4B" stroke-width="2" opacity="0.7"/>
+            <circle cx="25" cy="30" r="1.5" fill="#027B4B" opacity="0.5"/>
+            <circle cx="21" cy="23" r="4.5" fill="none" stroke="#027B4B" stroke-width="2" opacity="0.7"/>
+            <circle cx="21" cy="23" r="1.5" fill="#027B4B" opacity="0.5"/>
+            <!-- バツマーク -->
+            <line x1="33" y1="8" x2="37" y2="12" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/>
+            <line x1="37" y1="8" x2="33" y2="12" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="worry-card-text">ガレージに<br>置き場所がない</div>
+      </div>
+      <div class="worry-card">
+        <div class="worry-card-icon">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <!-- タイヤ -->
+            <circle cx="20" cy="22" r="10" fill="none" stroke="#027B4B" stroke-width="2.5"/>
+            <circle cx="20" cy="22" r="4" fill="none" stroke="#027B4B" stroke-width="2"/>
+            <line x1="20" y1="12" x2="20" y2="16" stroke="#027B4B" stroke-width="1.5"/>
+            <line x1="20" y1="28" x2="20" y2="32" stroke="#027B4B" stroke-width="1.5"/>
+            <line x1="10" y1="22" x2="14" y2="22" stroke="#027B4B" stroke-width="1.5"/>
+            <line x1="26" y1="22" x2="30" y2="22" stroke="#027B4B" stroke-width="1.5"/>
+            <!-- はてなマーク -->
+            <path d="M17 5 Q17 2 20 2 Q23 2 23 5 Q23 7 20 8 L20 10" fill="none" stroke="#EF7701" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="20" cy="13" r="1.2" fill="#EF7701"/>
+            <!-- 円マーク -->
+            <text x="34" y="10" font-size="10" font-weight="900" fill="#79af9b" font-family="sans-serif">?</text>
+          </svg>
+        </div>
+        <div class="worry-card-text">価値があるのか<br>わからない</div>
+      </div>
+    </div>
+
+    <div class="worry-arrow"><div class="worry-arrow-inner"></div></div>
+
+    <div class="worry-resolve">
+      <div class="worry-resolve-sub">そんな方は</div>
+      <div class="worry-resolve-main">
+        <span class="highlight">バイセル</span>がピッタリ！
+      </div>
+      <div class="worry-resolve-features">
+        <span class="worry-resolve-tag">高く売りたい</span>
+        <span class="worry-resolve-tag">簡単に売りたい</span>
+        <span class="worry-resolve-tag">重くて運べない</span>
+        <span class="worry-resolve-tag">まとめて売りたい</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 写真バナー1: 出張査定イメージ -->
+<div class="section">
+  <div class="photo-banner">
+    <img src="img/tire_ho1.jpg?v=5" alt="タイヤ・ホイール出張買取">
+    <div class="photo-banner-overlay"></div>
+    <div class="photo-banner-text">
+      <div class="banner-main">重いタイヤもご自宅で<br>そのまま査定・買取</div>
+      <div class="banner-sub">出張料・査定料・キャンセル料 すべて無料</div>
+    </div>
+  </div>
+</div>
+
+<!-- 累計実績 -->
+<div class="section">
+  <div class="track-section">
+    <div class="section-title" style="color:#fff;">バイセルの実績</div>
+    <div class="track-numbers">
+      <div class="track-item">
+        <div class="track-num">3,700<small>万点+</small></div>
+        <div class="track-label">累計買取点数※1</div>
+      </div>
+      <div class="track-item">
+        <div class="track-num">1,400<small>名+</small></div>
+        <div class="track-label">査定士在籍</div>
+      </div>
+    </div>
+    <div class="track-note">※1 2015年〜2024年の合計買取点数</div>
+  </div>
+</div>
+
+<!-- 選ばれる理由 -->
+<div class="section">
+  <div class="reason-section">
+    <div class="section-title">バイセルが<span class="green">選ばれる理由</span><span class="underline"></span></div>
+    <div class="reason-list">
+      <div class="reason-item">
+        <div class="reason-num">1</div>
+        <div class="reason-content">
+          <div class="reason-title">ご自宅まで出張査定</div>
+          <div class="reason-desc">重いタイヤを持ち運ぶ必要はありません。ご自宅のガレージや玄関先で査定いたします。</div>
+        </div>
+      </div>
+      <div class="reason-item">
+        <div class="reason-num">2</div>
+        <div class="reason-content">
+          <div class="reason-title">その場で現金化※</div>
+          <div class="reason-desc">査定にご納得いただければ、その場でお支払い。面倒な手続きは不要です。</div>
+          <div style="font-size:10px; color:#888; margin-top:4px;">※現金払いに関して、ご契約内容によっては振込対応となる場合がございます。</div>
+        </div>
+      </div>
+      <div class="reason-item">
+        <div class="reason-num">3</div>
+        <div class="reason-content">
+          <div class="reason-title">経験豊富な査定士</div>
+          <div class="reason-desc">タイヤの状態・ブランド・ホイールの価値をしっかり見極めます。</div>
+        </div>
+      </div>
+      <div class="reason-item">
+        <div class="reason-num">4</div>
+        <div class="reason-content">
+          <div class="reason-title">手数料すべて無料</div>
+          <div class="reason-desc">出張料・査定料・キャンセル料、すべて無料。お気軽にご依頼ください。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 写真バナー2: ホイール査定 -->
+<div class="section">
+  <div class="photo-banner">
+    <img src="img/tire_tu1.jpg?v=5" alt="ホイール査定">
+    <div class="photo-banner-overlay"></div>
+    <div class="photo-banner-text">
+      <div class="banner-main">プロの査定士が<br>1本1本丁寧に査定</div>
+      <div class="banner-sub">ブランド・状態・市場価値をしっかり見極めます</div>
+    </div>
+  </div>
+</div>
+
+<!-- 安心・信頼の取り組み -->
+<div class="section">
+  <div class="trust-section">
+    <div class="section-title">安心・信頼の<span class="green">取り組み</span><span class="underline"></span></div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-label">東証上場企業</div>
+        <div class="trust-desc">グロース市場上場</div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-label">クーリングオフ</div>
+        <div class="trust-desc">8日間対応</div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-label">フォローコール</div>
+        <div class="trust-desc">査定後にご確認</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 4 -->
+<div class="section">
+  <div class="cta-section">
+    <div class="cta-note">お見積もりだけでも大歓迎！</div>
+    <a href="tel:0120949104" class="cta-phone-btn">
+      0120-949-104
+    </a>
+    <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
+  </div>
+</div>
+
+<!-- 買取の流れ -->
+<div class="section">
+  <div class="flow-section">
+    <div class="section-title">出張買取の<span class="green">流れ</span><span class="underline"></span></div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-num">
+          <span class="num-label">STEP</span>
+          <span class="num-value">01</span>
+        </div>
+        <div class="step-body">
+          <div class="step-title">まずはお申し込み</div>
+          <div class="step-desc">お電話1本でOK。24時間365日受付しております。お品物の内容やご都合の良い日時をお伝えください。</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">
+          <span class="num-label">STEP</span>
+          <span class="num-value">02</span>
+        </div>
+        <div class="step-body">
+          <div class="step-title">査定日時を決める</div>
+          <div class="step-desc">お客様のご都合に合わせて、査定の日時を調整いたします。最短で即日の訪問も可能です。</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">
+          <span class="num-label">STEP</span>
+          <span class="num-value">03</span>
+        </div>
+        <div class="step-body">
+          <div class="step-title">ご自宅で査定</div>
+          <div class="step-desc">査定士がご自宅に訪問し、ガレージや玄関先でタイヤ・ホイールを丁寧に査定。金額とその理由をわかりやすくご説明します。ご納得いただけない場合はお断りOKです。</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">
+          <span class="num-label">STEP</span>
+          <span class="num-value">04</span>
+        </div>
+        <div class="step-body">
+          <div class="step-title">その場で現金買取※</div>
+          <div class="step-desc">ご成約後、その場で現金にてお支払いいたします。重いタイヤの搬出もお任せください。</div>
+          <div style="font-size:10px; color:#888; margin-top:4px;">※現金払いに関して、ご契約内容によっては振込対応となる場合がございます。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 査定当日タイムライン -->
+    <div class="flow-timeline">
+      <div class="flow-timeline-title">査定当日のスケジュール例（午前9時予約の場合）</div>
+      <div class="flow-timeline-row">
+        <div class="flow-timeline-time">08:45</div>
+        <div class="flow-timeline-desc">査定士より到着前のご連絡</div>
+      </div>
+      <div class="flow-timeline-row">
+        <div class="flow-timeline-time">09:00</div>
+        <div class="flow-timeline-desc">査定士がご自宅に到着</div>
+      </div>
+      <div class="flow-timeline-row">
+        <div class="flow-timeline-time">09:15</div>
+        <div class="flow-timeline-desc">タイヤ・ホイールの査定開始（平均約30〜60分）</div>
+      </div>
+      <div class="flow-timeline-row">
+        <div class="flow-timeline-time">10:00</div>
+        <div class="flow-timeline-desc">査定結果のご説明・お支払い</div>
+      </div>
+      <div class="flow-timeline-row">
+        <div class="flow-timeline-time">10:30</div>
+        <div class="flow-timeline-desc">フォローコール（ご不明点の確認）</div>
+      </div>
+      <div class="flow-timeline-note">※所要時間はお品物の点数や状態によって異なります</div>
+    </div>
+    <div style="max-width:500px; margin:12px auto 0; font-size:10px; color:#888; line-height:1.6; padding:0 4px;">
+      ※季節事情または地域により出張査定や最短即日での対応が難しい場合もございます。<br>
+      ※内容により宅配査定・店舗査定をご案内する場合がございます。<br>
+      ※現金払いに関して、ご契約内容によっては振込対応となる場合がございます。<br>
+      ※未成年者からの買取はできません。また、酒類の買取に関しては20歳以上のお客様のみ対象となります。<br>
+      ※運転免許証・運転経歴証明書・マイナンバーカード・身体障害者手帳・住民基本台帳カード・その他当社が認めるもの（有効期限があるものについては、有効期限内のもの）などのご本人確認書類を査定士にご提示ください。
+    </div>
+  </div>
+</div>
+
+<!-- 写真バナー3: タイヤセット -->
+<div class="section">
+  <div class="photo-banner">
+    <img src="img/tire_set1.jpg?v=5" alt="タイヤ・ホイールセット">
+    <div class="photo-banner-overlay"></div>
+    <div class="photo-banner-text">
+      <div class="banner-main">4本セットでまとめて<br>高価買取</div>
+      <div class="banner-sub">ご自宅のガレージ・玄関先まで査定士がお伺いします</div>
+    </div>
+  </div>
+</div>
+
+<!-- お客様の声 -->
+<div class="section">
+  <div class="voice-section">
+    <div class="section-title">お客様の<span class="green">声</span><span class="underline"></span></div>
+    <div class="voice-list">
+      <div class="voice-card">
+        <div class="voice-header">
+          <div class="voice-profile">東京都 30代男性</div>
+        </div>
+        <div class="voice-text">一品一品丁寧に見てくださり、今の相場についても詳しく教えていただけました。お値段も精一杯頑張ってくださり、大満足の結果です！誠実に向き合ってくれるプロの対応に、深い信頼を感じました。</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-header">
+          <div class="voice-profile">神奈川県 50代男性</div>
+        </div>
+        <div class="voice-text">とても良かったです。凄く言葉遣が丁寧で明るく対応をしていただきました。身だしなみも問題なかったですね。対応は満点ですね。価格についても大丈夫でした。また何かありましたら利用をしてみたいと思います。</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-header">
+          <div class="voice-profile">埼玉県 60代男性</div>
+        </div>
+        <div class="voice-text">他店では出してくれなかったのにバイセルさんはちゃんと明細を出してくれました。またアフターフォローの確認電話まであって驚きです。利用者への配慮が行き届いていて、信頼できる会社さんだと思います。</div>
+      </div>
+    </div>
+    <div style="max-width:500px; margin:8px auto 0; font-size:10px; color:#888; line-height:1.6;">
+      ※お客様の声から当社で選択の上で掲載しています。<br>
+      ※掲載しているお客様の声の内容はお客様個人の感想であり、お買い取りした商品はお客様によって異なります。
+    </div>
+  </div>
+</div>
+
+<!-- CTA 5 -->
+<div class="section">
+  <div class="cta-section">
+    <div class="cta-note">査定だけでもOK！お気軽にお電話ください</div>
+    <a href="tel:0120949104" class="cta-phone-btn">
+      0120-949-104
+    </a>
+    <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section">
+  <div class="faq-section">
+    <div class="section-title">よくある<span class="green">ご質問</span><span class="underline"></span></div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="q-icon">Q</span>
+          <span>タイヤの溝が少なくても買取できますか？</span>
+        </div>
+        <div class="faq-a">状態を拝見したうえで査定いたします。まずはお気軽にご相談ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="q-icon">Q</span>
+          <span>4本揃っていない場合はどうなりますか？</span>
+        </div>
+        <div class="faq-a">申し訳ございませんが、4本セットでの買取とさせていただいております。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="q-icon">Q</span>
+          <span>査定後にキャンセルしても費用はかかりますか？</span>
+        </div>
+        <div class="faq-a">キャンセル料は一切かかりません。査定だけでもお気軽にご依頼ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="q-icon">Q</span>
+          <span>スタッドレスタイヤだけでも買い取れますか？</span>
+        </div>
+        <div class="faq-a">はい、4本セットであればスタッドレスタイヤのみでも査定可能です。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span class="q-icon">Q</span>
+          <span>タイヤと一緒に他のものも査定してもらえますか？</span>
+        </div>
+        <div class="faq-a">もちろんです。着物・ブランド品・貴金属など、他の買取品目もまとめて査定可能です。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- その他買取品目 -->
+<div class="section">
+  <div class="other-section">
+    <div class="section-title">その他の<span class="green">買取品目</span><span class="underline"></span></div>
+    <div class="other-grid">
+      <div class="other-card">
+        <img src="img/kimono.jpg" alt="着物">
+        <div class="card-label">着物</div>
+      </div>
+      <div class="other-card">
+        <img src="img/kikinzoku.jpg" alt="貴金属">
+        <div class="card-label">貴金属</div>
+      </div>
+      <div class="other-card">
+        <img src="img/brand.jpg" alt="ブランド品">
+        <div class="card-label">ブランド品</div>
+      </div>
+      <div class="other-card">
+        <img src="img/kosen.jpg" alt="古銭">
+        <div class="card-label">古銭</div>
+      </div>
+      <div class="other-card">
+        <img src="img/kitte.jpg" alt="切手">
+        <div class="card-label">切手</div>
+      </div>
+      <div class="other-card">
+        <img src="img/osake.jpg" alt="お酒">
+        <div class="card-label">お酒</div>
+      </div>
+      <div class="other-card">
+        <img src="img/kottou.jpg" alt="骨董品">
+        <div class="card-label">骨董品</div>
+      </div>
+      <div class="other-card">
+        <img src="img/gakki.jpg" alt="楽器">
+        <div class="card-label">楽器</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 6 -->
+<div class="section">
+  <div class="cta-section">
+    <div class="cta-note">まずはお電話でご相談ください</div>
+    <a href="tel:0120949104" class="cta-phone-btn">
+      0120-949-104
+    </a>
+    <div class="cta-sub"><span class="cta-sub-bold">24時間・365日受付</span>｜通話料無料</div>
+  </div>
+</div>
+
+<div class="company-info">
+  運営会社：株式会社BuySell Technologies<br>
+  〒160-0004 東京都新宿区四谷4-28-8 PALTビル<br>
+  【東京都公安委員会】古物商許可番号：第301041408603号
+</div>
+
+<!-- フッター -->
+<div class="lp-footer">
+  <div style="font-size:11px; color:#ccc; margin-bottom:8px;">株式会社BuySell Technologies　東証グロース上場 証券コード：7685</div>
+  <div style="display:flex; justify-content:center; gap:16px; margin-bottom:8px; flex-wrap:wrap;">
+    <a href="https://campaigns.speed-kaitori.jp/company/" style="font-size:10px; color:#999; text-decoration:underline;">会社概要</a>
+    <a href="https://buysell-technologies.com/privacy/" style="font-size:10px; color:#999; text-decoration:underline;">個人情報保護方針</a>
+    <a href="https://campaigns.speed-kaitori.jp/terms/" style="font-size:10px; color:#999; text-decoration:underline;">利用規約</a>
+    <a href="https://campaigns.speed-kaitori.jp/coolingoff/" style="font-size:10px; color:#999; text-decoration:underline;">クーリングオフ</a>
+  </div>
+  <div style="font-size:10px; color:#999;">株式会社BuySell Technologies<br>古物商許可番号：東京都公安委員会 第301041408603号</div>
+  <div class="footer-text" style="margin-top:8px;">&copy; BuySell Technologies</div>
+</div>
+
+<!-- 固定CTA（スマホ） -->
+<div class="fixed-cta">
+  <div class="fixed-cta-inner">
+    <a href="tel:0120949104" class="fixed-btn phone-btn">
+      <span class="btn-label">電話で相談<span class="btn-sub">24時間受付</span></span>
+    </a>
+    <a href="https://campaigns.speed-kaitori.jp/ad/lisg/sem/bst-wheel-ta-form/" class="fixed-btn web-btn">
+      <span class="btn-label">Web申し込み<span class="btn-sub">簡単30秒</span></span>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
