@@ -55,7 +55,7 @@
       radial-gradient(circle at 10% 90%, rgba(2,123,75,0.08) 0%, transparent 50%),
       radial-gradient(circle at 90% 10%, rgba(2,123,75,0.06) 0%, transparent 40%),
       radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 0%, transparent 70%);
-    text-align: center; padding: 20px 16px 10px;
+    text-align: center; padding: 10px 16px 0;
     position: relative; overflow: hidden;
   }
   .fv::before {
@@ -81,7 +81,7 @@
     position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
   }
   .fv-categories {
-    display: flex; gap: 8px; justify-content: center; margin-bottom: 10px;
+    display: flex; gap: 8px; justify-content: center; margin-bottom: 4px;
     position: relative; z-index: 2;
   }
   .fv-categories .cat-tag {
@@ -91,14 +91,14 @@
   }
   .fv-catch {
     font-size: 20px; font-weight: 900; color: #1A1311;
-    margin-bottom: 4px; line-height: 1.3;
+    margin-bottom: 0; line-height: 1.3;
     position: relative; z-index: 2;
   }
   .fv-catch .green { color: #027B4B; }
   .fv-brand {
-    margin-bottom: 16px;
+    margin: 0;
     position: relative; z-index: 2;
-    padding: 50px 50px;
+    padding: 4px 25px 8px; /* 左右0.5A確保、上下は詰める */
   }
   .fv-brand img {
     height: 50px; width: auto;
@@ -106,7 +106,7 @@
   .fv-photo {
     width: 100%; max-width: 500px; margin: 0 auto;
     display: flex; gap: 8px; justify-content: center;
-    background: #fff; border-radius: 12px 12px 0 0; padding: 16px 12px 0;
+    background: #fff; border-radius: 12px 12px 0 0; padding: 4px 12px 0;
     position: relative; z-index: 2;
   }
   .fv-photo img {
